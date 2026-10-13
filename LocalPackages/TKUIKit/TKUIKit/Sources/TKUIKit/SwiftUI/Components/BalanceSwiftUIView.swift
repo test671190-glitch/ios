@@ -179,9 +179,6 @@ public struct BalanceSwiftUIView: View {
         .frame(maxWidth: .infinity, alignment: .center)
         .padding(Layout.contentInsets)
         .frame(height: Layout.height, alignment: .top)
-        .overlay(alignment: .top) {
-            demoBadgeView
-        }
     }
 }
 
@@ -190,15 +187,6 @@ private extension BalanceSwiftUIView {
     /// swapped in when demo mode is on. Render-time only; the caller's config is untouched.
     var renderedConfig: BalanceViewConfig {
         config.applyingDemoBalance(demoBalance.snapshot)
-    }
-
-    /// Always present while demo mode is on and the header shows content.
-    @ViewBuilder
-    var demoBadgeView: some View {
-        if config.showsDemoBadge(demoBalance.snapshot) {
-            DemoBalanceBadge()
-                .padding(.top, Layout.demoBadgeTopPadding)
-        }
     }
 
     @ViewBuilder
@@ -486,9 +474,6 @@ private extension BalanceSwiftUIView {
         static let addressHeight: CGFloat = TKTextStyle.body2.lineHeight
         static let addressTopPadding: CGFloat = 4
         static let addressBottomPadding: CGFloat = 8
-        /// Badge (22pt) + this padding stays inside `contentInsets.top` (28pt),
-        /// so the badge never overlaps the amount and the header keeps its height.
-        static let demoBadgeTopPadding: CGFloat = 4
         static let tooltipMaximumWidth: CGFloat = 280
         static let amountTooltipConfiguration = HintConfiguration(
             position: HintPosition(

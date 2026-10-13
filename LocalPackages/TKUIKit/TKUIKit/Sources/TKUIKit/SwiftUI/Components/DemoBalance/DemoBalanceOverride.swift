@@ -13,19 +13,13 @@ public extension BalanceViewConfig {
         content.balance = content.balance.applyingDemoBalance(demo)
         return .content(content)
     }
-
-    /// `true` when the header is showing content in demo mode, i.e. when the badge must be drawn.
-    func showsDemoBadge(_ demo: DemoBalanceSettings.Snapshot) -> Bool {
-        guard demo.isEnabled, case .content = self else { return false }
-        return true
-    }
 }
 
 extension BalanceViewContent.Balance {
     func applyingDemoBalance(_ demo: DemoBalanceSettings.Snapshot) -> BalanceViewContent.Balance {
         switch state {
         case .secure:
-            // Hidden-balance mode stays hidden; the badge still marks the header as demo.
+            // Hidden-balance mode stays hidden.
             return self
         case let .amount(real):
             let formatted = DemoBalanceFormatter.format(amount: demo.amount, currency: demo.currency)

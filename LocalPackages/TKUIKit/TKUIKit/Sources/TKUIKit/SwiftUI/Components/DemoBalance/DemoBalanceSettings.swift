@@ -8,9 +8,7 @@ import Foundation
 /// - it is stored in `UserDefaults` on this device and never leaves it;
 /// - it is read exclusively at render time by `BalanceSwiftUIView`;
 /// - wallet state, keys, nodes, history, send/receive and fee calculation never see it,
-///   so the demo amount can never be spent or used anywhere;
-/// - while it is on, `DemoBalanceBadge` is always rendered over the balance. There is
-///   deliberately no setting that hides the badge.
+///   so the demo amount can never be spent or used anywhere.
 public final class DemoBalanceSettings: ObservableObject {
     public static let shared = DemoBalanceSettings()
 

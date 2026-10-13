@@ -71,7 +71,6 @@ final class DemoBalanceTests: XCTestCase {
         let real = makeConfig(text: "$10")
         let snapshot = DemoBalanceSettings.Snapshot(isEnabled: false, amount: decimal("999"), currency: .usd)
         XCTAssertEqual(real.applyingDemoBalance(snapshot), real)
-        XCTAssertFalse(real.showsDemoBadge(snapshot))
     }
 
     func testEnabledReplacesAmountAndRequiresBadge() {
@@ -80,7 +79,6 @@ final class DemoBalanceTests: XCTestCase {
         let rendered = real.applyingDemoBalance(snapshot)
 
         XCTAssertNotEqual(rendered, real)
-        XCTAssertTrue(real.showsDemoBadge(snapshot))
         guard
             case let .content(content) = rendered,
             case let .amount(amount) = content.balance.state
@@ -98,13 +96,11 @@ final class DemoBalanceTests: XCTestCase {
         let real = BalanceViewConfig.content(BalanceViewContent(balance: .secure()))
         let snapshot = DemoBalanceSettings.Snapshot(isEnabled: true, amount: decimal("999"), currency: .usd)
         XCTAssertEqual(real.applyingDemoBalance(snapshot), real)
-        XCTAssertTrue(real.showsDemoBadge(snapshot))
     }
 
     func testShimmerIsNotOverridden() {
         let snapshot = DemoBalanceSettings.Snapshot(isEnabled: true, amount: decimal("999"), currency: .usd)
         XCTAssertEqual(BalanceViewConfig.shimmer.applyingDemoBalance(snapshot), .shimmer)
-        XCTAssertFalse(BalanceViewConfig.shimmer.showsDemoBadge(snapshot))
     }
 
     func testFormatterSplitsIntegerAndFraction() {

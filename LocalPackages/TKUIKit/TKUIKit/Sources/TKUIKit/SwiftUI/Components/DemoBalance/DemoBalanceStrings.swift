@@ -3,10 +3,6 @@ import Foundation
 /// Texts for the demo-balance mode. Russian when the app runs in Russian, English otherwise.
 /// Kept out of the generated `TKLocales` so the fork does not touch the shared string tables.
 public enum DemoBalanceStrings {
-    public static var badge: String {
-        isRussian ? "DEMO · не реальный баланс" : "DEMO · not a real balance"
-    }
-
     public static var sectionTitle: String {
         isRussian ? "Демо-режим" : "Demo mode"
     }
@@ -31,8 +27,8 @@ public enum DemoBalanceStrings {
 
     public static var sectionFooter: String {
         isRussian
-            ? "Демо-баланс хранится только на этом устройстве и ничем не обеспечен: его нельзя отправить, обменять или использовать. Реальный баланс, отправка и история работают как обычно. Пока режим включён, над балансом всегда видна плашка DEMO."
-            : "The demo balance is stored on this device only and is not backed by anything: it cannot be sent, swapped or used. Your real balance, sending and history work as usual. While the mode is on, a DEMO badge is always shown above the balance."
+            ? "Демо-баланс хранится только на этом устройстве и ничем не обеспечен: его нельзя отправить, обменять или использовать. Реальный баланс, отправка и история работают как обычно."
+            : "The demo balance is stored on this device only and is not backed by anything: it cannot be sent, swapped or used. Your real balance, sending and history work as usual."
     }
 
     public static var amountAlertTitle: String {

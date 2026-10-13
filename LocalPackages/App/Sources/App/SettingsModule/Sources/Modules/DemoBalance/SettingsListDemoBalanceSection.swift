@@ -4,8 +4,7 @@ import UIKit
 /// The "Demo mode" section of the root settings list.
 ///
 /// Drives `DemoBalanceSettings` only. Nothing here touches wallets, keys, network or
-/// transactions: the values are read back solely by `BalanceSwiftUIView` at render time,
-/// which also draws the mandatory `DemoBalanceBadge` while the mode is on.
+/// transactions: the values are read back solely by `BalanceSwiftUIView` at render time.
 enum SettingsListDemoBalanceSection {
     static func make(settings: DemoBalanceSettings = .shared) -> SettingsListSection {
         var items: [SettingsListItemsSectionItem] = [.listItem(makeToggleItem(settings: settings))]
