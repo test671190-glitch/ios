@@ -73,7 +73,7 @@ final class DemoBalanceTests: XCTestCase {
         XCTAssertEqual(real.applyingDemoBalance(snapshot), real)
     }
 
-    func testEnabledReplacesAmountAndRequiresBadge() {
+    func testEnabledReplacesAmount() {
         let real = makeConfig(text: "$10")
         let snapshot = DemoBalanceSettings.Snapshot(isEnabled: true, amount: decimal("999"), currency: .usd)
         let rendered = real.applyingDemoBalance(snapshot)
@@ -92,7 +92,7 @@ final class DemoBalanceTests: XCTestCase {
         )
     }
 
-    func testSecureModeStaysHiddenButStillShowsBadge() {
+    func testSecureModeStaysHidden() {
         let real = BalanceViewConfig.content(BalanceViewContent(balance: .secure()))
         let snapshot = DemoBalanceSettings.Snapshot(isEnabled: true, amount: decimal("999"), currency: .usd)
         XCTAssertEqual(real.applyingDemoBalance(snapshot), real)

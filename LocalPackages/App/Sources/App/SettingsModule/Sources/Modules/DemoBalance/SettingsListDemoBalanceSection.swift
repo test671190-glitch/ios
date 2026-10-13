@@ -27,7 +27,6 @@ private extension SettingsListDemoBalanceSection {
         SettingsListItem(
             id: .demoBalanceToggleItemIdentifier,
             title: SettingsListItemTitle(DemoBalanceStrings.toggleTitle),
-            tags: [.tag(text: "DEMO")],
             captions: [SettingsListItemCaption(DemoBalanceStrings.toggleCaption)],
             accessory: .toggle(
                 SettingsListItemToggleAccessory(isOn: settings.isEnabled) { isOn in
