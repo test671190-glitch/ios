@@ -2,24 +2,34 @@ workflows:
   tonkeeper-unsigned:
     name: Tonkeeper fork (unsigned)
     instance_type: mac_mini_m2
-    max_build_duration: 60
+    max_build_duration: 90
     environment:
       xcode: latest
       vars:
         XCODE_PROJECT: "Keeper.xcodeproj"
         XCODE_SCHEME: "Keeper"
     scripts:
-      - name: Список схем (узнать точное имя XCODE_SCHEME)
+      - name: Положить GoogleService-Info.plist из секрета
         script: |
-          xcodebuild -list -project "$XCODE_PROJECT" || true
+          set -e
+          if [ -z "$GOOGLE_SERVICE_INFO_PLIST_B64" ]; then
+            echo "error: в Codemagic не задана секретная переменная GOOGLE_SERVICE_INFO_PLIST_B64 (base64 от GoogleService-Info.plist для Keeper)" >&2
+            exit 1
+          fi
+          DEST="$CM_BUILD_DIR/Keeper/Resources/Firebase/Keeper"
+          mkdir -p "$DEST"
+          echo "$GOOGLE_SERVICE_INFO_PLIST_B64" | base64 --decode > "$DEST/GoogleService-Info.plist"
+          plutil -lint "$DEST/GoogleService-Info.plist"
 
       - name: Сборка без подписи в .xcarchive
         script: |
           set -e
+          # Без -configuration: конфигурация архива берётся из схемы Keeper (KeeperRelease).
+          # В проекте нет конфигурации Debug, а при -configuration Debug пакеты SPM и таргеты
+          # раскладывали продукты в разные папки (Debug-iphoneos и KeeperDebug-iphoneos).
           xcodebuild \
             -project "$XCODE_PROJECT" \
             -scheme "$XCODE_SCHEME" \
-            -configuration Debug \
             -sdk iphoneos \
             -archivePath "$CM_BUILD_DIR/Tonkeeper.xcarchive" \
             archive \
