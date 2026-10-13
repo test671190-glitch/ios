@@ -1,3 +1,4 @@
+import Combine
 import KeeperCore
 import SwiftUI
 import TKCore
@@ -56,6 +57,7 @@ final class SettingsListRootConfigurator: SettingsListConfigurator {
     private let anaylticsProvider: AnalyticsProvider
     private let walletNotificationStore: WalletNotificationStore
     private let settingsRepository: SettingsRepository
+    private var demoBalanceCancellable: AnyCancellable?
 
     // MARK: - Init
 
@@ -153,6 +155,12 @@ final class SettingsListRootConfigurator: SettingsListConfigurator {
                 observer.didUpdateState?(state)
             }
         }
+        demoBalanceCancellable = DemoBalanceSettings.shared.didChange
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                guard let self else { return }
+                self.didUpdateState?(self.createState())
+            }
     }
 
     private func createState() -> SettingsListState {
@@ -168,6 +176,7 @@ final class SettingsListRootConfigurator: SettingsListConfigurator {
         if let appSettingsSection = createAppSettingsSection() {
             sections.append(appSettingsSection)
         }
+        sections.append(SettingsListDemoBalanceSection.make())
         sections.append(createSupportSection())
         sections.append(createLogoutSection())
         sections.append(createAppInformationSection())
