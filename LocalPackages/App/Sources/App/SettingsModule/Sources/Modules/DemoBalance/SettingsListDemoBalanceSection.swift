@@ -26,7 +26,7 @@ enum SettingsListDemoBalanceSection {
 private extension SettingsListDemoBalanceSection {
     static func makeToggleItem(settings: DemoBalanceSettings) -> SettingsListItem {
         SettingsListItem(
-            id: .toggleItemIdentifier,
+            id: .demoBalanceToggleItemIdentifier,
             title: SettingsListItemTitle(DemoBalanceStrings.toggleTitle),
             tags: [.tag(text: "DEMO")],
             captions: [SettingsListItemCaption(DemoBalanceStrings.toggleCaption)],
@@ -39,19 +39,27 @@ private extension SettingsListDemoBalanceSection {
     }
 
     static func makeAmountItem(settings: DemoBalanceSettings) -> SettingsListItem {
-        let formatted = DemoBalanceDisplay.text(amount: settings.amount, currency: settings.currency)
-        return SettingsListItem(
-            id: .amountItemIdentifier,
+        SettingsListItem(
+            id: .demoBalanceAmountItemIdentifier,
             title: SettingsListItemTitle(DemoBalanceStrings.amountTitle),
             accessory: .text(
                 SettingsListItemTextAccessory(
-                    text: formatted,
+                    text: DemoBalanceDisplay.text(amount: settings.amount, currency: settings.currency),
                     color: .accentBlue,
                     textStyle: .label1
                 )
             ),
             onTap: { anchorView in
-                guard let presenter = anchorView?.demoBalancePresenter else { return }
+                // Present from the top-most modal of the window, like
+                // `modalPresentationSourceViewController()`; skip while another alert is up
+                // (e.g. a quick double tap) or a modal is still animating away.
+                guard
+                    let presenter = anchorView?.window?.rootViewController?.topPresentedViewController(),
+                    !presenter.isBeingDismissed,
+                    !(presenter is UIAlertController)
+                else {
+                    return
+                }
                 presentAmountAlert(from: presenter, settings: settings)
             }
         )
@@ -60,7 +68,7 @@ private extension SettingsListDemoBalanceSection {
     static func makeCurrencyItem(settings: DemoBalanceSettings) -> SettingsListItem {
         let selected = settings.currency
         return SettingsListItem(
-            id: .currencyItemIdentifier,
+            id: .demoBalanceCurrencyItemIdentifier,
             title: SettingsListItemTitle(DemoBalanceStrings.currencyTitle),
             accessory: .menu(
                 SettingsListItemMenuAccessory(
@@ -89,24 +97,33 @@ private extension SettingsListDemoBalanceSection {
             preferredStyle: .alert
         )
 
+        let saveAction = UIAlertAction(title: DemoBalanceStrings.save, style: .default) { [weak alert] _ in
+            // Save is disabled while the input is invalid; this guard only covers races.
+            let text = alert?.textFields?.first?.text ?? ""
+            guard let amount = DemoBalanceDisplay.amount(fromInput: text) else { return }
+            settings.setAmount(amount)
+        }
+
         alert.addTextField { textField in
             textField.keyboardType = .decimalPad
             textField.placeholder = DemoBalanceStrings.amountAlertPlaceholder
             textField.text = settings.amount == 0 ? nil : DemoBalanceDisplay.editableText(amount: settings.amount)
             textField.clearButtonMode = .whileEditing
             textField.accessibilityIdentifier = "demo_balance_amount_field"
+            // An empty field resets to zero; unparsable input disables Save instead of being
+            // silently dropped when the alert closes.
+            textField.addAction(
+                UIAction(handler: { [weak textField, weak saveAction] _ in
+                    let text = textField?.text ?? ""
+                    saveAction?.isEnabled = DemoBalanceDisplay.amount(fromInput: text) != nil
+                }),
+                for: .editingChanged
+            )
         }
 
         alert.addAction(UIAlertAction(title: DemoBalanceStrings.cancel, style: .cancel))
-        alert.addAction(
-            UIAlertAction(title: DemoBalanceStrings.save, style: .default) { [weak alert] _ in
-                let text = alert?.textFields?.first?.text ?? ""
-                // Empty field resets to zero; unparsable input leaves the value unchanged.
-                let parsed: Decimal? = text.isEmpty ? Decimal.zero : DemoBalanceSettings.parseAmount(text)
-                guard let amount = parsed else { return }
-                settings.setAmount(amount)
-            }
-        )
+        alert.addAction(saveAction)
+        alert.preferredAction = saveAction
 
         presenter.present(alert, animated: true)
     }
@@ -114,49 +131,46 @@ private extension SettingsListDemoBalanceSection {
 
 /// Plain-text rendering of the demo amount for the settings row and the edit field.
 private enum DemoBalanceDisplay {
+    /// Same shape as the header: grouped, two fraction digits, symbol on its usual side.
     static func text(amount: Decimal, currency: DemoBalanceSettings.Currency) -> String {
-        let number = makeFormatter(grouping: true).string(from: NSDecimalNumber(decimal: amount)) ?? "0"
+        let number = displayFormatter.string(from: NSDecimalNumber(decimal: amount)) ?? "0"
         return currency.isSymbolLeading
             ? "\(currency.symbol)\(number)"
             : "\(number) \(currency.symbol)"
     }
 
+    /// ASCII digits without grouping, using the locale's decimal separator when it is `,`
+    /// (`1234,5` in ru_RU, `1234.5` in en_US). Always round-trips through
+    /// `DemoBalanceSettings.parseAmount`, unlike a locale `NumberFormatter`, which may emit
+    /// non-ASCII digits or separators in some regions.
     static func editableText(amount: Decimal) -> String {
-        makeFormatter(grouping: false).string(from: NSDecimalNumber(decimal: amount)) ?? ""
+        let plain = NSDecimalNumber(decimal: amount).description(withLocale: posixLocale)
+        guard Locale.autoupdatingCurrent.decimalSeparator == "," else { return plain }
+        return plain.replacingOccurrences(of: ".", with: ",")
     }
 
-    private static func makeFormatter(grouping: Bool) -> NumberFormatter {
+    /// `0` for an empty field, the parsed value for valid input, `nil` for anything else.
+    static func amount(fromInput text: String) -> Decimal? {
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? 0 : DemoBalanceSettings.parseAmount(trimmed)
+    }
+
+    private static let posixLocale = Locale(identifier: "en_US_POSIX")
+
+    private static let displayFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
-        formatter.locale = .current
+        formatter.locale = .autoupdatingCurrent
         formatter.numberStyle = .decimal
-        formatter.usesGroupingSeparator = grouping
+        formatter.usesGroupingSeparator = true
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 2
         formatter.roundingMode = .down
         return formatter
-    }
-}
-
-private extension UIView {
-    /// The top-most view controller that can present over the screen this view is on.
-    var demoBalancePresenter: UIViewController? {
-        var responder: UIResponder? = self
-        while let current = responder {
-            if let viewController = current as? UIViewController {
-                var top = viewController
-                while let presented = top.presentedViewController, !presented.isBeingDismissed {
-                    top = presented
-                }
-                return top
-            }
-            responder = current.next
-        }
-        return window?.rootViewController
-    }
+    }()
 }
 
 private extension String {
-    static let toggleItemIdentifier = "DemoBalanceToggleItem"
-    static let amountItemIdentifier = "DemoBalanceAmountItem"
-    static let currencyItemIdentifier = "DemoBalanceCurrencyItem"
+    static let demoBalanceToggleItemIdentifier = "DemoBalanceToggleItem"
+    static let demoBalanceAmountItemIdentifier = "DemoBalanceAmountItem"
+    static let demoBalanceCurrencyItemIdentifier = "DemoBalanceCurrencyItem"
 }
