@@ -24,6 +24,8 @@ workflows:
       - name: Сборка без подписи в .xcarchive
         script: |
           set -e
+          # ENABLE_USER_SCRIPT_SANDBOXING=NO: скрипт Crashlytics+dSYM отправляет dSYM по сети,
+          # песочница user scripts (включена в проекте) этого не разрешает.
           # Без -configuration: конфигурация архива берётся из схемы Keeper (KeeperRelease).
           # В проекте нет конфигурации Debug, а при -configuration Debug пакеты SPM и таргеты
           # раскладывали продукты в разные папки (Debug-iphoneos и KeeperDebug-iphoneos).
@@ -33,6 +35,7 @@ workflows:
             -sdk iphoneos \
             -archivePath "$CM_BUILD_DIR/Tonkeeper.xcarchive" \
             archive \
+            ENABLE_USER_SCRIPT_SANDBOXING=NO \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO \
