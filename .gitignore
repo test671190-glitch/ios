@@ -24,7 +24,10 @@ DerivedData/
 *.dSYM
 
 ## Firebase config
-Keeper/Resources/Firebase/
+Keeper/Resources/Firebase/*
+!Keeper/Resources/Firebase/Keeper/
+Keeper/Resources/Firebase/Keeper/*
+!Keeper/Resources/Firebase/Keeper/GoogleService-Info.plist
 
 ## Modules
 LocalPackages/**/Package.resolved
