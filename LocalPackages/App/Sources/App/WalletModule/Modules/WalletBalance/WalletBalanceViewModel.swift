@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import KeeperCore
 import SwiftUI
@@ -200,6 +201,7 @@ final class WalletBalanceViewModelImplementation:
     private var stakingUpdateTimer: DispatchSourceTimer?
     @MainActor
     private var isOnScreen = false
+    private var demoBalanceCancellable: AnyCancellable?
 
     @MainActor
     var moreAssetsPreviewAvatars: [AssetAvatarViewImageSource] {
@@ -380,6 +382,14 @@ final class WalletBalanceViewModelImplementation:
         balanceLoader.addUpdateObserver(self) { observer, update in
             observer.syncQueue.async {
                 observer.trackLoadBalance(update: update)
+            }
+        }
+
+        // Rebuild the token list when demo mode changes (DemoBalanceMarker.swift).
+        demoBalanceCancellable = DemoBalanceMarker.didChange.sink { [weak self] in
+            Task { @MainActor [weak self] in
+                guard let self else { return }
+                applyWalletContentImmediately(walletViewModel.content)
             }
         }
     }

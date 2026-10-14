@@ -20,6 +20,7 @@ struct BalanceItemMapper {
     func mapTonItem(
         _ item: ProcessedBalanceTonItem,
         tags: [TKTagView.Configuration] = [],
+        demo: DemoBalanceMarker.GramRow? = nil,
         isSecure: Bool,
         isPinned: Bool
     ) -> TKListItemContentView.Configuration {
@@ -30,17 +31,24 @@ struct BalanceItemMapper {
             isUnverified: false
         )
 
+        // Demo values always come together with their "DEMO" tag (DemoBalanceMarker.swift).
+        let demoAmount = demo.flatMap { BigUInt($0.nanoAmount, radix: 10) }
+        let activeDemo = demoAmount == nil ? nil : demo
+        let amount = demoAmount ?? BigUInt(item.amount)
+        let converted = activeDemo?.converted ?? item.converted
+        let rowTags = activeDemo.map { tags + [$0.tag] } ?? tags
+
         return TKListItemContentView.Configuration(
             iconViewConfiguration: .tonConfiguration(),
             textContentViewConfiguration: createTextContentViewConfiguration(
                 title: TonInfo.symbol,
                 isPinned: isPinned,
                 caption: caption,
-                amount: BigUInt(item.amount),
+                amount: amount,
                 amountFractionDigits: TonInfo.fractionDigits,
-                convertedAmount: item.converted,
+                convertedAmount: converted,
                 currency: item.currency,
-                tags: tags,
+                tags: rowTags,
                 isSecure: isSecure
             )
         )

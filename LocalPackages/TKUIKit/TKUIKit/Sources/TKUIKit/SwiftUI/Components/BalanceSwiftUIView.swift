@@ -173,6 +173,7 @@ public struct BalanceSwiftUIView: View {
     public var body: some View {
         VStack(spacing: 4) {
             amountView
+                .demoBalanceBadge() // DemoBalanceMarker.swift
 
             addressView
         }

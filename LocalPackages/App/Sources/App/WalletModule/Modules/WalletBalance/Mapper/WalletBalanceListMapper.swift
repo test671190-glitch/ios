@@ -40,6 +40,10 @@ struct WalletBalanceListMapper {
                 listItemContentViewConfiguration: balanceItemMapper.mapTonItem(
                     item,
                     tags: tonTags(for: wallet),
+                    demo: DemoBalanceMarker.gramRow(
+                        price: item.price,
+                        walletCurrencyCode: item.currency.code
+                    ),
                     isSecure: isSecure,
                     isPinned: isPinned
                 ),
