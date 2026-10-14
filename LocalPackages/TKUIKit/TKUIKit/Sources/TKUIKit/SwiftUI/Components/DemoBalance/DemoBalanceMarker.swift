@@ -1,21 +1,22 @@
 import Combine
+import Foundation
 import SwiftUI
-import UIKit
 
 // MARK: - DemoBalanceMarker
 //
-// Self-contained file. It does not call any other demo-balance code: it reads the raw
-// `UserDefaults` keys itself, so it keeps working if `DemoBalanceSettings.swift` or
-// `DemoBalanceOverride.swift` break, and it can be restored on its own.
+// Standalone "DEMO" marker. It imports only Foundation, SwiftUI and Combine, and it does not
+// reference any other project file: it reads its own `UserDefaults` keys and returns plain
+// values. Other files never need its types; they only receive neutral values, see below.
 //
-// It is the single source of truth for the "DEMO" marker AND for the demo GRAM row.
-// Both come from the same `isActive` check, so the demo amount in the token list can never
-// be shown without its marker, and the header always carries the badge while demo is on.
-//
-// Hooks into the rest of the project (each is one line, grep for `DemoBalanceMarker`):
+// Call sites in the rest of the project (grep for `DemoBalanceMarker`):
 //   1. `BalanceSwiftUIView.body`            → `.demoBalanceBadge()`
 //   2. `WalletBalanceListMapper.mapTonItem` → `DemoBalanceMarker.gramRow(...)`
 //   3. `WalletBalanceViewModel`             → refresh the list on `DemoBalanceMarker.didChange`
+//
+// Removing this file therefore needs exactly those three lines removed as well. Nothing else
+// in the project changes, and the build reports the lines if they are forgotten.
+// Removing any other part of the project leaves this file compiling, because it has no
+// dependency on that part.
 //
 // The marker is drawn into the regular view hierarchy, so it is also what iOS captures for the
 // app switcher snapshot.
@@ -24,8 +25,8 @@ public enum DemoBalanceMarker {
     /// Text of the badge and of the token tag.
     public static let text = "DEMO"
 
-    /// Keys written by `DemoBalanceSettings`. Duplicated on purpose to stay independent;
-    /// `DemoBalanceMarkerTests` fails if the two files ever drift apart.
+    /// Keys written by the demo settings. They are the storage contract: `DemoBalanceMarkerTests`
+    /// pins them, so a rename on either side fails the tests instead of hiding the marker.
     enum Keys {
         static let isEnabled = "tk.demoBalance.isEnabled"
         static let amount = "tk.demoBalance.amount"
@@ -50,24 +51,17 @@ public enum DemoBalanceMarker {
             .eraseToAnyPublisher()
     }
 
-    // MARK: Token tag
-
-    /// Orange "DEMO" tag shown next to the token title.
-    public static var tagConfiguration: TKTagView.Configuration {
-        .accentTag(text: text, color: .Accent.orange)
-    }
-
     // MARK: GRAM row
 
-    /// Demo values for the GRAM row of the token list. The tag is part of the result, so a
-    /// caller cannot take the amount without the marker.
+    /// Demo values for the GRAM row of the token list. `tagText` always comes with the amount,
+    /// so the caller cannot take the amount without the marker text.
     public struct GramRow: Equatable {
         /// Amount in nano-GRAM (9 fraction digits), ready for the list formatter.
         public let nanoAmount: String
         /// Value of `nanoAmount` in the wallet's fiat currency.
         public let converted: Decimal
-        /// Must be appended to the row's tags.
-        public let tag: TKTagView.Configuration
+        /// Text of the tag that must be shown next to the GRAM title.
+        public let tagText: String
     }
 
     /// Returns demo values for the GRAM row, or `nil` when demo is off or the amount cannot be
@@ -102,7 +96,7 @@ public enum DemoBalanceMarker {
         return GramRow(
             nanoAmount: nanoString(from: gram),
             converted: rounded(converted, scale: 2),
-            tag: tagConfiguration
+            tagText: text
         )
     }
 
@@ -150,6 +144,8 @@ public enum DemoBalanceMarker {
 // MARK: - Header badge
 
 /// Capsule "DEMO" badge laid over the balance header.
+///
+/// The colour is fixed on purpose: a warning plate must look the same in both themes.
 public struct DemoBalanceBadge: View {
     public init() {}
 
@@ -160,7 +156,7 @@ public struct DemoBalanceBadge: View {
             .foregroundColor(.white)
             .padding(.horizontal, 10)
             .padding(.vertical, 3)
-            .background(Capsule().fill(Color(UIColor.Accent.orange)))
+            .background(Capsule().fill(Color.orange))
             .fixedSize()
             .allowsHitTesting(false)
             .accessibilityLabel(DemoBalanceMarker.text)
@@ -168,7 +164,7 @@ public struct DemoBalanceBadge: View {
     }
 }
 
-/// Watches the demo flag on its own, independent of `DemoBalanceSettings`.
+/// Watches the demo flag on its own.
 final class DemoBalanceMarkerObserver: ObservableObject {
     @Published private(set) var isActive = DemoBalanceMarker.isActive()
     private var cancellable: AnyCancellable?

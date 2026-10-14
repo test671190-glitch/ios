@@ -21,20 +21,22 @@ final class DemoBalanceMarkerTests: XCTestCase {
 
     // MARK: - Marker follows the settings
 
-    /// Fails if the keys in `DemoBalanceMarker` and `DemoBalanceSettings` drift apart,
-    /// i.e. if the badge would stop showing while demo mode is on.
-    func testMarkerReadsWhatSettingsWrite() {
-        let settings = DemoBalanceSettings(defaults: defaults)
+    /// Pins the storage keys. The demo settings write these exact keys; if they ever change, this
+    /// fails instead of the badge silently stopping to show while demo mode is on.
+    func testKeysAreTheStorageContract() {
+        XCTAssertEqual(DemoBalanceMarker.Keys.isEnabled, "tk.demoBalance.isEnabled")
+        XCTAssertEqual(DemoBalanceMarker.Keys.amount, "tk.demoBalance.amount")
+        XCTAssertEqual(DemoBalanceMarker.Keys.currency, "tk.demoBalance.currency")
+    }
+
+    func testMarkerFollowsStoredValues() {
         XCTAssertFalse(DemoBalanceMarker.isActive(defaults: defaults))
 
-        settings.setEnabled(true)
+        enable(amount: "150", currency: "usd")
         XCTAssertTrue(DemoBalanceMarker.isActive(defaults: defaults))
-
-        settings.setAmount(decimal("150"))
-        settings.setCurrency(.usd)
         XCTAssertNotNil(DemoBalanceMarker.gramRow(price: decimal("1.5"), walletCurrencyCode: "USD", defaults: defaults))
 
-        settings.setEnabled(false)
+        defaults.set(false, forKey: DemoBalanceMarker.Keys.isEnabled)
         XCTAssertFalse(DemoBalanceMarker.isActive(defaults: defaults))
         XCTAssertNil(DemoBalanceMarker.gramRow(price: decimal("1.5"), walletCurrencyCode: "USD", defaults: defaults))
     }
@@ -58,7 +60,7 @@ final class DemoBalanceMarkerTests: XCTestCase {
     func testGramRowAlwaysCarriesTheDemoTag() throws {
         enable(amount: "1", currency: "ton")
         let row = try XCTUnwrap(DemoBalanceMarker.gramRow(price: decimal("1"), walletCurrencyCode: "USD", defaults: defaults))
-        XCTAssertEqual(row.tag, DemoBalanceMarker.tagConfiguration)
+        XCTAssertEqual(row.tagText, DemoBalanceMarker.text)
     }
 
     func testGramRowIsNilForOtherFiatOrZeroPrice() {
