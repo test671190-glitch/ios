@@ -6,18 +6,6 @@ import TKUIKit
 import TronSwift
 import UIKit
 
-/// Replaces the TON row amount with a value that comes from outside (for example a display-only
-/// mode). The mapper does not know where the values come from, and it does not know any mode by
-/// name: it only shows the amount, the fiat value and one tag, which always come together.
-struct TonAmountOverride {
-    /// Amount in nano units (9 fraction digits).
-    let nanoAmount: String
-    /// Fiat value of `nanoAmount`.
-    let converted: Decimal
-    /// Text of the tag shown next to the title.
-    let tagText: String
-}
-
 struct BalanceItemMapper {
     private let amountFormatter: AmountFormatter
     private let signedAmountFormatter: AmountFormatter
@@ -32,7 +20,6 @@ struct BalanceItemMapper {
     func mapTonItem(
         _ item: ProcessedBalanceTonItem,
         tags: [TKTagView.Configuration] = [],
-        amountOverride: TonAmountOverride? = nil,
         isSecure: Bool,
         isPinned: Bool
     ) -> TKListItemContentView.Configuration {
@@ -43,27 +30,17 @@ struct BalanceItemMapper {
             isUnverified: false
         )
 
-        // An override brings its amount, fiat value and tag together: the amount is never shown
-        // without its tag.
-        let overrideAmount = amountOverride.flatMap { BigUInt($0.nanoAmount, radix: 10) }
-        let activeOverride = overrideAmount == nil ? nil : amountOverride
-        let amount = overrideAmount ?? BigUInt(item.amount)
-        let converted = activeOverride?.converted ?? item.converted
-        let rowTags = activeOverride.map {
-            tags + [TKTagView.Configuration.accentTag(text: $0.tagText, color: .Accent.orange)]
-        } ?? tags
-
         return TKListItemContentView.Configuration(
             iconViewConfiguration: .tonConfiguration(),
             textContentViewConfiguration: createTextContentViewConfiguration(
                 title: TonInfo.symbol,
                 isPinned: isPinned,
                 caption: caption,
-                amount: amount,
+                amount: BigUInt(item.amount),
                 amountFractionDigits: TonInfo.fractionDigits,
-                convertedAmount: converted,
+                convertedAmount: item.converted,
                 currency: item.currency,
-                tags: rowTags,
+                tags: tags,
                 isSecure: isSecure
             )
         )
