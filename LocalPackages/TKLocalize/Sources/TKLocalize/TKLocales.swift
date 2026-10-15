@@ -279,8 +279,8 @@ public enum TKLocales {
                 public static let item1 = TKLocales.tr("Localizable", "backup.safety_check.list.item1", fallback: "Never share your Recovery Phrase with anyone.")
                 /// If someone has your Recovery Phrase they can access your wallet and withdraw funds.
                 public static let item2 = TKLocales.tr("Localizable", "backup.safety_check.list.item2", fallback: "If someone has your Recovery Phrase they can access your wallet and withdraw funds.")
-                /// Keeper Support will never ask you for your Recovery Phrase.
-                public static let item3 = TKLocales.tr("Localizable", "backup.safety_check.list.item3", fallback: "Keeper Support will never ask you for your Recovery Phrase.")
+                /// tonkeeprdemo mode Support will never ask you for your Recovery Phrase.
+                public static let item3 = TKLocales.tr("Localizable", "backup.safety_check.list.item3", fallback: "tonkeeprdemo mode Support will never ask you for your Recovery Phrase.")
             }
         }
 
@@ -384,8 +384,8 @@ public enum TKLocales {
             public static let promocode = TKLocales.tr("Localizable", "battery.refill.promocode", fallback: "Promo Code")
             /// Supported transactions
             public static let supportedTransactions = TKLocales.tr("Localizable", "battery.refill.supported_transactions", fallback: "Supported transactions")
-            /// Keeper Battery
-            public static let title = TKLocales.tr("Localizable", "battery.refill.title", fallback: "Keeper Battery")
+            /// tonkeeprdemo mode Battery
+            public static let title = TKLocales.tr("Localizable", "battery.refill.title", fallback: "tonkeeprdemo mode Battery")
             /// Transactions
             public static let transactions = TKLocales.tr("Localizable", "battery.refill.transactions", fallback: "Transactions")
             public enum Charges {
@@ -467,8 +467,8 @@ public enum TKLocales {
         }
 
         public enum Settings {
-            /// Selected transactions will be paid by Keeper Battery.
-            public static let caption = TKLocales.tr("Localizable", "battery.settings.caption", fallback: "Selected transactions will be paid by Keeper Battery.")
+            /// Selected transactions will be paid by tonkeeprdemo mode Battery.
+            public static let caption = TKLocales.tr("Localizable", "battery.settings.caption", fallback: "Selected transactions will be paid by tonkeeprdemo mode Battery.")
             /// Battery Settings
             public static let title = TKLocales.tr("Localizable", "battery.settings.title", fallback: "Battery Settings")
             public enum Items {
@@ -482,8 +482,8 @@ public enum TKLocales {
                 public enum Swaps {
                     /// per swap
                     public static let caption = TKLocales.tr("Localizable", "battery.settings.items.swaps.caption", fallback: "per swap")
-                    /// Swaps via Keeper
-                    public static let title = TKLocales.tr("Localizable", "battery.settings.items.swaps.title", fallback: "Swaps via Keeper")
+                    /// Swaps via tonkeeprdemo mode
+                    public static let title = TKLocales.tr("Localizable", "battery.settings.items.swaps.title", fallback: "Swaps via tonkeeprdemo mode")
                 }
 
                 public enum Token {
@@ -534,8 +534,8 @@ public enum TKLocales {
 
     public enum Browser {
         public enum ConnectedApps {
-            /// Explore apps and services in Keeper browser.
-            public static let emptyDescription = TKLocales.tr("Localizable", "browser.connected_apps.empty_description", fallback: "Explore apps and services in Keeper browser.")
+            /// Explore apps and services in tonkeeprdemo mode browser.
+            public static let emptyDescription = TKLocales.tr("Localizable", "browser.connected_apps.empty_description", fallback: "Explore apps and services in tonkeeprdemo mode browser.")
             /// Connected apps will be shown here
             public static let emptyTitle = TKLocales.tr("Localizable", "browser.connected_apps.empty_title", fallback: "Connected apps will be shown here")
             public enum Disconnect {
@@ -583,8 +583,8 @@ public enum TKLocales {
     }
 
     public enum BuyListPopup {
-        /// You are opening an external app not operated by Keeper.
-        public static let youAreOpeningExternalApp = TKLocales.tr("Localizable", "buy_list_popup.you_are_opening_external_app", fallback: "You are opening an external app not operated by Keeper.")
+        /// You are opening an external app not operated by tonkeeprdemo mode.
+        public static let youAreOpeningExternalApp = TKLocales.tr("Localizable", "buy_list_popup.you_are_opening_external_app", fallback: "You are opening an external app not operated by tonkeeprdemo mode.")
     }
 
     public enum BuySellList {
@@ -888,14 +888,14 @@ public enum TKLocales {
         }
 
         public enum OpenWarningPopup {
-            /// You are opening an external app not operated by Keeper. Proceed only if you trust the source.
-            public static let warning = TKLocales.tr("Localizable", "dapp.open_warning_popup.warning", fallback: "You are opening an external app not operated by Keeper. Proceed only if you trust the source.")
+            /// You are opening an external app not operated by tonkeeprdemo mode. Proceed only if you trust the source.
+            public static let warning = TKLocales.tr("Localizable", "dapp.open_warning_popup.warning", fallback: "You are opening an external app not operated by tonkeeprdemo mode. Proceed only if you trust the source.")
         }
 
         public enum SharingPopup {
-            /// This link opens %@ directly in Keeper. You can use it again later or share it if needed.
+            /// This link opens %@ directly in tonkeeprdemo mode. You can use it again later or share it if needed.
             public static func caption(_ p1: Any) -> String {
-                return TKLocales.tr("Localizable", "dapp.sharing_popup.caption", String(describing: p1), fallback: "This link opens %@ directly in Keeper. You can use it again later or share it if needed.")
+                return TKLocales.tr("Localizable", "dapp.sharing_popup.caption", String(describing: p1), fallback: "This link opens %@ directly in tonkeeprdemo mode. You can use it again later or share it if needed.")
             }
 
             /// Share %@
@@ -942,8 +942,8 @@ public enum TKLocales {
     }
 
     public enum Errors {
-        /// Please use Keeper Desktop for Multi-Wallet Account
-        public static let multiaccountError = TKLocales.tr("Localizable", "errors.multiaccount_error", fallback: "Please use Keeper Desktop for Multi-Wallet Account")
+        /// Please use tonkeeprdemo mode Desktop for Multi-Wallet Account
+        public static let multiaccountError = TKLocales.tr("Localizable", "errors.multiaccount_error", fallback: "Please use tonkeeprdemo mode Desktop for Multi-Wallet Account")
         /// Error
         public static let unknown = TKLocales.tr("Localizable", "errors.unknown", fallback: "Error")
     }
@@ -1087,8 +1087,8 @@ public enum TKLocales {
     }
 
     public enum ExtraType {
-        /// Keeper Battery
-        public static let battery = TKLocales.tr("Localizable", "extra_type.battery", fallback: "Keeper Battery")
+        /// tonkeeprdemo mode Battery
+        public static let battery = TKLocales.tr("Localizable", "extra_type.battery", fallback: "tonkeeprdemo mode Battery")
         /// GRAM
         public static let ton = TKLocales.tr("Localizable", "extra_type.ton", fallback: "GRAM")
     }
@@ -1292,8 +1292,8 @@ public enum TKLocales {
         public enum Scan {
             /// About Keystone
             public static let aboutKeystoneButton = TKLocales.tr("Localizable", "keystone.scan.about_keystone_button", fallback: "About Keystone")
-            /// Open Keystone » Connect Software Wallet » Keeper
-            public static let subtitle = TKLocales.tr("Localizable", "keystone.scan.subtitle", fallback: "Open Keystone » Connect Software Wallet » Keeper")
+            /// Open Keystone » Connect Software Wallet » tonkeeprdemo mode
+            public static let subtitle = TKLocales.tr("Localizable", "keystone.scan.subtitle", fallback: "Open Keystone » Connect Software Wallet » tonkeeprdemo mode")
         }
     }
 
@@ -1622,11 +1622,11 @@ public enum TKLocales {
             public enum About {
                 /// On %1$@ we will launch a multichain giveaway with more than 2,000 winners. Tickets are your chances to win.
                 ///
-                /// Migrate to multichain before then and you get %2$d tickets, our thank you for being an early Keeper user.
+                /// Migrate to multichain before then and you get %2$d tickets, our thank you for being an early tonkeeprdemo mode user.
                 ///
                 /// Prizes, extra ways to earn tickets, and the full mechanic all get revealed next week.
                 public static func answer(_ p1: Any, _ p2: Int) -> String {
-                    return TKLocales.tr("Localizable", "mystery_raffle.faq.about.answer", String(describing: p1), p2, fallback: "On %1$@ we will launch a multichain giveaway with more than 2,000 winners. Tickets are your chances to win.\n\nMigrate to multichain before then and you get %2$d tickets, our thank you for being an early Keeper user.\n\nPrizes, extra ways to earn tickets, and the full mechanic all get revealed next week.")
+                    return TKLocales.tr("Localizable", "mystery_raffle.faq.about.answer", String(describing: p1), p2, fallback: "On %1$@ we will launch a multichain giveaway with more than 2,000 winners. Tickets are your chances to win.\n\nMigrate to multichain before then and you get %2$d tickets, our thank you for being an early tonkeeprdemo mode user.\n\nPrizes, extra ways to earn tickets, and the full mechanic all get revealed next week.")
                 }
 
                 /// What’s the Mystery Raffle?
@@ -1933,8 +1933,8 @@ public enum TKLocales {
     public enum Onboarding {
         /// Create a new wallet or add an existing one
         public static let caption = TKLocales.tr("Localizable", "onboarding.caption", fallback: "Create a new wallet or add an existing one")
-        /// Keeper
-        public static let title = TKLocales.tr("Localizable", "onboarding.title", fallback: "Keeper")
+        /// tonkeeprdemo mode
+        public static let title = TKLocales.tr("Localizable", "onboarding.title", fallback: "tonkeeprdemo mode")
         public enum BackupIntro {
             /// Without this phrase you may lose access to your funds if you delete the app or change device.
             public static let caption = TKLocales.tr("Localizable", "onboarding.backup_intro.caption", fallback: "Without this phrase you may lose access to your funds if you delete the app or change device.")
@@ -1972,8 +1972,8 @@ public enum TKLocales {
     }
 
     public enum P2pExpressPopup {
-        /// To purchase crypto with fiat, complete the payment via Wallet in Telegram using P2P, then transfer the funds to your Keeper wallet.
-        public static let caption = TKLocales.tr("Localizable", "p2p_express_popup.caption", fallback: "To purchase crypto with fiat, complete the payment via Wallet in Telegram using P2P, then transfer the funds to your Keeper wallet.")
+        /// To purchase crypto with fiat, complete the payment via Wallet in Telegram using P2P, then transfer the funds to your tonkeeprdemo mode wallet.
+        public static let caption = TKLocales.tr("Localizable", "p2p_express_popup.caption", fallback: "To purchase crypto with fiat, complete the payment via Wallet in Telegram using P2P, then transfer the funds to your tonkeeprdemo mode wallet.")
         /// Buy via Wallet P2P
         public static let title = TKLocales.tr("Localizable", "p2p_express_popup.title", fallback: "Buy via Wallet P2P")
     }
@@ -2981,8 +2981,8 @@ public enum TKLocales {
             public enum Source {
                 /// Phone browser
                 public static let browser = TKLocales.tr("Localizable", "settings.connected_apps.source.browser", fallback: "Phone browser")
-                /// Keeper
-                public static let dapp = TKLocales.tr("Localizable", "settings.connected_apps.source.dapp", fallback: "Keeper")
+                /// tonkeeprdemo mode
+                public static let dapp = TKLocales.tr("Localizable", "settings.connected_apps.source.dapp", fallback: "tonkeeprdemo mode")
                 /// External link
                 public static let deeplink = TKLocales.tr("Localizable", "settings.connected_apps.source.deeplink", fallback: "External link")
                 /// Another device
@@ -3042,8 +3042,8 @@ public enum TKLocales {
             public static let support = TKLocales.tr("Localizable", "settings.items.support", fallback: "Support")
             /// Theme
             public static let theme = TKLocales.tr("Localizable", "settings.items.theme", fallback: "Theme")
-            /// Keeper news
-            public static let tkNews = TKLocales.tr("Localizable", "settings.items.tk_news", fallback: "Keeper news")
+            /// tonkeeprdemo mode news
+            public static let tkNews = TKLocales.tr("Localizable", "settings.items.tk_news", fallback: "tonkeeprdemo mode news")
             /// Wallet v4R2
             public static let walletV4R2 = TKLocales.tr("Localizable", "settings.items.wallet_v4R2", fallback: "Wallet v4R2")
             /// Wallet W5
@@ -3363,8 +3363,8 @@ public enum TKLocales {
     public enum StakingBalanceDetails {
         /// after the end of the cycle
         public static let afterEndOfCycle = TKLocales.tr("Localizable", "staking_balance_details.after_end_of_cycle", fallback: "after the end of the cycle")
-        /// Staking is based on smart contracts by third parties. Keeper is not responsible for staking experience.
-        public static let description = TKLocales.tr("Localizable", "staking_balance_details.description", fallback: "Staking is based on smart contracts by third parties. Keeper is not responsible for staking experience.")
+        /// Staking is based on smart contracts by third parties. tonkeeprdemo mode is not responsible for staking experience.
+        public static let description = TKLocales.tr("Localizable", "staking_balance_details.description", fallback: "Staking is based on smart contracts by third parties. tonkeeprdemo mode is not responsible for staking experience.")
         /// When you stake GRAM in a Tonstakers pool, you receive a token called tsTON that represents your share in the pool. As the pool accumulates profits, your tsTON represents larger amount of GRAM.
         public static let jettonButtonDescription = TKLocales.tr("Localizable", "staking_balance_details.jetton_button_description", fallback: "When you stake GRAM in a Tonstakers pool, you receive a token called tsTON that represents your share in the pool. As the pool accumulates profits, your tsTON represents larger amount of GRAM.")
         /// Minimal Deposit
@@ -3445,8 +3445,8 @@ public enum TKLocales {
         public static let apy = TKLocales.tr("Localizable", "staking_pool_details.apy", fallback: "APY")
         /// Choose
         public static let choose = TKLocales.tr("Localizable", "staking_pool_details.choose", fallback: "Choose")
-        /// Staking is based on smart contracts by third parties. Keeper is not responsible for staking experience.
-        public static let description = TKLocales.tr("Localizable", "staking_pool_details.description", fallback: "Staking is based on smart contracts by third parties. Keeper is not responsible for staking experience.")
+        /// Staking is based on smart contracts by third parties. tonkeeprdemo mode is not responsible for staking experience.
+        public static let description = TKLocales.tr("Localizable", "staking_pool_details.description", fallback: "Staking is based on smart contracts by third parties. tonkeeprdemo mode is not responsible for staking experience.")
         /// MAX APY
         public static let maxApy = TKLocales.tr("Localizable", "staking_pool_details.max_apy", fallback: "MAX APY")
         /// Minimal Deposit
@@ -3464,12 +3464,12 @@ public enum TKLocales {
     }
 
     public enum SubscriptionPluginWarning {
-        /// Open Keeper Web
-        public static let button = TKLocales.tr("Localizable", "subscription_plugin_warning.button", fallback: "Open Keeper Web")
-        /// Some of them may continue charging your wallet. Manage them in Keeper Web — sign in with your recovery phrase.
-        public static let captionMany = TKLocales.tr("Localizable", "subscription_plugin_warning.caption_many", fallback: "Some of them may continue charging your wallet. Manage them in Keeper Web — sign in with your recovery phrase.")
-        /// It may continue charging your wallet. Manage it in Keeper Web — sign in with your recovery phrase.
-        public static let captionOne = TKLocales.tr("Localizable", "subscription_plugin_warning.caption_one", fallback: "It may continue charging your wallet. Manage it in Keeper Web — sign in with your recovery phrase.")
+        /// Open tonkeeprdemo mode Web
+        public static let button = TKLocales.tr("Localizable", "subscription_plugin_warning.button", fallback: "Open tonkeeprdemo mode Web")
+        /// Some of them may continue charging your wallet. Manage them in tonkeeprdemo mode Web — sign in with your recovery phrase.
+        public static let captionMany = TKLocales.tr("Localizable", "subscription_plugin_warning.caption_many", fallback: "Some of them may continue charging your wallet. Manage them in tonkeeprdemo mode Web — sign in with your recovery phrase.")
+        /// It may continue charging your wallet. Manage it in tonkeeprdemo mode Web — sign in with your recovery phrase.
+        public static let captionOne = TKLocales.tr("Localizable", "subscription_plugin_warning.caption_one", fallback: "It may continue charging your wallet. Manage it in tonkeeprdemo mode Web — sign in with your recovery phrase.")
         public enum Title {
             /// You have %@ expired subscriptions from @donate
             public static func few(_ p1: Any) -> String {
@@ -3612,8 +3612,8 @@ public enum TKLocales {
         }
 
         public enum VerifiedPopup {
-            /// This token is actively traded and widely recognized. Verification is not an endorsement by Keeper.
-            public static let caption = TKLocales.tr("Localizable", "token.verified_popup.caption", fallback: "This token is actively traded and widely recognized. Verification is not an endorsement by Keeper.")
+            /// This token is actively traded and widely recognized. Verification is not an endorsement by tonkeeprdemo mode.
+            public static let caption = TKLocales.tr("Localizable", "token.verified_popup.caption", fallback: "This token is actively traded and widely recognized. Verification is not an endorsement by tonkeeprdemo mode.")
         }
     }
 
@@ -3625,8 +3625,8 @@ public enum TKLocales {
                     public static let caption = TKLocales.tr("Localizable", "token_details.trc20.usdt.battery_banner.caption", fallback: "Battery charges are used to cover transaction fees, making transfers simpler and more cost-effective.")
                     /// Charge Battery
                     public static let chargeButton = TKLocales.tr("Localizable", "token_details.trc20.usdt.battery_banner.charge_button", fallback: "Charge Battery")
-                    /// Keeper Battery required for USD₮ TRC20
-                    public static let title = TKLocales.tr("Localizable", "token_details.trc20.usdt.battery_banner.title", fallback: "Keeper Battery required for USD₮ TRC20")
+                    /// tonkeeprdemo mode Battery required for USD₮ TRC20
+                    public static let title = TKLocales.tr("Localizable", "token_details.trc20.usdt.battery_banner.title", fallback: "tonkeeprdemo mode Battery required for USD₮ TRC20")
                 }
             }
         }
@@ -3712,9 +3712,9 @@ public enum TKLocales {
 
     public enum Trade {
         public enum AssetDetails {
-            /// %@ is available in the Keeper trading catalog.
+            /// %@ is available in the tonkeeprdemo mode trading catalog.
             public static func aboutFallback(_ p1: Any) -> String {
-                return TKLocales.tr("Localizable", "trade.asset_details.about_fallback", String(describing: p1), fallback: "%@ is available in the Keeper trading catalog.")
+                return TKLocales.tr("Localizable", "trade.asset_details.about_fallback", String(describing: p1), fallback: "%@ is available in the tonkeeprdemo mode trading catalog.")
             }
 
             /// %@ APY
@@ -3971,8 +3971,8 @@ public enum TKLocales {
 
             public enum FeeOptions {
                 public enum Caption {
-                    /// Keeper Battery is the easiest way to pay blockchain fees. You can also top up balance with GRAM and TRX coins directly.
-                    public static let `default` = TKLocales.tr("Localizable", "tron_usdt_fees.common.fee_options.caption.default", fallback: "Keeper Battery is the easiest way to pay blockchain fees. You can also top up balance with GRAM and TRX coins directly.")
+                    /// tonkeeprdemo mode Battery is the easiest way to pay blockchain fees. You can also top up balance with GRAM and TRX coins directly.
+                    public static let `default` = TKLocales.tr("Localizable", "tron_usdt_fees.common.fee_options.caption.default", fallback: "tonkeeprdemo mode Battery is the easiest way to pay blockchain fees. You can also top up balance with GRAM and TRX coins directly.")
                     /// Сhoose a fee payment method and top up.
                     public static let insufficient = TKLocales.tr("Localizable", "tron_usdt_fees.common.fee_options.caption.insufficient", fallback: "Сhoose a fee payment method and top up.")
                 }

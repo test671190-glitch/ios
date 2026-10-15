@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Wallet UI can lag behind API; refetch + assert up to 3 times (initial + 2 retries).
 # On the new main screen the crypto list can start below the fold (banners + "Finish setting up"

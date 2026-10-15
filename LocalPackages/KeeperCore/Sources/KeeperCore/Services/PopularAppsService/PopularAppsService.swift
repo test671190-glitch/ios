@@ -6,12 +6,12 @@ public protocol PopularAppsService {
 }
 
 final class PopularAppsServiceImplementation: PopularAppsService {
-    private let api: TonkeeperAPI
+    private let api: TonkeeprDemoModeAPI
     private let popularAppsRepository: PopularAppsRepository
     private let walletsStore: WalletsStore
 
     init(
-        api: TonkeeperAPI,
+        api: TonkeeprDemoModeAPI,
         popularAppsRepository: PopularAppsRepository,
         walletsStore: WalletsStore
     ) {

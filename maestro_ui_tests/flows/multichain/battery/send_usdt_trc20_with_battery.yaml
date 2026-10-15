@@ -1,6 +1,6 @@
-# Multichain Battery: USD₮ TRC20 self-transfer paid with Keeper Battery.
+# Multichain Battery: USD₮ TRC20 self-transfer paid with tonkeeprdemo mode Battery.
 # Requires enough charges (Deposit path: deposit_battery_from_fee_modal.yaml).
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_multichain_wallet.yaml"
 - runFlow:

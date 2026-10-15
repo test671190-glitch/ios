@@ -3,7 +3,7 @@
 # a test that taps its own target right away silently loses that tap.
 # Tapping the bubble dismisses it without firing its target action, and the next queued
 # tooltip may appear right after, hence the loop. Times cap it so a stuck queue cannot hang.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - repeat:
     times: 10

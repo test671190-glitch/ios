@@ -6,7 +6,7 @@ import TonSwift
 public final class LoadersAssembly {
     private let servicesAssembly: ServicesAssembly
     private let storesAssembly: StoresAssembly
-    private let tonkeeperAPIAssembly: TonkeeperAPIAssembly
+    private let tonkeeprDemoModeAPIAssembly: TonkeeprDemoModeAPIAssembly
     private let apiAssembly: APIAssembly
     private let knownAccountsAssembly: KnownAccountsAssembly
     private let tronAssembly: TronUSDTAssembly
@@ -16,7 +16,7 @@ public final class LoadersAssembly {
     init(
         servicesAssembly: ServicesAssembly,
         storesAssembly: StoresAssembly,
-        tonkeeperAPIAssembly: TonkeeperAPIAssembly,
+        tonkeeprDemoModeAPIAssembly: TonkeeprDemoModeAPIAssembly,
         apiAssembly: APIAssembly,
         knownAccountsAssembly: KnownAccountsAssembly,
         tronAssembly: TronUSDTAssembly,
@@ -25,7 +25,7 @@ public final class LoadersAssembly {
     ) {
         self.servicesAssembly = servicesAssembly
         self.storesAssembly = storesAssembly
-        self.tonkeeperAPIAssembly = tonkeeperAPIAssembly
+        self.tonkeeprDemoModeAPIAssembly = tonkeeprDemoModeAPIAssembly
         self.apiAssembly = apiAssembly
         self.knownAccountsAssembly = knownAccountsAssembly
         self.tronAssembly = tronAssembly
@@ -53,7 +53,7 @@ public final class LoadersAssembly {
             return _internalNotificationsLoader
         }
         let loader = InternalNotificationsLoader(
-            tonkeeperAPI: tonkeeperAPIAssembly.api,
+            tonkeeprDemoModeAPI: tonkeeprDemoModeAPIAssembly.api,
             notificationsStore: storesAssembly.internalNotificationsStore,
             walletsStore: storesAssembly.walletsStore
         )
@@ -67,7 +67,7 @@ public final class LoadersAssembly {
             return _homeBannersLoader
         }
         let loader = HomeBannersLoader(
-            tonkeeperAPI: tonkeeperAPIAssembly.api,
+            tonkeeprDemoModeAPI: tonkeeprDemoModeAPIAssembly.api,
             homeBannersStore: storesAssembly.homeBannersStore,
             walletsStore: storesAssembly.walletsStore
         )
@@ -254,7 +254,7 @@ public final class LoadersAssembly {
             return loader
         }
 
-        let loader = EthenaStakingLoader(wallet: wallet, api: tonkeeperAPIAssembly.api)
+        let loader = EthenaStakingLoader(wallet: wallet, api: tonkeeprDemoModeAPIAssembly.api)
         _ethenaStakingLoaders[wallet] = Weak(value: loader)
         return loader
     }

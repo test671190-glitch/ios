@@ -3,7 +3,7 @@ import CoreGraphics
 
 enum QRCodeViewTestConstants {
     static let addressPayload = "UQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKZ"
-    static let transferPayload = "tonkeeper://transfer/UQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKZ"
+    static let transferPayload = "tonkeeprdemomode://transfer/UQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKZ"
     static let centerCutoutSize = CGSize(width: 60, height: 60)
     static let renderSize = CGSize(width: 320, height: 320)
 
@@ -17,7 +17,7 @@ enum QRCodeViewTestConstants {
     static let densePayload = densePayload(length: 220)
 
     static func densePayload(length: Int) -> String {
-        let seed = "tonkeeper://transfer/UQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKZ?text="
+        let seed = "tonkeeprdemomode://transfer/UQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKZ?text="
         let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let repeated = String(repeating: alphabet, count: max(1, length / alphabet.count + 1))
         return seed + String(repeated.prefix(length))

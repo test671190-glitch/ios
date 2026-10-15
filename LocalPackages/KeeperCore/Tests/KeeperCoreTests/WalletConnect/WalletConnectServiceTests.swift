@@ -32,7 +32,7 @@ final class WalletConnectServiceTests: XCTestCase {
         let events = await context.service.events()
 
         try await context.service.pair(
-            uri: "https://app.tonkeeper.com/wc?uri=wc%3Apairing%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
+            uri: "https://app.example.com/wc?uri=wc%3Apairing%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
             source: .browser
         )
 

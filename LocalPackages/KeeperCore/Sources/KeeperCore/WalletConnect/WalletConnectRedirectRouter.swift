@@ -65,10 +65,10 @@ private extension WalletConnectRedirectRouter {
         [
             "tc",
             "ton",
-            "tonkeeper",
-            "tonkeeper-mob",
-            "tonkeeper-tc",
-            "tonkeeper-tc-mob",
+            "tonkeeprdemomode",
+            "tonkeepr-demo-mode-mob",
+            "tonkeepr-demo-mode-tc",
+            "tonkeepr-demo-mode-tc-mob",
             "wc",
         ]
     }

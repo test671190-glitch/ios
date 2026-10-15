@@ -44,7 +44,7 @@ final class TransferServiceRelayerEnabledTests: XCTestCase {
         )
     }
 
-    /// Only an aggregator's swap keeps the refund address its payload was built with; Tonkeeper's own
+    /// Only an aggregator's swap keeps the refund address its payload was built with; tonkeeprdemo mode's own
     /// relayed transfers redirect the excess to whoever paid the gas.
     func test_onlyMultichainSwapKeepsItsPayloadExcessAddress() throws {
         XCTAssertTrue(try makeMultichainSwapTransfer().keepsPayloadExcessAddress)

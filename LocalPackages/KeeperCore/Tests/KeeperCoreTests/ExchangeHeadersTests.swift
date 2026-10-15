@@ -183,7 +183,7 @@ private extension ExchangeHeadersTests {
 
     func queryItems(_ transport: RecordingTransport) throws -> [String: String] {
         let path = try XCTUnwrap(transport.lastRequest?.path)
-        let components = try XCTUnwrap(URLComponents(string: "https://swap.tonkeeper.com\(path)"))
+        let components = try XCTUnwrap(URLComponents(string: "https://swap.example.com\(path)"))
         return Dictionary(
             (components.queryItems ?? []).map { ($0.name, $0.value ?? "") },
             uniquingKeysWith: { first, _ in first }
@@ -191,7 +191,7 @@ private extension ExchangeHeadersTests {
     }
 
     func makeClient(_ transport: RecordingTransport) -> SwapAPI.Client {
-        SwapAPI.Client(serverURL: URL(string: "https://swap.tonkeeper.com")!, transport: transport)
+        SwapAPI.Client(serverURL: URL(string: "https://swap.example.com")!, transport: transport)
     }
 
     func makeSwapAPI(
@@ -243,7 +243,7 @@ private struct StubAppInfoProvider: AppInfoProvider {
     }
 
     var userAgent: String {
-        "Tonkeeper/1.0"
+        "TonkeeprDemoMode/1.0"
     }
 
     var platform: String {

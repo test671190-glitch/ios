@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - evalScript: ${output.importAttempt = 0; output.importPasteOk = false}
 

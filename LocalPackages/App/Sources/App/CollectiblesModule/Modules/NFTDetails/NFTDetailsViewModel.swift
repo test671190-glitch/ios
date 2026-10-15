@@ -375,7 +375,7 @@ final class NFTDetailsViewModelImplementation: NFTDetailsViewModel, NFTDetailsMo
         return buttons.enumerated().compactMap { index, button -> NFTDetailsScreenState.Button? in
             guard var label = button.label else { return nil }
 
-            // https://linear.app/tonkeeper/issue/IOS-279
+            // IOS-279
             // Если заголовок у кнопки - "Manage", то брать из локализации
             if label == .manageButtonTitle {
                 label = TKLocales.NftDetails.ManageButton.title

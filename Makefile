@@ -18,7 +18,7 @@ XCBEAUTIFY := $(TOOL) xcbeautify
 	hooks \
 	setup \
 	tonconnect_generate \
-	tonkeeper_generate \
+	tonkeeprdemomode_generate \
 	trading_generate \
 	perps_generate \
 	kandelabr_generate \
@@ -71,7 +71,7 @@ setup:
 # per-API target names kept as the entry points. Spelled out rather than generated
 # from a name list, because shell completion parses the Makefile text and does not
 # expand functions, so a computed target list leaves `make <tab>` with nothing to offer.
-tonconnect_generate tonkeeper_generate trading_generate perps_generate kandelabr_generate multichain_generate swap_generate:
+tonconnect_generate tonkeeprdemomode_generate trading_generate perps_generate kandelabr_generate multichain_generate swap_generate:
 	@scripts/apigen/generate.sh $(patsubst %_generate,%,$@)
 
 api_generate:

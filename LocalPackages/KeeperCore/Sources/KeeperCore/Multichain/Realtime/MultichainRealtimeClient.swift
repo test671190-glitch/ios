@@ -24,7 +24,7 @@ final class MultichainRealtimeClient: MultichainRealtimeTransport {
     private var clientID = UUID()
     private var subscription: CentrifugeSubscription?
     private var subscriptionDelegate: WalletSubscriptionDelegate?
-    private let syncQueue = DispatchQueue(label: "com.tonkeeper.multichain.realtime")
+    private let syncQueue = DispatchQueue(label: "com.tonkeeprdemomode.multichain.realtime")
 
     init(
         tokenSource: RealtimeTokenSource,

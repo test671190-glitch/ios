@@ -124,15 +124,15 @@ final class AptabaseDispatcherTests: XCTestCase {
 
     func test_onlyAnAbsoluteHttpHostIsAcceptedFromTheConfiguration() {
         XCTAssertEqual(
-            AptabaseConfigurator.usableEndpoint("https://block-analytics.tonkeeper.com"),
-            "https://block-analytics.tonkeeper.com"
+            AptabaseConfigurator.usableEndpoint("https://block-analytics.example.com"),
+            "https://block-analytics.example.com"
         )
         XCTAssertEqual(AptabaseConfigurator.usableEndpoint("http://localhost:3000"), "http://localhost:3000")
         // Everything below parses as a URL, which is why the check cannot just be `URL(string:)`.
         XCTAssertNil(AptabaseConfigurator.usableEndpoint("not a url"))
-        XCTAssertNil(AptabaseConfigurator.usableEndpoint("block-analytics.tonkeeper.com"))
+        XCTAssertNil(AptabaseConfigurator.usableEndpoint("block-analytics.example.com"))
         XCTAssertNil(AptabaseConfigurator.usableEndpoint("/api/v0/events"))
-        XCTAssertNil(AptabaseConfigurator.usableEndpoint("wss://block-analytics.tonkeeper.com"))
+        XCTAssertNil(AptabaseConfigurator.usableEndpoint("wss://block-analytics.example.com"))
         XCTAssertNil(AptabaseConfigurator.usableEndpoint(""))
         XCTAssertNil(AptabaseConfigurator.usableEndpoint(nil))
     }

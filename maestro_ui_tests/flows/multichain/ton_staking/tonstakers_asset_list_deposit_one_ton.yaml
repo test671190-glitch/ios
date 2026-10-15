@@ -1,7 +1,7 @@
 # Tonstakers from main asset list → Stake → deposit 1 TON (sign in UI).
 # Preconditions: English UI; Tonstakers row visible on wallet list (tsTON / staking position);
 # free TON balance covers amount + fees; pool min stake allows 1 TON (raise amount if your pool min is higher).
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 - runFlow: "../../../service/account/compare_ton_balance.yaml"

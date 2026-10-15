@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-/** User sees the external app alert modal (e.g. \&quot;Mercuryo — You are opening an external app not operated by Tonkeeper\&quot;) before being sent to the onramp provider  */
+/** User sees the external app alert modal (e.g. \&quot;Mercuryo — You are opening an external app not operated by tonkeeprdemo mode\&quot;) before being sent to the onramp provider  */
 public struct DepositViewRampAlert: Codable, JSONEncodable, Hashable {
 
     public var eventName: String = "deposit_view_ramp_alert"

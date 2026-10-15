@@ -5,7 +5,7 @@ final class InternalNotificationsLoader {
     private let loader: WalletScopedLoader<[InternalNotification]?>
 
     init(
-        tonkeeperAPI: TonkeeperAPI,
+        tonkeeprDemoModeAPI: TonkeeprDemoModeAPI,
         notificationsStore: InternalNotificationsStore,
         walletsStore: WalletsStore
     ) {
@@ -13,7 +13,7 @@ final class InternalNotificationsLoader {
             walletsStore: walletsStore,
             fetch: { walletId in
                 do {
-                    return try await tonkeeperAPI.loadNotifications(walletId: walletId)
+                    return try await tonkeeprDemoModeAPI.loadNotifications(walletId: walletId)
                 } catch {
                     Log.w("Failed to load internal notifications for wallet \(walletId ?? "none"): \(error)")
                     return nil

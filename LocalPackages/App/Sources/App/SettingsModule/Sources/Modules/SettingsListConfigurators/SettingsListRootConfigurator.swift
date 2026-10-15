@@ -555,14 +555,14 @@ final class SettingsListRootConfigurator: SettingsListConfigurator {
 
     func createNewsItem() -> SettingsListItem {
         SettingsListItem(
-            id: .tonkeeperNewsItemIdentifier,
+            id: .tonkeeprDemoModeNewsItemIdentifier,
             title: SettingsListItemTitle(TKLocales.Settings.Items.tkNews),
             accessory: .icon(.TKUIKit.Icons.Size28.telegram, tintColor: .iconSecondary),
             onTap: { [weak self, configuration] _ in
                 guard let self else { return }
                 Task {
                     guard let contactUsURL = configuration
-                        .tonkeeperNewsUrl
+                        .tonkeeprDemoModeNewsUrl
                     else {
                         return
                     }
@@ -739,7 +739,7 @@ private extension String {
     static let themeItemIdentifier = "ThemeItem"
     static let FAQItemIdentifier = "FAQItem"
     static let supportItemIdentifier = "SupportItem"
-    static let tonkeeperNewsItemIdentifier = "TonkeeperNewsItem"
+    static let tonkeeprDemoModeNewsItemIdentifier = "TonkeeprDemoModeNewsItem"
     static let contactUsItemIdentifier = "ContactUsItem"
     static let rateItemIdentifier = "RateItem"
     static let legalItemIdentifier = "LegalItem"

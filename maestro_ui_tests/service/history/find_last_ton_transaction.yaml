@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runScript:
     file: ../../scripts/api/v2/accounts/getLastEvent.js

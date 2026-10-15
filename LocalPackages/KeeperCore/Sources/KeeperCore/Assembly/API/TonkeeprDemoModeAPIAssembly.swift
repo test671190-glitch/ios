@@ -1,7 +1,7 @@
 import Foundation
 import TKFeatureFlags
 
-public final class TonkeeperAPIAssembly {
+public final class TonkeeprDemoModeAPIAssembly {
     private let appInfoProvider: AppInfoProvider
     private let coreAssembly: CoreAssembly
     private let tkAppSettings: TKAppSettings
@@ -16,10 +16,10 @@ public final class TonkeeperAPIAssembly {
         self.tkAppSettings = tkAppSettings
     }
 
-    public var api: TonkeeperAPI {
-        TonkeeperAPIImplementation(
+    public var api: TonkeeprDemoModeAPI {
+        TonkeeprDemoModeAPIImplementation(
             urlSession: .shared,
-            hostProvider: TonkeeperAPIHostProvider(
+            hostProvider: TonkeeprDemoModeAPIHostProvider(
                 defaultHost: apiV1DefaultURL,
                 configHost: { [weak self] in
                     self?.apiV1ConfigURL
@@ -39,12 +39,12 @@ public final class TonkeeperAPIAssembly {
     var apiV1ConfigURL: URL? {
         guard
             let configuration = try? bootConfigurationProvider.configuration,
-            let tonkeeperApiUrl = configuration.mainnet.tonkeeperApiUrl
+            let tonkeeprDemoModeApiUrl = configuration.mainnet.tonkeeprDemoModeApiUrl
         else {
             return nil
         }
 
-        return URL(string: tonkeeperApiUrl)
+        return URL(string: tonkeeprDemoModeApiUrl)
     }
 
     var apiV1DefaultURL: URL {

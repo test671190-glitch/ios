@@ -14,7 +14,7 @@ excluded:
   - LocalPackages/KeeperCore/Packages/TKTradingAPI/Sources/TKTradingAPI
   - LocalPackages/KeeperCore/Packages/TKPerpsAPI/Sources/TKPerpsAPI
   - LocalPackages/KeeperCore/Packages/TKKandelabrAPI/Sources/TKKandelabrAPI
-  - LocalPackages/KeeperCore/Packages/TKTonkeeperAPI/Sources/TKTonkeeperAPI
+  - LocalPackages/KeeperCore/Packages/TKTonkeeprDemoModeAPI/Sources/TKTonkeeprDemoModeAPI
   - LocalPackages/KeeperCore/Packages/MultichainAPI/Sources/MultichainAPI
   - LocalPackages/KeeperCore/Packages/SwapAPI/Sources/SwapAPI
 

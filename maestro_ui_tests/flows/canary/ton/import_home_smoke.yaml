@@ -2,7 +2,7 @@
 # all start from this import, so it gates the matrix together with the multichain
 # import canary next to it.
 # Not part of any shard: config.yaml globs do not cover flows/canary/**.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - launchApp:
     clearState: true

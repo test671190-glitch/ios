@@ -194,7 +194,7 @@ open class TKBridgeWebViewController: UIViewController {
             self?.backButton.isHidden = !canGoBack
         }
 
-        let urlRequest = URLRequest(url: updateURLWithTonkeeperUTM(url: url))
+        let urlRequest = URLRequest(url: updateURLWithTonkeeprDemoModeUTM(url: url))
         webView.load(urlRequest)
     }
 
@@ -305,11 +305,11 @@ open class TKBridgeWebViewController: UIViewController {
         )
     }
 
-    private func updateURLWithTonkeeperUTM(url: URL) -> URL {
+    private func updateURLWithTonkeeprDemoModeUTM(url: URL) -> URL {
         guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return url }
         var queryItems = urlComponents.queryItems ?? []
         guard !queryItems.contains(where: { $0.name != "utm_source" }) else { return url }
-        queryItems.append(URLQueryItem(name: "utm_source", value: "tonkeeper"))
+        queryItems.append(URLQueryItem(name: "utm_source", value: "tonkeeprdemomode"))
         urlComponents.queryItems = queryItems
         guard let updatedURL = urlComponents.url else { return url }
         return updatedURL

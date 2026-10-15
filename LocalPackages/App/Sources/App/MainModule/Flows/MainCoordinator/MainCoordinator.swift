@@ -256,9 +256,9 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
     ) -> Bool {
         let didHandle: Bool
         switch deeplink {
-        case let tonkeeperDeeplink as KeeperCore.Deeplink:
-            didHandle = handleTonkeeperDeeplink(
-                tonkeeperDeeplink,
+        case let tonkeeprDemoModeDeeplink as KeeperCore.Deeplink:
+            didHandle = handleTonkeeprDemoModeDeeplink(
+                tonkeeprDemoModeDeeplink,
                 fromStories: fromStories,
                 sendSource: .deepLink(utm: utm),
                 dappOpenFrom: dappOpenFrom
@@ -266,7 +266,7 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
         case let string as String:
             do {
                 let deeplink = try mainController.parseDeeplink(deeplink: string)
-                didHandle = handleTonkeeperDeeplink(
+                didHandle = handleTonkeeprDemoModeDeeplink(
                     deeplink,
                     fromStories: fromStories,
                     sendSource: .deepLink(utm: utm.isEmpty ? UtmParameters(link: string) : utm),
@@ -420,10 +420,10 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
             self?.openDepositTon(wallet: wallet, entrySource: .collectibles)
         }
         walletCoordinator.didRequestDeeplinkHandling = { [weak self] deeplink, utm in
-            _ = self?.handleTonkeeperDeeplink(deeplink, fromStories: false, sendSource: .deepLink(utm: utm))
+            _ = self?.handleTonkeeprDemoModeDeeplink(deeplink, fromStories: false, sendSource: .deepLink(utm: utm))
         }
         walletCoordinator.didRequestBannerDeeplinkHandling = { [weak self] deeplink, utm in
-            _ = self?.handleTonkeeperDeeplink(
+            _ = self?.handleTonkeeprDemoModeDeeplink(
                 deeplink,
                 fromStories: false,
                 sendSource: .deepLink(utm: utm),
@@ -604,7 +604,7 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
         let browserCoordinator = browserModule.createBrowserCoordinator()
 
         browserCoordinator.didHandleDeeplink = { [weak self] deeplink, utm in
-            _ = self?.handleTonkeeperDeeplink(deeplink, fromStories: false, sendSource: .deepLink(utm: utm))
+            _ = self?.handleTonkeeprDemoModeDeeplink(deeplink, fromStories: false, sendSource: .deepLink(utm: utm))
         }
 
         browserCoordinator.didRequestOpenBuySell = { [weak self] wallet in
@@ -620,10 +620,10 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
             self?.openDapp(title: title, url: url, analyticsFrom: .collectibles)
         }
         multichainWalletCoordinator?.collectiblesDidRequestDeeplinkHandling = { [weak self] deeplink, utm in
-            _ = self?.handleTonkeeperDeeplink(deeplink, fromStories: false, sendSource: .deepLink(utm: utm))
+            _ = self?.handleTonkeeprDemoModeDeeplink(deeplink, fromStories: false, sendSource: .deepLink(utm: utm))
         }
         multichainWalletCoordinator?.didRequestBannerDeeplinkHandling = { [weak self] deeplink, utm in
-            _ = self?.handleTonkeeperDeeplink(
+            _ = self?.handleTonkeeprDemoModeDeeplink(
                 deeplink,
                 fromStories: false,
                 sendSource: .deepLink(utm: utm),
@@ -973,7 +973,7 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
 
         scanModule.output.didScanDeeplink = { [weak self] deeplink in
             self?.router.dismiss(completion: {
-                _ = self?.handleTonkeeperDeeplink(
+                _ = self?.handleTonkeeprDemoModeDeeplink(
                     deeplink,
                     fromStories: false,
                     sendSource: .qrCode
@@ -1569,7 +1569,7 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
         }
     }
 
-    func handleTonkeeperDeeplink(
+    func handleTonkeeprDemoModeDeeplink(
         _ deeplink: KeeperCore.Deeplink,
         fromStories: Bool,
         sendSource: SendAnalyticsSource,
@@ -1629,48 +1629,48 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
                 return true
             }
             if let sendTokenCoordinator = sendTokenCoordinator {
-                return sendTokenCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+                return sendTokenCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
             }
             if handleWalletCollectiblesPublishDeeplink(sign: sign) {
                 return true
             }
             if let webSwapCoordinator = webSwapCoordinator,
-               webSwapCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+               webSwapCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
             {
                 return true
             }
             if let nativeSwapCoordinator = nativeSwapCoordinator,
-               nativeSwapCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+               nativeSwapCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
             {
                 return true
             }
             if let multichainSwapCoordinator = multichainSwapCoordinator,
-               multichainSwapCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+               multichainSwapCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
             {
                 return true
             }
             if let batteryRefillCoordinator,
-               batteryRefillCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+               batteryRefillCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
             {
                 return true
             }
             if let stakingCoordinator,
-               stakingCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+               stakingCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
             {
                 return true
             }
             if let stakingStakeCoordinator,
-               stakingStakeCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+               stakingStakeCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
             {
                 return true
             }
             if let stakingUnstakeCoordinator,
-               stakingUnstakeCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+               stakingUnstakeCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
             {
                 return true
             }
             if let stakingConfirmationCoordinator,
-               stakingConfirmationCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+               stakingConfirmationCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
             {
                 return true
             }
@@ -4041,12 +4041,12 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
 
     private func handleWalletCollectiblesPublishDeeplink(sign: Data) -> Bool {
         if let walletCoordinator,
-           walletCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+           walletCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
         {
             return true
         }
         if let multichainWalletCoordinator,
-           multichainWalletCoordinator.handleTonkeeperPublishDeeplink(sign: sign)
+           multichainWalletCoordinator.handleTonkeeprDemoModePublishDeeplink(sign: sign)
         {
             return true
         }
@@ -4076,7 +4076,7 @@ final class MainCoordinator: RouterCoordinator<TabBarControllerRouter> {
                 dappOpenFrom: .push,
                 utm: utm
             ) {
-                // Push delivered a tonkeeper deeplink — handled above.
+                // Push delivered a tonkeeprdemo mode deeplink — handled above.
             } else {
                 openURL(linkURL, title: nil)
             }

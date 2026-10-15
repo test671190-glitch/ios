@@ -51,8 +51,8 @@ final class MultichainSwapCoordinator: RouterCoordinator<NavigationControllerRou
         openSwap()
     }
 
-    func handleTonkeeperPublishDeeplink(sign: Data) -> Bool {
-        confirmationCoordinator?.handleTonkeeperPublishDeeplink(sign: sign) ?? false
+    func handleTonkeeprDemoModePublishDeeplink(sign: Data) -> Bool {
+        confirmationCoordinator?.handleTonkeeprDemoModePublishDeeplink(sign: sign) ?? false
     }
 
     override func didMoveTo(toParent parent: Coordinator?) {

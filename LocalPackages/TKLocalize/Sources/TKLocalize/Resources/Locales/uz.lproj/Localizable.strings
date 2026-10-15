@@ -249,9 +249,9 @@
 "settings.items.logout" = "Chiqish";
 "settings.items.faq" = "FAQ";
 "settings.items.support" = "Qo'llab-quvvatlash";
-"settings.items.tk_news" = "Keeper yangiliklari";
+"settings.items.tk_news" = "tonkeeprdemo mode yangiliklari";
 "settings.items.contact_us" = "Biz bilan bog'laning";
-"settings.items.rate" = "Bahola Keeper X";
+"settings.items.rate" = "Bahola tonkeeprdemo mode X";
 "settings.items.legal" = "Yuridik hujjatlar";
 "settings.items.delete_account" = "Hisobni o'chirish";
 "settings.items.setup_wallet_description" = "Tahrirlash nomi va rangi";
@@ -318,8 +318,8 @@
 "token.verified" = "Tasdiqlangan token";
 "token.unverified" = "Tasdiqlanmagan token";
 "token.scam" = "Scam";
-"token.verified_popup.caption" = "Bu token faol savdo qilinadi va keng tanilgan. Tasdiqlash Keeper tomonidan ma'qullashni anglatmaydi.";
-"onboarding.title" = "Keeper";
+"token.verified_popup.caption" = "Bu token faol savdo qilinadi va keng tanilgan. Tasdiqlash tonkeeprdemo mode tomonidan ma'qullashni anglatmaydi.";
+"onboarding.title" = "tonkeeprdemo mode";
 "onboarding.caption" = "Yangi hamyon yarating yoki mavjudini qo'shing";
 "onboarding.buttons.create_new" = "Yangi hamyon yaratish";
 "onboarding.buttons.import_existing" = "Import qilish";
@@ -452,7 +452,7 @@
 "toast.hidden" = "Yashirildi";
 "toast.shown" = "Ko'rsatildi";
 "errors.unknown" = "Xato";
-"errors.multiaccount_error" = "Iltimos, Multi-Wallet hisobi uchun Keeper Ish stolidan foydalaning";
+"errors.multiaccount_error" = "Iltimos, Multi-Wallet hisobi uchun tonkeeprdemo mode Ish stolidan foydalaning";
 "tabs.collectibles" = "To'plamlar";
 "list.show_all" = "Hammasini ko'rsatish";
 "list.hide" = "Yashirish";
@@ -587,7 +587,7 @@
 "settings.connected_apps.actions.cancel" = "Bekor qilish";
 "settings.connected_apps.empty.title" = "Ulangan ilovalar yo‘q";
 "settings.connected_apps.source.browser" = "Telefon brauzeri";
-"settings.connected_apps.source.dapp" = "Keeper";
+"settings.connected_apps.source.dapp" = "tonkeeprdemo mode";
 "settings.connected_apps.source.deeplink" = "Tashqi havola";
 "settings.connected_apps.source.qr" = "Boshqa qurilma";
 "currency.items.uzs" = "O‘zbekiston so‘mi";
@@ -615,7 +615,7 @@
 "backup.safety_check.title" = "Xavfsizlik tekshiruvi";
 "backup.safety_check.list.item1" = "Qayta tiklash iborangizni hech kimga ko‘rsatmang.";
 "backup.safety_check.list.item2" = "Qayta tiklash iborangizga ega bo‘lgan har kim hamyoningizga kirib, mablag‘ni yechib olishi mumkin.";
-"backup.safety_check.list.item3" = "Keeper qo‘llab-quvvatlash xizmati hech qachon qayta tiklash iborangizni so‘ramaydi.";
+"backup.safety_check.list.item3" = "tonkeeprdemo mode qo‘llab-quvvatlash xizmati hech qachon qayta tiklash iborangizni so‘ramaydi.";
 "backup.safety_check.agreement.text" = "Qayta tiklash iborasini boshqalarga berish %@ olib kelishi mumkinligini tushunaman.";
 "backup.safety_check.agreement.highlighted" = "mablag‘ning butunlay yo‘qolishiga";
 "backup.show.title" = "Qayta tiklash iborasi";
@@ -704,7 +704,7 @@
 "add_wallet.items.pair_keystone.title" = "Keystone bilan bog'lang";
 "add_wallet.items.pair_keystone.subtitle" = "AIR-GAP apparat hamyoni bilan yuqori darajadagi xavfsizlik";
 "add_wallet.sections.other_options" = "Boshqa variantlar";
-"keystone.scan.subtitle" = "Keystoneni oching » Software Wallet ni ulash » Keeper";
+"keystone.scan.subtitle" = "Keystoneni oching » Software Wallet ni ulash » tonkeeprdemo mode";
 "keystone.scan.about_keystone_button" = "Keystone haqida";
 "balance_header.your_address" = "Sizning manzilingiz: ";
 "balance_header.address" = "Manzil: ";
@@ -796,7 +796,7 @@
 "nft_details.actions.report_spam" = "Spam haqida xabar berish";
 "nft_details.actions.not_spam" = "Spam emas";
 "nft_details.manage_button.title" = "Boshqarish";
-"buy_list_popup.you_are_opening_external_app" = "Siz Keeper tomonidan boshqarilmaydigan tashqi ilovani ochyapsiz.";
+"buy_list_popup.you_are_opening_external_app" = "Siz tonkeeprdemo mode tomonidan boshqarilmaydigan tashqi ilovani ochyapsiz.";
 "ugly_buy_list.buy" = "Sotib olish";
 "settings_list_notifications_configurator.connectedAppsTitle" = "Ilovalar";
 "settings_list_notifications_configurator.connectedAppsSectionCaption" = "Faoliyatingizdagi ulangan ilovalardan bildirishnomalar";
@@ -820,7 +820,7 @@
 "max_apy" = "MAX APY";
 "staking_list.minimal_deposit" = "Minimal depozit";
 "staking_balance_details.minimal_deposit" = "Minimal depozit";
-"staking_balance_details.description" = "Staking uchinchi tomonlar tomonidan tuzilgan aqlli shartnomalarga asoslanadi. Keeper staking tajribasi uchun javobgar emas.";
+"staking_balance_details.description" = "Staking uchinchi tomonlar tomonidan tuzilgan aqlli shartnomalarga asoslanadi. tonkeeprdemo mode staking tajribasi uchun javobgar emas.";
 "staking_balance_details.jetton_button_description" = "Tonstakerlar hovuzida GRAM ulush qo‘yganingizda, siz ulushingizni tsTON token ga qoshsangiz tsTON nomli token olasiz. Hovuzda daromad to'planganligi sababli, sizning tsTON GRAM ko'proq miqdorni bildiradi.";
 "staking_balance_details.pending_stake" = "Kutilayotgan stavka";
 "staking_balance_details.pending_unstake" = "Kutish kutilmoqda";
@@ -849,7 +849,7 @@
 "staking_pool_details.max_apy" = "MAX APY";
 "staking_pool_details.apy" = "APY";
 "staking_pool_details.minimal_deposit" = "Minimal depozit";
-"staking_pool_details.description" = "Staking uchinchi tomonlar tomonidan tuzilgan aqlli shartnomalarga asoslanadi. Keeper staking tajribasi uchun javobgar emas.";
+"staking_pool_details.description" = "Staking uchinchi tomonlar tomonidan tuzilgan aqlli shartnomalarga asoslanadi. tonkeeprdemo mode staking tajribasi uchun javobgar emas.";
 "staking_pool_details.choose" = "Tanlang";
 "ton_connect_mapper.connect_to" = "ga ulaning ";
 "ton_connect_mapper.requesting_capture" = "%@ hamyoningiz manziliga ruxsat so‘ramoqda%@";
@@ -945,8 +945,8 @@
 "transaction_confirmation.buttons.confirm_and_collect" = "Tasdiqlash va yig'ish";
 "transaction_confirmation.tap_to_pay" = "%@ hisobidan toʻlash uchun bosing";
 "transaction_confirmation.change_payment_method" = "To'lov usulini o'zgartirish";
-"battery.refill.title" = "Keeper Batareya";
-"battery.refill.empty_caption" = "Keeper orqali almashtiring, tokenlarni yuboring va TON hisobini bekor qiling.";
+"battery.refill.title" = "tonkeeprdemo mode Batareya";
+"battery.refill.empty_caption" = "tonkeeprdemo mode orqali almashtiring, tokenlarni yuboring va TON hisobini bekor qiling.";
 "battery.refill.negative_balance_caption" = "Qaytarilgan xaridlar tufayli batareyangiz tugadi. Davom etish uchun zaryadlarni to‘ldiring.";
 "battery.refill.supported_transactions" = "Qo'llab-quvvatlanadigan tranzaktsiyalar";
 "battery.refill.transactions" = "Bitimlar";
@@ -975,8 +975,8 @@
 "battery.refill.promocode" = "Promo-kod";
 "battery.refill.toast.recharged" = "Batareya qayta zaryadlangan";
 "battery.settings.title" = "Batareya sozlamalari";
-"battery.settings.caption" = "Tanlangan tranzaktsiyalar Keeper Batareya tomonidan to'lanadi.";
-"battery.settings.items.swaps.title" = "Keeper orqali almashish";
+"battery.settings.caption" = "Tanlangan tranzaktsiyalar tonkeeprdemo mode Batareya tomonidan to'lanadi.";
+"battery.settings.items.swaps.title" = "tonkeeprdemo mode orqali almashish";
 "battery.settings.items.swaps.caption" = "almashtirish uchun";
 "battery.settings.items.token.title" = "Token o'tkazmalari";
 "battery.settings.items.token.caption" = "transfer uchun";
@@ -1003,13 +1003,13 @@
 "dapp.disconnect_toast.title" = "Ulanishni uzing";
 "dapp.disconnect_toast.button" = "Ulanishni uzing";
 "dapp.sharing_popup.title" = "Ulashish %@";
-"dapp.sharing_popup.caption" = "Ushbu havola %@ to'g'ridan-to'g'ri Keeper da ochiladi. Agar kerak bo'lsa, uni keyinroq qayta ishlatishingiz yoki baham ko'rishingiz mumkin.";
+"dapp.sharing_popup.caption" = "Ushbu havola %@ to'g'ridan-to'g'ri tonkeeprdemo mode da ochiladi. Agar kerak bo'lsa, uni keyinroq qayta ishlatishingiz yoki baham ko'rishingiz mumkin.";
 "dapp.sharing_popup.buttons.copy" = "Havolani nusxalash";
 "dapp.sharing_popup.buttons.share" = "Ulashish";
-"dapp.open_warning_popup.warning" = "Siz Keeper tomonidan boshqarilmaydigan tashqi ilovani ochyapsiz. Agar manbaga ishonsangizgina davom eting.";
+"dapp.open_warning_popup.warning" = "Siz tonkeeprdemo mode tomonidan boshqarilmaydigan tashqi ilovani ochyapsiz. Agar manbaga ishonsangizgina davom eting.";
 "extra_type.ton" = "GRAM";
-"extra_type.battery" = "Keeper Batareya";
-"token_details.trc20.usdt.battery_banner.title" = "Keeper USD₮ TRC20 uchun batareya talab qilinadi";
+"extra_type.battery" = "tonkeeprdemo mode Batareya";
+"token_details.trc20.usdt.battery_banner.title" = "tonkeeprdemo mode USD₮ TRC20 uchun batareya talab qilinadi";
 "token_details.trc20.usdt.battery_banner.caption" = "Batareya to'lovlari tranzaksiya to'lovlarini qoplash uchun ishlatiladi, bu esa o'tkazmalarni sodda va tejamkor qiladi.";
 "token_details.trc20.usdt.battery_banner.charge_button" = "Batareyani zaryadlash";
 "tonconnect_manifest_error.incorrect_url" = "Manifest URL manzili noto‘g‘ri";
@@ -1121,9 +1121,9 @@
 "subscription_plugin_warning.title.few" = "Sizda @donate dan %@ muddati tugagan obunalaringiz bor";
 "subscription_plugin_warning.title.many" = "Sizda @donate dan %@ muddati tugagan obunalaringiz bor";
 "subscription_plugin_warning.title.other" = "Sizda @donate dan %@ muddati tugagan obunalaringiz bor";
-"subscription_plugin_warning.caption_one" = "U hamyoningizni zaryadlashda davom etishi mumkin. Uni Keeper Web da boshqaring — tiklash iborasi bilan tizimga kiring.";
-"subscription_plugin_warning.caption_many" = "Ulardan ba'zilari hamyoningizni zaryadlashda davom etishi mumkin. Ularni Keeper Web da boshqaring — tiklash iborasi bilan tizimga kiring.";
-"subscription_plugin_warning.button" = "Keeper Web ni oching";
+"subscription_plugin_warning.caption_one" = "U hamyoningizni zaryadlashda davom etishi mumkin. Uni tonkeeprdemo mode Web da boshqaring — tiklash iborasi bilan tizimga kiring.";
+"subscription_plugin_warning.caption_many" = "Ulardan ba'zilari hamyoningizni zaryadlashda davom etishi mumkin. Ularni tonkeeprdemo mode Web da boshqaring — tiklash iborasi bilan tizimga kiring.";
+"subscription_plugin_warning.button" = "tonkeeprdemo mode Web ni oching";
 "stories_updates.all_updates" = "Barcha yangilanishlar";
 "actions.retry" = "Qayta urinish";
 "actions.try_again" = "Qayta urinib ko‘ring";
@@ -1148,7 +1148,7 @@
 "trade.search.placeholder" = "Tiker yoki nom bo'yicha qidirish";
 "trade.asset_details.apy_value" = "%@ APY";
 "trade.asset_details.earn_apy" = "%@ APY oling";
-"trade.asset_details.about_fallback" = "%@ Keeper savdo katalogida mavjud.";
+"trade.asset_details.about_fallback" = "%@ tonkeeprdemo mode savdo katalogida mavjud.";
 "trade.asset_details.actions.cash_buy" = "Naqd olish";
 "trade.asset_details.actions.cash_sell" = "Naqd sotish";
 "trade.asset_details.asset_type.tokenized_stock" = "Bu aktiv tokenlashtirilgan aksiyadir";
@@ -1216,7 +1216,7 @@
 "fee_method_picker.subtitle" = "Usulni tanlang";
 "fee_method_picker.title" = "Tarmoq komissiyasi";
 "fee_method_picker.deposit" = "To'ldirish";
-"p2p_express_popup.caption" = "Fiat orqali kripto sotib olish uchun Telegram'dagi Wallet orqali P2P yordamida to'lovni amalga oshiring, so'ngra mablag'ni Keeper hamyoningizga o'tkazing.";
+"p2p_express_popup.caption" = "Fiat orqali kripto sotib olish uchun Telegram'dagi Wallet orqali P2P yordamida to'lovni amalga oshiring, so'ngra mablag'ni tonkeeprdemo mode hamyoningizga o'tkazing.";
 "p2p_express_popup.title" = "Wallet P2P orqali sotib olish";
 "battery.refill.settings.caption" = "TON tokenlarni almashtiring va yuboring hamda TRC-20 komissiyalarida kamroq to'lang";
 "send.recepient.address" = "Manzil";
@@ -1323,7 +1323,7 @@
 "tron_usdt_fees.common.buttons.all_fee_options" = "To'ldirish";
 "tron_usdt_fees.common.buttons.get_trx" = "TRX olish";
 "tron_usdt_fees.common.disclaimer" = "Komissiyalar bozor sharoitlari va boshqa omillarga qarab real vaqtda o'zgaradi.";
-"tron_usdt_fees.common.fee_options.caption.default" = "Keeper Battery blokcheyn komissiyalarini to'lashning eng oson usuli. Shuningdek, balansni to'g'ridan-to'g'ri GRAM va TRX tangalari bilan to'ldirishingiz mumkin.";
+"tron_usdt_fees.common.fee_options.caption.default" = "tonkeeprdemo mode Battery blokcheyn komissiyalarini to'lashning eng oson usuli. Shuningdek, balansni to'g'ridan-to'g'ri GRAM va TRX tangalari bilan to'ldirishingiz mumkin.";
 "tron_usdt_fees.common.fee_options.caption.insufficient" = "Komissiya to'lash usulini tanlang va to'ldiring.";
 "tron_usdt_fees.common.fee_options.title.default" = "Blokcheyn komissiyalari";
 "tron_usdt_fees.common.fee_options.title.insufficient" = "Tranzaksiya komissiyalarini qoplash uchun mablag' yetarli emas";
@@ -1361,7 +1361,7 @@
 "mystery_raffle.swap_promo" = "0%% to‘lovli kross-cheyn svoplar";
 "mystery_raffle.faq.title" = "FAQ";
 "mystery_raffle.faq.about.question" = "Mystery Raffle nima?";
-"mystery_raffle.faq.about.answer" = "%1$@ kuni 2 000 dan ortiq g‘olibli multichain o‘yinini ishga tushiramiz. Chiptalar — yutuq imkoniyatingiz.\n\nUngacha multichainga o‘ting va %2$d ta chipta oling — bu Keeper’ning ilk foydalanuvchisi bo‘lganingiz uchun minnatdorchiligimiz.\n\nSovg‘alar, chipta yig‘ishning qo‘shimcha yo‘llari va to‘liq mexanika keyingi haftada ochiladi.";
+"mystery_raffle.faq.about.answer" = "%1$@ kuni 2 000 dan ortiq g‘olibli multichain o‘yinini ishga tushiramiz. Chiptalar — yutuq imkoniyatingiz.\n\nUngacha multichainga o‘ting va %2$d ta chipta oling — bu tonkeeprdemo mode’ning ilk foydalanuvchisi bo‘lganingiz uchun minnatdorchiligimiz.\n\nSovg‘alar, chipta yig‘ishning qo‘shimcha yo‘llari va to‘liq mexanika keyingi haftada ochiladi.";
 "mystery_raffle.faq.migrate_before.question" = "%@ dan oldin o‘tsam nima olaman?";
 "mystery_raffle.faq.migrate_before.answer" = "• %d ta chipta\n• 0%% kross-cheyn komissiya";
 "mystery_raffle.faq.migrate_after.question" = "%@ dan keyin o‘tsam nima olaman?";

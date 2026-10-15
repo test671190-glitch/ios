@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # The refill sheet ignores Maestro's centre-screen scroll (scrollUntilVisible never moves it),
 # but a swipe that starts on one of its rows does. Swipe from the recharge rows until the

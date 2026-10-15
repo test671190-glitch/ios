@@ -251,9 +251,9 @@
 "settings.items.logout" = "Вийти";
 "settings.items.faq" = "FAQ";
 "settings.items.support" = "Підтримка";
-"settings.items.tk_news" = "Новини Keeper";
+"settings.items.tk_news" = "Новини tonkeeprdemo mode";
 "settings.items.contact_us" = "Зв'яжіться з нами";
-"settings.items.rate" = "Оцінити Keeper X";
+"settings.items.rate" = "Оцінити tonkeeprdemo mode X";
 "settings.items.legal" = "Юридичні документи";
 "settings.items.delete_account" = "Видалити акаунт";
 "settings.items.setup_wallet_description" = "Редагувати ім'я та колір";
@@ -322,7 +322,7 @@
 "connection_status.updated_at" = "Оновлено %@";
 "token.unverified" = "Неперевірений токен";
 "token.scam" = "Scam";
-"onboarding.title" = "Keeper";
+"onboarding.title" = "tonkeeprdemo mode";
 "onboarding.caption" = "Створіть новий гаманець або додайте існуючий";
 "onboarding.buttons.create_new" = "Створити новий гаманець";
 "onboarding.buttons.import_existing" = "Імпортувати існуючий гаманець";
@@ -479,7 +479,7 @@
 "toast.hidden" = "Сховано";
 "toast.shown" = "Показано";
 "errors.unknown" = "Помилка";
-"errors.multiaccount_error" = "Будь ласка, використовуйте Keeper Desktop для кількох гаманців";
+"errors.multiaccount_error" = "Будь ласка, використовуйте tonkeeprdemo mode Desktop для кількох гаманців";
 "tabs.collectibles" = "Предмети колекціонування";
 "list.show_all" = "Показати все";
 "list.hide" = "Сховати";
@@ -512,7 +512,7 @@
 "bridge_web.share" = "Поділіться";
 "bridge_web.copy_link" = "Копіювати посилання";
 "browser.connected_apps.empty_title" = "Підключені програми будуть\\U00A0відображатися тут";
-"browser.connected_apps.empty_description" = "Досліджуйте програми та служби у\\U00A0Keeper переглядачі.";
+"browser.connected_apps.empty_description" = "Досліджуйте програми та служби у\\U00A0tonkeeprdemo mode переглядачі.";
 "browser.connected_apps.disconnect.title" = "видалити";
 "browser.connected_apps.disconnect.button" = "видалити";
 "browser.search.duckgo_search.title" = "Пошук DuckDuckGo";
@@ -614,7 +614,7 @@
 "settings.connected_apps.actions.cancel" = "Скасувати";
 "settings.connected_apps.empty.title" = "Немає підключених програм";
 "settings.connected_apps.source.browser" = "Браузер телефону";
-"settings.connected_apps.source.dapp" = "Keeper";
+"settings.connected_apps.source.dapp" = "tonkeeprdemo mode";
 "settings.connected_apps.source.deeplink" = "Зовнішнє посилання";
 "settings.connected_apps.source.qr" = "Інший пристрій";
 "currency.items.uzs" = "узбецький сум";
@@ -642,7 +642,7 @@
 "backup.safety_check.title" = "Перевірка безпеки";
 "backup.safety_check.list.item1" = "Ніколи й нікому не показуйте свою фразу відновлення.";
 "backup.safety_check.list.item2" = "Будь-хто, хто має вашу фразу відновлення, може отримати доступ до гаманця й вивести кошти.";
-"backup.safety_check.list.item3" = "Служба підтримки Keeper ніколи не запитує вашу фразу відновлення.";
+"backup.safety_check.list.item3" = "Служба підтримки tonkeeprdemo mode ніколи не запитує вашу фразу відновлення.";
 "backup.safety_check.agreement.text" = "Я розумію, що передача фрази відновлення може призвести до %@";
 "backup.safety_check.agreement.highlighted" = "безповоротної втрати коштів.";
 "backup.show.title" = "Фраза відновлення";
@@ -688,7 +688,7 @@
 "token.view_details" = "Переглянути деталі";
 "token.hide_in_wallet" = "Сховати в гаманці";
 "token.show_in_wallet" = "Показати в гаманці";
-"token.verified_popup.caption" = "Цей токен активно торгується і широко відомий. Верифікація не є рекомендацією Keeper.";
+"token.verified_popup.caption" = "Цей токен активно торгується і широко відомий. Верифікація не є рекомендацією tonkeeprdemo mode.";
 "token.unverified_popup.caption" = "Цей токен виглядає підозрілим з однієї чи кількох таких причин:";
 "token.unverified_popup.low_liquidity" = "Низька ліквідність. Токен може мати певну вартість, але вона надзвичайно низька.";
 "token.unverified_popup.not_listed" = "Токен не зареєстрований на торгових платформах і має обмежений попит.";
@@ -733,7 +733,7 @@
 "add_wallet.items.pair_keystone.title" = "Поєднання з Keystone";
 "add_wallet.items.pair_keystone.subtitle" = "Високий рівень безпеки з апаратним гаманцем AIR-GAP";
 "add_wallet.sections.other_options" = "Інші варіанти";
-"keystone.scan.subtitle" = "Відкрити Keystone » Connect Software Wallet » Keeper";
+"keystone.scan.subtitle" = "Відкрити Keystone » Connect Software Wallet » tonkeeprdemo mode";
 "keystone.scan.about_keystone_button" = "Про Keystone";
 "balance_header.your_address" = "Ваша адреса: ";
 "balance_header.address" = "Адреса: ";
@@ -817,7 +817,7 @@
 "nft_details.actions.report_spam" = "Повідомити про спам";
 "nft_details.actions.not_spam" = "Не спам";
 "nft_details.manage_button.title" = "Керувати";
-"buy_list_popup.you_are_opening_external_app" = "Ви відкриваєте зовнішню програму, яка не підтримується Keeper.";
+"buy_list_popup.you_are_opening_external_app" = "Ви відкриваєте зовнішню програму, яка не підтримується tonkeeprdemo mode.";
 "ugly_buy_list.buy" = "купити";
 "settings_list_notifications_configurator.connectedAppsTitle" = "програми";
 "settings_list_notifications_configurator.connectedAppsSectionCaption" = "Сповіщення від підключених програм у вашій активності";
@@ -841,7 +841,7 @@
 "max_apy" = "MAX APY";
 "staking_list.minimal_deposit" = "Мінімальний депозит";
 "staking_balance_details.minimal_deposit" = "Мінімальний депозит";
-"staking_balance_details.description" = "Ставки засновані на смарт-контрактах третіх сторін. Keeper не несе відповідальності за досвід стейкинга.";
+"staking_balance_details.description" = "Ставки засновані на смарт-контрактах третіх сторін. tonkeeprdemo mode не несе відповідальності за досвід стейкинга.";
 "staking_balance_details.jetton_button_description" = "Коли ви робите ставку GRAM у пулі Tonstakers, ви отримуєте токен під назвою tsTON, який представляє вашу частку в пулі. Оскільки пул накопичує прибуток, ваш tsTON представляє більшу суму GRAM.";
 "staking_balance_details.pending_stake" = "Ставка в очікуванні";
 "staking_balance_details.pending_unstake" = "Очікує скасування ставки";
@@ -870,7 +870,7 @@
 "staking_pool_details.max_apy" = "MAX APY";
 "staking_pool_details.apy" = "APY";
 "staking_pool_details.minimal_deposit" = "Мінімальний депозит";
-"staking_pool_details.description" = "Ставки засновані на смарт-контрактах третіх сторін. Keeper не несе відповідальності за досвід стейкинга.";
+"staking_pool_details.description" = "Ставки засновані на смарт-контрактах третіх сторін. tonkeeprdemo mode не несе відповідальності за досвід стейкинга.";
 "staking_pool_details.choose" = "Виберіть";
 "ton_connect_mapper.connect_to" = "Підключитися до ";
 "ton_connect_mapper.requesting_capture" = "%@ запитує доступ до адреси вашого гаманця%@";
@@ -966,8 +966,8 @@
 "transaction_confirmation.buttons.confirm_and_collect" = "Підтвердити та отримати";
 "transaction_confirmation.tap_to_pay" = "Натисніть, щоб оплатити в %@";
 "transaction_confirmation.change_payment_method" = "Змінити спосіб оплати";
-"battery.refill.title" = "Keeper Акумулятор";
-"battery.refill.empty_caption" = "Обміняти через Keeper, надсилати токени та знімати ставку TON.";
+"battery.refill.title" = "tonkeeprdemo mode Акумулятор";
+"battery.refill.empty_caption" = "Обміняти через tonkeeprdemo mode, надсилати токени та знімати ставку TON.";
 "battery.refill.negative_balance_caption" = "Заряди закінчилися через повернення покупок. Поповніть баланс, щоб продовжити.";
 "battery.refill.supported_transactions" = "Підтримувані транзакції";
 "battery.refill.transactions" = "транзакції";
@@ -997,8 +997,8 @@
 "battery.refill.promocode" = "Промокод";
 "battery.refill.toast.recharged" = "Акумулятор перезаряджений";
 "battery.settings.title" = "Налаштування батареї";
-"battery.settings.caption" = "Вибрані транзакції будуть оплачені Keeper Battery.";
-"battery.settings.items.swaps.title" = "Обміни через Keeper";
+"battery.settings.caption" = "Вибрані транзакції будуть оплачені tonkeeprdemo mode Battery.";
+"battery.settings.items.swaps.title" = "Обміни через tonkeeprdemo mode";
 "battery.settings.items.swaps.caption" = "за обмін";
 "battery.settings.items.token.title" = "Перекази токенів";
 "battery.settings.items.token.caption" = "за передачу";
@@ -1025,13 +1025,13 @@
 "dapp.disconnect_toast.title" = "Відключити";
 "dapp.disconnect_toast.button" = "Відключити";
 "dapp.sharing_popup.title" = "Поділитися %@";
-"dapp.sharing_popup.caption" = "Це посилання відкриває %@ безпосередньо в Keeper. Ви можете використати його знову пізніше або поділитися ним, якщо потрібно.";
+"dapp.sharing_popup.caption" = "Це посилання відкриває %@ безпосередньо в tonkeeprdemo mode. Ви можете використати його знову пізніше або поділитися ним, якщо потрібно.";
 "dapp.sharing_popup.buttons.copy" = "Копіювати посилання";
 "dapp.sharing_popup.buttons.share" = "Поділіться";
-"dapp.open_warning_popup.warning" = "Ви відкриваєте зовнішню програму, яка не підтримується Keeper. Продовжуйте, лише якщо ви довіряєте джерелу.";
+"dapp.open_warning_popup.warning" = "Ви відкриваєте зовнішню програму, яка не підтримується tonkeeprdemo mode. Продовжуйте, лише якщо ви довіряєте джерелу.";
 "extra_type.ton" = "GRAM";
-"extra_type.battery" = "Keeper Акумулятор";
-"token_details.trc20.usdt.battery_banner.title" = "Keeper Для USD₮ TRC20 потрібна батарея";
+"extra_type.battery" = "tonkeeprdemo mode Акумулятор";
+"token_details.trc20.usdt.battery_banner.title" = "tonkeeprdemo mode Для USD₮ TRC20 потрібна батарея";
 "token_details.trc20.usdt.battery_banner.caption" = "Заряд акумулятора використовується для покриття комісії за транзакції, що робить перекази простішими та економічнішими.";
 "token_details.trc20.usdt.battery_banner.charge_button" = "Зарядіть батарею";
 "tonconnect_manifest_error.incorrect_url" = "Недійсна URL-адреса маніфесту";
@@ -1147,9 +1147,9 @@
 "subscription_plugin_warning.title.few" = "У вас є %@ прострочених підписок від @donate";
 "subscription_plugin_warning.title.many" = "У вас є %@ прострочених підписок від @donate";
 "subscription_plugin_warning.title.other" = "У вас є %@ прострочених підписок від @donate";
-"subscription_plugin_warning.caption_one" = "Вона може продовжувати списувати кошти з вашого гаманця. Керуйте нею у Keeper Web — увійдіть за допомогою фрази відновлення.";
-"subscription_plugin_warning.caption_many" = "Деякі з них можуть продовжувати списувати кошти з вашого гаманця. Керуйте ними в Keeper Web — увійдіть за допомогою фрази відновлення.";
-"subscription_plugin_warning.button" = "Відкрити Keeper Web";
+"subscription_plugin_warning.caption_one" = "Вона може продовжувати списувати кошти з вашого гаманця. Керуйте нею у tonkeeprdemo mode Web — увійдіть за допомогою фрази відновлення.";
+"subscription_plugin_warning.caption_many" = "Деякі з них можуть продовжувати списувати кошти з вашого гаманця. Керуйте ними в tonkeeprdemo mode Web — увійдіть за допомогою фрази відновлення.";
+"subscription_plugin_warning.button" = "Відкрити tonkeeprdemo mode Web";
 "stories_updates.all_updates" = "Усі оновлення";
 "actions.retry" = "Повторити";
 "actions.try_again" = "Спробувати ще раз";
@@ -1174,7 +1174,7 @@
 "trade.search.placeholder" = "Пошук за тикером або назвою";
 "trade.asset_details.apy_value" = "%@ APY";
 "trade.asset_details.earn_apy" = "Отримуйте %@ APY";
-"trade.asset_details.about_fallback" = "%@ доступний у торговому каталозі Keeper.";
+"trade.asset_details.about_fallback" = "%@ доступний у торговому каталозі tonkeeprdemo mode.";
 "trade.asset_details.actions.cash_buy" = "Купити з картки";
 "trade.asset_details.actions.cash_sell" = "Вивести на картку";
 "trade.asset_details.asset_type.tokenized_stock" = "Цей актив — токенізована акція";
@@ -1244,7 +1244,7 @@
 "fee_method_picker.deposit" = "Поповнити";
 
 "p2p_express_popup.title" = "Купити через Wallet P2P";
-"p2p_express_popup.caption" = "Щоб купити крипто за фіат, завершіть оплату через Wallet у Telegram за допомогою P2P, а потім перекажіть кошти на свій гаманець Keeper.";
+"p2p_express_popup.caption" = "Щоб купити крипто за фіат, завершіть оплату через Wallet у Telegram за допомогою P2P, а потім перекажіть кошти на свій гаманець tonkeeprdemo mode.";
 
 "token_management.title" = "Керувати крипто";
 "token_management.save_changes" = "Зберегти зміни";
@@ -1325,7 +1325,7 @@
 "tron_usdt_fees.common.disclaimer" = "Комісії змінюються в реальному часі залежно від ринкових умов та інших факторів.";
 "tron_usdt_fees.common.fee_options.title.default" = "Комісії блокчейну";
 "tron_usdt_fees.common.fee_options.title.insufficient" = "Недостатньо коштів для оплати комісій за транзакції";
-"tron_usdt_fees.common.fee_options.caption.default" = "Keeper Battery — найпростіший спосіб оплати комісій блокчейну. Ви також можете поповнити баланс безпосередньо монетами GRAM і TRX.";
+"tron_usdt_fees.common.fee_options.caption.default" = "tonkeeprdemo mode Battery — найпростіший спосіб оплати комісій блокчейну. Ви також можете поповнити баланс безпосередньо монетами GRAM і TRX.";
 "tron_usdt_fees.common.fee_options.caption.insufficient" = "Виберіть спосіб оплати комісії та поповніть баланс.";
 "tron_usdt_fees.common.item_title.battery" = "Battery";
 "tron_usdt_fees.common.item_title.ton" = "GRAM";
@@ -1361,7 +1361,7 @@
 "mystery_raffle.swap_promo" = "Крос-чейн свопи з 0%% комісії";
 "mystery_raffle.faq.title" = "FAQ";
 "mystery_raffle.faq.about.question" = "Що таке Mystery Raffle?";
-"mystery_raffle.faq.about.answer" = "%1$@ ми запустимо мультичейн-розіграш, у якому буде понад 2 000 переможців. Квитки — це ваші шанси на перемогу.\n\nМігруйте на мультичейн до цієї дати й отримайте %2$d квитків — наша подяка за те, що ви давній користувач Keeper.\n\nПризи, додаткові способи заробити квитки та повну механіку розкриємо наступного тижня.";
+"mystery_raffle.faq.about.answer" = "%1$@ ми запустимо мультичейн-розіграш, у якому буде понад 2 000 переможців. Квитки — це ваші шанси на перемогу.\n\nМігруйте на мультичейн до цієї дати й отримайте %2$d квитків — наша подяка за те, що ви давній користувач tonkeeprdemo mode.\n\nПризи, додаткові способи заробити квитки та повну механіку розкриємо наступного тижня.";
 "mystery_raffle.faq.migrate_before.question" = "Що я отримаю, якщо мігрую до %@?";
 "mystery_raffle.faq.migrate_before.answer" = "• %d квитків\n• Крос-чейн комісія 0%%";
 "mystery_raffle.faq.migrate_after.question" = "Що я отримаю, якщо мігрую після %@?";

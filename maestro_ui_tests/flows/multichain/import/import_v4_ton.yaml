@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Import TON-only v4R2 from Maestro env TON_v4 (multichain build).
 - launchApp:

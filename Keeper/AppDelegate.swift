@@ -58,7 +58,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
 
     private func indexMainAppSearchItem() {
-        let appName = (Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String) ?? "Keeper"
+        let appName = (Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String) ?? "tonkeeprdemo mode"
 
         let attributeSet = CSSearchableItemAttributeSet(contentType: .item)
         attributeSet.title = appName

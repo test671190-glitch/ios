@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: ../../../steps/launch_app_ensure_ton_wallet.yaml
 - runFlow: ../../../service/account/compare_ton_balance.yaml
@@ -12,7 +12,7 @@ appId: com.jbig.tonkeeper
 - tapOn:
     id: wallet_battery
 - extendedWaitUntil:
-    visible: Keeper Battery
+    visible: tonkeeprdemo mode Battery
     timeout: 30000
 - runFlow: ../../../steps/battery/reveal_refill_bottom.yaml
 - tapOn: ${"Recharge with " + NATIVE_TOKEN_SHORT_TEXT}

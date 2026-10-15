@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Native swap Continue stays visible while disabled: `getContinueButtonEnableState()` requires
 # `confirmation != nil`, and `handleContinueTap()` guards on the same value, so a tap fired before

@@ -42,10 +42,10 @@ final class BootConfigurationDomainTests: XCTestCase {
     func testDecodesTheAnalyticsEndpoint() throws {
         let configuration = try JSONDecoder().decode(
             BootConfiguration.self,
-            from: Data(#"{"aptabase_endpoint": "https://block-analytics.tonkeeper.com"}"#.utf8)
+            from: Data(#"{"aptabase_endpoint": "https://block-analytics.example.com"}"#.utf8)
         )
 
-        XCTAssertEqual(configuration.aptabaseEndpoint, "https://block-analytics.tonkeeper.com")
+        XCTAssertEqual(configuration.aptabaseEndpoint, "https://block-analytics.example.com")
     }
 
     /// Absent means the bundled endpoint stands, so this must stay nil rather than gain a default.
@@ -91,24 +91,24 @@ final class BootConfigurationDomainTests: XCTestCase {
                 """
                 {
                   "multichain": {
-                    "domain": "https://block-multi.tonkeeper.com",
-                    "realtime": "wss://block-rt.tonkeeper.com/connection/websocket"
+                    "domain": "https://block-multi.example.com",
+                    "realtime": "wss://block-rt.example.com/connection/websocket"
                   },
                   "trading": {
-                    "domain": "https://trading.tonkeeper.com"
+                    "domain": "https://trading.example.com"
                   }
                 }
                 """.utf8
             )
         )
 
-        XCTAssertEqual(configuration.multichain.domain, URL(string: "https://block-multi.tonkeeper.com"))
+        XCTAssertEqual(configuration.multichain.domain, URL(string: "https://block-multi.example.com"))
         XCTAssertEqual(
             configuration.multichain.realtime,
-            URL(string: "wss://block-rt.tonkeeper.com/connection/websocket"),
+            URL(string: "wss://block-rt.example.com/connection/websocket"),
             "the realtime host is swapped by region just like the domain is"
         )
-        XCTAssertEqual(configuration.trading.domain, URL(string: "https://trading.tonkeeper.com"))
+        XCTAssertEqual(configuration.trading.domain, URL(string: "https://trading.example.com"))
         XCTAssertNil(configuration.trading.realtime)
     }
 
@@ -117,20 +117,20 @@ final class BootConfigurationDomainTests: XCTestCase {
             BootConfiguration.self,
             from: Data(
                 """
-                { "multichain": { "domain": "https://block-multi.tonkeeper.com" } }
+                { "multichain": { "domain": "https://block-multi.example.com" } }
                 """.utf8
             )
         )
 
-        XCTAssertEqual(configuration.multichain.domain, URL(string: "https://block-multi.tonkeeper.com"))
+        XCTAssertEqual(configuration.multichain.domain, URL(string: "https://block-multi.example.com"))
         XCTAssertNil(configuration.multichain.realtime)
     }
 
     func testUsesDefaultDomainsWhenResponseDoesNotContainEndpoints() throws {
         let configuration = try JSONDecoder().decode(BootConfiguration.self, from: Data("{}".utf8))
 
-        XCTAssertEqual(configuration.multichain.domain, URL(string: "https://multi.tonkeeper.com"))
+        XCTAssertEqual(configuration.multichain.domain, URL.noServer)
         XCTAssertEqual(configuration.multichain.realtime, BootConfiguration.defaultMultichainRealtimeURL)
-        XCTAssertEqual(configuration.trading.domain, URL(string: "https://trading.tonkeeper.com"))
+        XCTAssertEqual(configuration.trading.domain, URL.noServer)
     }
 }

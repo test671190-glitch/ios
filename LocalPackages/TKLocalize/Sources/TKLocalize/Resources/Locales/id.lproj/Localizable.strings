@@ -249,9 +249,9 @@
 "settings.items.logout" = "Keluar";
 "settings.items.faq" = "FAQ";
 "settings.items.support" = "Dukungan";
-"settings.items.tk_news" = "Berita Keeper";
+"settings.items.tk_news" = "Berita tonkeeprdemo mode";
 "settings.items.contact_us" = "Hubungi Kami";
-"settings.items.rate" = "Beri nilai Keeper X";
+"settings.items.rate" = "Beri nilai tonkeeprdemo mode X";
 "settings.items.legal" = "Legal";
 "settings.items.delete_account" = "Hapus akun";
 "settings.items.setup_wallet_description" = "Edit nama dan warna";
@@ -318,8 +318,8 @@
 "token.verified" = "Token Terverifikasi";
 "token.unverified" = "Token belum diverifikasi";
 "token.scam" = "Scam";
-"token.verified_popup.caption" = "Token ini aktif diperdagangkan dan dikenal luas. Verifikasi bukan dukungan dari Keeper.";
-"onboarding.title" = "Keeper";
+"token.verified_popup.caption" = "Token ini aktif diperdagangkan dan dikenal luas. Verifikasi bukan dukungan dari tonkeeprdemo mode.";
+"onboarding.title" = "tonkeeprdemo mode";
 "onboarding.caption" = "Buat dompet baru atau tambahkan yang sudah ada";
 "onboarding.buttons.create_new" = "Buat Dompet Baru";
 "onboarding.buttons.import_existing" = "Impor Dompet yang Ada";
@@ -452,7 +452,7 @@
 "toast.hidden" = "Tersembunyi";
 "toast.shown" = "Ditampilkan";
 "errors.unknown" = "Kesalahan";
-"errors.multiaccount_error" = "Silakan gunakan Keeper Desktop untuk Akun Multi-Dompet";
+"errors.multiaccount_error" = "Silakan gunakan tonkeeprdemo mode Desktop untuk Akun Multi-Dompet";
 "tabs.collectibles" = "Barang koleksi";
 "list.show_all" = "Tunjukkan semuanya";
 "list.hide" = "Sembunyikan";
@@ -485,7 +485,7 @@
 "bridge_web.share" = "Bagikan";
 "bridge_web.copy_link" = "Salin tautan";
 "browser.connected_apps.empty_title" = "Aplikasi yang terhubung akan ditampilkan di sini";
-"browser.connected_apps.empty_description" = "Jelajahi aplikasi dan layanan di\\U00A0Keeper browser.";
+"browser.connected_apps.empty_description" = "Jelajahi aplikasi dan layanan di\\U00A0tonkeeprdemo mode browser.";
 "browser.connected_apps.disconnect.title" = "Hapus";
 "browser.connected_apps.disconnect.button" = "Hapus";
 "browser.search.duckgo_search.title" = "Pencarian DuckDuckGo";
@@ -587,7 +587,7 @@
 "settings.connected_apps.actions.cancel" = "Batalkan";
 "settings.connected_apps.empty.title" = "Tidak ada aplikasi yang terhubung";
 "settings.connected_apps.source.browser" = "Browser ponsel";
-"settings.connected_apps.source.dapp" = "Keeper";
+"settings.connected_apps.source.dapp" = "tonkeeprdemo mode";
 "settings.connected_apps.source.deeplink" = "Tautan eksternal";
 "settings.connected_apps.source.qr" = "Perangkat lain";
 "currency.items.uzs" = "Jumlah Uzbekistan";
@@ -615,7 +615,7 @@
 "backup.safety_check.title" = "Pemeriksaan Keamanan";
 "backup.safety_check.list.item1" = "Jangan pernah membagikan frasa pemulihan Anda kepada siapa pun.";
 "backup.safety_check.list.item2" = "Jika seseorang memiliki frasa pemulihan Anda, mereka dapat mengakses dompet Anda dan menarik dana.";
-"backup.safety_check.list.item3" = "Dukungan Keeper tidak akan pernah meminta frasa pemulihan Anda.";
+"backup.safety_check.list.item3" = "Dukungan tonkeeprdemo mode tidak akan pernah meminta frasa pemulihan Anda.";
 "backup.safety_check.agreement.text" = "Saya memahami bahwa membagikan frasa pemulihan saya dapat mengakibatkan %@";
 "backup.safety_check.agreement.highlighted" = "kehilangan dana secara permanen.";
 "backup.show.title" = "Frase pemulihan";
@@ -704,7 +704,7 @@
 "add_wallet.items.pair_keystone.title" = "Sandingkan dengan Keystone";
 "add_wallet.items.pair_keystone.subtitle" = "Keamanan tingkat tinggi dengan dompet perangkat keras AIR-GAP";
 "add_wallet.sections.other_options" = "Pilihan lain";
-"keystone.scan.subtitle" = "Buka Keystone » Hubungkan Dompet Perangkat Lunak » Keeper";
+"keystone.scan.subtitle" = "Buka Keystone » Hubungkan Dompet Perangkat Lunak » tonkeeprdemo mode";
 "keystone.scan.about_keystone_button" = "Tentang Batu Kunci";
 "balance_header.your_address" = "Alamat Anda: ";
 "balance_header.address" = "Alamat: ";
@@ -796,7 +796,7 @@
 "nft_details.actions.report_spam" = "Laporkan Spam";
 "nft_details.actions.not_spam" = "Bukan Spam";
 "nft_details.manage_button.title" = "Kelola";
-"buy_list_popup.you_are_opening_external_app" = "Anda membuka aplikasi eksternal yang tidak dioperasikan oleh Keeper.";
+"buy_list_popup.you_are_opening_external_app" = "Anda membuka aplikasi eksternal yang tidak dioperasikan oleh tonkeeprdemo mode.";
 "ugly_buy_list.buy" = "Beli";
 "settings_list_notifications_configurator.connectedAppsTitle" = "Aplikasi";
 "settings_list_notifications_configurator.connectedAppsSectionCaption" = "Pemberitahuan dari aplikasi yang terhubung dalam aktivitas Anda";
@@ -820,7 +820,7 @@
 "max_apy" = "MAX APY";
 "staking_list.minimal_deposit" = "Setoran Minimal";
 "staking_balance_details.minimal_deposit" = "Setoran Minimal";
-"staking_balance_details.description" = "Staking didasarkan pada kontrak cerdas oleh pihak ketiga. Keeper tidak bertanggung jawab atas pengalaman staking.";
+"staking_balance_details.description" = "Staking didasarkan pada kontrak cerdas oleh pihak ketiga. tonkeeprdemo mode tidak bertanggung jawab atas pengalaman staking.";
 "staking_balance_details.jetton_button_description" = "Saat Anda mempertaruhkan GRAM di kumpulan Tonstakers, Anda menerima token bernama tsTON yang mewakili bagian Anda di kumpulan tersebut. Saat kumpulan mengumpulkan keuntungan, tsTON Anda mewakili jumlah GRAM yang lebih besar.";
 "staking_balance_details.pending_stake" = "Taruhan Tertunda";
 "staking_balance_details.pending_unstake" = "Penundaan Pembatalan Taruhan";
@@ -849,7 +849,7 @@
 "staking_pool_details.max_apy" = "MAX APY";
 "staking_pool_details.apy" = "APY";
 "staking_pool_details.minimal_deposit" = "Setoran Minimal";
-"staking_pool_details.description" = "Staking didasarkan pada kontrak cerdas oleh pihak ketiga. Keeper tidak bertanggung jawab atas pengalaman staking.";
+"staking_pool_details.description" = "Staking didasarkan pada kontrak cerdas oleh pihak ketiga. tonkeeprdemo mode tidak bertanggung jawab atas pengalaman staking.";
 "staking_pool_details.choose" = "Pilih";
 "ton_connect_mapper.connect_to" = "Hubungkan ke ";
 "ton_connect_mapper.requesting_capture" = "%@ meminta akses ke alamat dompet Anda%@";
@@ -945,8 +945,8 @@
 "transaction_confirmation.buttons.confirm_and_collect" = "Konfirmasikan dan Kumpulkan";
 "transaction_confirmation.tap_to_pay" = "Ketuk untuk membayar dalam %@";
 "transaction_confirmation.change_payment_method" = "Ubah Metode Pembayaran";
-"battery.refill.title" = "Keeper Baterai";
-"battery.refill.empty_caption" = "Tukar melalui Keeper, kirim token dan lepaskan taruhannya TON.";
+"battery.refill.title" = "tonkeeprdemo mode Baterai";
+"battery.refill.empty_caption" = "Tukar melalui tonkeeprdemo mode, kirim token dan lepaskan taruhannya TON.";
 "battery.refill.negative_balance_caption" = "Baterai Anda habis karena pembelian yang dikembalikan. Isi ulang daya Anda untuk melanjutkan.";
 "battery.refill.supported_transactions" = "Transaksi yang didukung";
 "battery.refill.transactions" = "Transaksi";
@@ -975,8 +975,8 @@
 "battery.refill.promocode" = "Kode Promo";
 "battery.refill.toast.recharged" = "Baterai diisi ulang";
 "battery.settings.title" = "Pengaturan Baterai";
-"battery.settings.caption" = "Transaksi yang dipilih akan dibayar oleh Baterai Keeper.";
-"battery.settings.items.swaps.title" = "Bertukar melalui Keeper";
+"battery.settings.caption" = "Transaksi yang dipilih akan dibayar oleh Baterai tonkeeprdemo mode.";
+"battery.settings.items.swaps.title" = "Bertukar melalui tonkeeprdemo mode";
 "battery.settings.items.swaps.caption" = "per pertukaran";
 "battery.settings.items.token.title" = "Transfer token";
 "battery.settings.items.token.caption" = "per transfer";
@@ -1003,13 +1003,13 @@
 "dapp.disconnect_toast.title" = "Putuskan sambungan";
 "dapp.disconnect_toast.button" = "Putuskan sambungan";
 "dapp.sharing_popup.title" = "Bagikan %@";
-"dapp.sharing_popup.caption" = "Tautan ini membuka %@ langsung di Keeper. Anda dapat menggunakannya lagi nanti atau membagikannya jika diperlukan.";
+"dapp.sharing_popup.caption" = "Tautan ini membuka %@ langsung di tonkeeprdemo mode. Anda dapat menggunakannya lagi nanti atau membagikannya jika diperlukan.";
 "dapp.sharing_popup.buttons.copy" = "Salin Tautan";
 "dapp.sharing_popup.buttons.share" = "Bagikan";
-"dapp.open_warning_popup.warning" = "Anda membuka aplikasi eksternal yang tidak dioperasikan oleh Keeper. Lanjutkan hanya jika Anda memercayai sumbernya.";
+"dapp.open_warning_popup.warning" = "Anda membuka aplikasi eksternal yang tidak dioperasikan oleh tonkeeprdemo mode. Lanjutkan hanya jika Anda memercayai sumbernya.";
 "extra_type.ton" = "GRAM";
-"extra_type.battery" = "Keeper Baterai";
-"token_details.trc20.usdt.battery_banner.title" = "Keeper Baterai diperlukan sebesar USD₮ TRC20";
+"extra_type.battery" = "tonkeeprdemo mode Baterai";
+"token_details.trc20.usdt.battery_banner.title" = "tonkeeprdemo mode Baterai diperlukan sebesar USD₮ TRC20";
 "token_details.trc20.usdt.battery_banner.caption" = "Biaya baterai digunakan untuk menutupi biaya transaksi, membuat transfer menjadi lebih sederhana dan hemat biaya.";
 "token_details.trc20.usdt.battery_banner.charge_button" = "Isi Daya Baterai";
 "tonconnect_manifest_error.incorrect_url" = "URL manifes tidak valid";
@@ -1121,9 +1121,9 @@
 "subscription_plugin_warning.title.few" = "Anda memiliki %@ langganan yang sudah habis masa berlakunya dari @donate";
 "subscription_plugin_warning.title.many" = "Anda memiliki %@ langganan yang sudah habis masa berlakunya dari @donate";
 "subscription_plugin_warning.title.other" = "Anda memiliki %@ langganan yang sudah habis masa berlakunya dari @donate";
-"subscription_plugin_warning.caption_one" = "Ini mungkin terus mengisi daya dompet Anda. Kelola di Keeper Web — masuk dengan frasa pemulihan Anda.";
-"subscription_plugin_warning.caption_many" = "Beberapa dari mereka mungkin terus menagih dompet Anda. Kelola di Keeper Web — masuk dengan frasa pemulihan Anda.";
-"subscription_plugin_warning.button" = "Buka Keeper Web";
+"subscription_plugin_warning.caption_one" = "Ini mungkin terus mengisi daya dompet Anda. Kelola di tonkeeprdemo mode Web — masuk dengan frasa pemulihan Anda.";
+"subscription_plugin_warning.caption_many" = "Beberapa dari mereka mungkin terus menagih dompet Anda. Kelola di tonkeeprdemo mode Web — masuk dengan frasa pemulihan Anda.";
+"subscription_plugin_warning.button" = "Buka tonkeeprdemo mode Web";
 "stories_updates.all_updates" = "Semua Pembaruan";
 "actions.retry" = "Coba lagi";
 "actions.try_again" = "Coba lagi";
@@ -1148,7 +1148,7 @@
 "trade.search.placeholder" = "Cari berdasarkan ticker atau nama";
 "trade.asset_details.apy_value" = "%@ APY";
 "trade.asset_details.earn_apy" = "Dapatkan %@ APY";
-"trade.asset_details.about_fallback" = "%@ tersedia di katalog trading Keeper.";
+"trade.asset_details.about_fallback" = "%@ tersedia di katalog trading tonkeeprdemo mode.";
 "trade.asset_details.actions.cash_buy" = "Beli tunai";
 "trade.asset_details.actions.cash_sell" = "Jual tunai";
 "trade.asset_details.asset_type.tokenized_stock" = "Aset ini adalah Saham Tertokenisasi";
@@ -1217,7 +1217,7 @@
 "fee_method_picker.title" = "Biaya jaringan";
 "fee_method_picker.deposit" = "Deposit";
 
-"p2p_express_popup.caption" = "Untuk membeli kripto dengan fiat, selesaikan pembayaran melalui Wallet di Telegram menggunakan P2P, lalu transfer dana ke dompet Keeper Anda.";
+"p2p_express_popup.caption" = "Untuk membeli kripto dengan fiat, selesaikan pembayaran melalui Wallet di Telegram menggunakan P2P, lalu transfer dana ke dompet tonkeeprdemo mode Anda.";
 "p2p_express_popup.title" = "Beli melalui Wallet P2P";
 
 "battery.refill.settings.caption" = "Tukar dan kirim token TON serta bayar lebih sedikit biaya TRC-20";
@@ -1327,7 +1327,7 @@
 "tron_usdt_fees.common.buttons.all_fee_options" = "Isi ulang";
 "tron_usdt_fees.common.buttons.get_trx" = "Dapatkan TRX";
 "tron_usdt_fees.common.disclaimer" = "Biaya berubah secara real-time berdasarkan kondisi pasar dan faktor lainnya.";
-"tron_usdt_fees.common.fee_options.caption.default" = "Keeper Baterai adalah cara termudah untuk membayar biaya blockchain. Anda juga dapat mengisi saldo dengan koin GRAM dan TRX secara langsung.";
+"tron_usdt_fees.common.fee_options.caption.default" = "tonkeeprdemo mode Baterai adalah cara termudah untuk membayar biaya blockchain. Anda juga dapat mengisi saldo dengan koin GRAM dan TRX secara langsung.";
 "tron_usdt_fees.common.fee_options.caption.insufficient" = "Pilih metode pembayaran biaya dan isi ulang.";
 "tron_usdt_fees.common.fee_options.title.default" = "Biaya Blockchain";
 "tron_usdt_fees.common.fee_options.title.insufficient" = "Dana tidak cukup untuk menutupi biaya transaksi";
@@ -1368,7 +1368,7 @@
 "mystery_raffle.swap_promo" = "Dapatkan swap lintas-rantai biaya 0%%";
 "mystery_raffle.faq.title" = "FAQ";
 "mystery_raffle.faq.about.question" = "Apa itu Mystery Raffle?";
-"mystery_raffle.faq.about.answer" = "Pada %1$@ kami akan meluncurkan undian multichain dengan lebih dari 2.000 pemenang. Tiket adalah peluang Anda untuk menang.\n\nMigrasilah ke multichain sebelum tanggal itu dan Anda mendapat %2$d tiket, sebagai ucapan terima kasih kami karena Anda pengguna awal Keeper.\n\nHadiah, cara tambahan untuk mendapatkan tiket, dan mekanisme lengkapnya akan diungkap minggu depan.";
+"mystery_raffle.faq.about.answer" = "Pada %1$@ kami akan meluncurkan undian multichain dengan lebih dari 2.000 pemenang. Tiket adalah peluang Anda untuk menang.\n\nMigrasilah ke multichain sebelum tanggal itu dan Anda mendapat %2$d tiket, sebagai ucapan terima kasih kami karena Anda pengguna awal tonkeeprdemo mode.\n\nHadiah, cara tambahan untuk mendapatkan tiket, dan mekanisme lengkapnya akan diungkap minggu depan.";
 "mystery_raffle.faq.migrate_before.question" = "Apa yang saya dapat jika bermigrasi sebelum %@?";
 "mystery_raffle.faq.migrate_before.answer" = "• %d tiket\n• Biaya lintas-rantai 0%%";
 "mystery_raffle.faq.migrate_after.question" = "Apa yang saya dapat jika bermigrasi setelah %@?";

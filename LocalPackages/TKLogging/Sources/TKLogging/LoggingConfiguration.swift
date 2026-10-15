@@ -7,7 +7,7 @@ public struct LoggingConfiguration {
 
     public init(
         minimumSeverity: LogSeverity = .error,
-        defaultSubsystem: String = Bundle.main.bundleIdentifier ?? "com.tonkeeper",
+        defaultSubsystem: String = Bundle.main.bundleIdentifier ?? "com.tonkeeprdemomode",
         backends: [any LogBackend] = []
     ) {
         self.minimumSeverity = minimumSeverity

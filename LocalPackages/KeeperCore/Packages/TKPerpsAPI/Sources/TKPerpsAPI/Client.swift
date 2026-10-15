@@ -10,7 +10,7 @@ import struct Foundation.Data
 import struct Foundation.Date
 #endif
 import HTTPTypes
-/// An aggregating BFF proxy sitting between self-custody TonKeeper clients and the Lighter perpetuals exchange. It serves screen-shaped read responses so the client can render a full screen in a single round-trip.
+/// An aggregating BFF proxy sitting between self-custody tonkeeprdemo mode clients and the Lighter perpetuals exchange. It serves screen-shaped read responses so the client can render a full screen in a single round-trip.
 public struct Client: APIProtocol {
     /// The underlying HTTP client.
     private let client: UniversalClient

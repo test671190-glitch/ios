@@ -652,13 +652,13 @@ components:
       required: false
       description: >
         Юзер агент (для совместимости и фичефлагов). Формат:
-        "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)".
+        "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)".
         Должен передаваться как обычный текст, БЕЗ URL-кодирования
-        (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build
+        (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build
         не распарсятся у downstream-сервисов, которым он форвардится).
       schema:
         type: string
-      example: "Tonkeeper/4.9.0 (iOS; 17.2; iPhone15,3)"
+      example: "TonkeeprDemoMode/4.9.0 (iOS; 17.2; iPhone15,3)"
 
   responses:
     BadRequest:

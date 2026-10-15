@@ -312,7 +312,7 @@ private enum Constants {
     static let finderPatternSize = 7
 
     static func densePayload(length: Int) -> String {
-        let seed = "tonkeeper://transfer/UQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKZ?text="
+        let seed = "tonkeeprdemomode://transfer/UQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJKZ?text="
         let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let repeated = String(repeating: alphabet, count: max(1, length / alphabet.count + 1))
         return seed + String(repeated.prefix(length))

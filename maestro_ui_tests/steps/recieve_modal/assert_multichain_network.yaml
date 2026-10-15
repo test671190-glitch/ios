@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Env: NETWORK_NAME, INDEX, ADDRESS_TITLE, DISCLAIMER
 - assertVisible: ${NETWORK_NAME}

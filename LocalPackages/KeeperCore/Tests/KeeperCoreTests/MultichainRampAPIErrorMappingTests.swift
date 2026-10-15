@@ -50,7 +50,7 @@ final class MultichainRampAPIErrorMappingTests: XCTestCase {
     private func makeAPI(transport: StubTransport) -> MultichainRampAPI {
         MultichainRampAPIImplementation(
             swapAPIClient: SwapAPI.Client(
-                serverURL: URL(string: "https://swap.tonkeeper.com")!,
+                serverURL: URL(string: "https://swap.example.com")!,
                 transport: transport
             ),
             appInfoProvider: StubAppInfoProvider(),
@@ -101,7 +101,7 @@ private struct StubAppInfoProvider: AppInfoProvider {
     }
 
     var userAgent: String {
-        "Tonkeeper/1.0"
+        "TonkeeprDemoMode/1.0"
     }
 
     var platform: String {

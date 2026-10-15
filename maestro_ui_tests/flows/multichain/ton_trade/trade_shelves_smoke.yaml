@@ -1,6 +1,6 @@
 # regress_EN [Trading UI]: shelf categories (API titles) and Today's top movers segments.
 # Shelf group names come from Trading API — use optional checks where titles may vary by environment.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 - extendedWaitUntil:

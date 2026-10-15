@@ -9,12 +9,12 @@ final class DeeplinksParserTests: XCTestCase {
         walletConnectDeeplinkValidator: WalletConnectDeeplinkValidatorImplementation()
     )
 
-    func testTransferTonkeeperDeeplinkParsing() throws {
+    func testTransferTonkeeprDemoModeDeeplinkParsing() throws {
         let address = "EQD2NmD_lH5f5u1Kj3KfGyTvhZSX0Eg6qp2a5IQUKXxOG21n"
         let text = "just comment"
         let amount = "10000"
 
-        let string = "tonkeeper://transfer/\(address)?text=\(text)&amount=\(amount)"
+        let string = "tonkeeprdemomode://transfer/\(address)?text=\(text)&amount=\(amount)"
         let transferData = Deeplink.TransferData(
             recipient: address,
             amount: BigUInt(amount),
@@ -51,28 +51,6 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testTransferUniversalLinkParsing() throws {
-        let address = "EQD2NmD_lH5f5u1Kj3KfGyTvhZSX0Eg6qp2a5IQUKXxOG21n"
-        let text = "just comment"
-        let amount = "10000"
-
-        let string = "https://app.tonkeeper.com/transfer/\(address)?text=\(text)&amount=\(amount)"
-        let transferData = Deeplink.TransferData(
-            recipient: address,
-            amount: BigUInt(amount),
-            comment: text,
-            jettonAddress: nil,
-            assetId: nil,
-            expirationTimestamp: nil,
-            successReturn: nil
-        )
-        let result = Deeplink.transfer(.sendTransfer(transferData))
-
-        let parsedDeeplink = try parser.parse(string: string)
-
-        XCTAssertEqual(parsedDeeplink, result)
-    }
-
     func testStakingTonDeeplinkParsing() throws {
         let string = "ton://staking"
         let result = Deeplink.staking
@@ -82,17 +60,8 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testStakingTonkeeperDeeplinkParsing() throws {
-        let string = "tonkeeper://staking"
-        let result = Deeplink.staking
-
-        let parsedDeeplink = try parser.parse(string: string)
-
-        XCTAssertEqual(parsedDeeplink, result)
-    }
-
-    func testStakingTonkeeperUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/staking"
+    func testStakingTonkeeprDemoModeDeeplinkParsing() throws {
+        let string = "tonkeeprdemomode://staking"
         let result = Deeplink.staking
 
         let parsedDeeplink = try parser.parse(string: string)
@@ -113,21 +82,8 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testSwapTonkeeperDeeplinkParsing() throws {
-        let string = "tonkeeper://swap?ft=TON&tt=FNZ"
-        let swapData = Deeplink.SwapData(
-            fromToken: "TON",
-            toToken: "FNZ"
-        )
-        let result = Deeplink.swap(swapData)
-
-        let parsedDeeplink = try parser.parse(string: string)
-
-        XCTAssertEqual(parsedDeeplink, result)
-    }
-
-    func testSwapTonkeeperUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/swap?ft=TON&tt=FNZ"
+    func testSwapTonkeeprDemoModeDeeplinkParsing() throws {
+        let string = "tonkeeprdemomode://swap?ft=TON&tt=FNZ"
         let swapData = Deeplink.SwapData(
             fromToken: "TON",
             toToken: "FNZ"
@@ -148,17 +104,8 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testActionTonkeeperDeeplinkParsing() throws {
-        let string = "tonkeeper://action/f0389f350dd7b6bba35ce0dd12d4e2cf557c2613bca2426d2e0c3055ac105994"
-        let result = Deeplink.action(eventId: "f0389f350dd7b6bba35ce0dd12d4e2cf557c2613bca2426d2e0c3055ac105994")
-
-        let parsedDeeplink = try parser.parse(string: string)
-
-        XCTAssertEqual(parsedDeeplink, result)
-    }
-
-    func testActionTonkeeperUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/action/f0389f350dd7b6bba35ce0dd12d4e2cf557c2613bca2426d2e0c3055ac105994"
+    func testActionTonkeeprDemoModeDeeplinkParsing() throws {
+        let string = "tonkeeprdemomode://action/f0389f350dd7b6bba35ce0dd12d4e2cf557c2613bca2426d2e0c3055ac105994"
         let result = Deeplink.action(eventId: "f0389f350dd7b6bba35ce0dd12d4e2cf557c2613bca2426d2e0c3055ac105994")
 
         let parsedDeeplink = try parser.parse(string: string)
@@ -175,8 +122,8 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testPoolTonkeeperDeeplinkParsing() throws {
-        let string = "tonkeeper://pool/0:a45b17f28409229b78360e3290420f13e4fe20f90d7e2bf8c4ac6703259e22fa"
+    func testPoolTonkeeprDemoModeDeeplinkParsing() throws {
+        let string = "tonkeeprdemomode://pool/0:a45b17f28409229b78360e3290420f13e4fe20f90d7e2bf8c4ac6703259e22fa"
         let result = try Deeplink.pool(Address.parse("0:a45b17f28409229b78360e3290420f13e4fe20f90d7e2bf8c4ac6703259e22fa"))
 
         let parsedDeeplink = try parser.parse(string: string)
@@ -184,8 +131,8 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testPoolTonkeeperUnversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/pool/0:a45b17f28409229b78360e3290420f13e4fe20f90d7e2bf8c4ac6703259e22fa"
+    func testPoolTonkeeprDemoModeUnversalLinkParsing() throws {
+        let string = "ton://pool/0:a45b17f28409229b78360e3290420f13e4fe20f90d7e2bf8c4ac6703259e22fa"
         let result = try Deeplink.pool(Address.parse("0:a45b17f28409229b78360e3290420f13e4fe20f90d7e2bf8c4ac6703259e22fa"))
 
         let parsedDeeplink = try parser.parse(string: string)
@@ -203,18 +150,8 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testPublishTonkeeperDeeplinkParsing() throws {
-        let string = "tonkeeper://publish?sign=9dfab96f693363f48a641c628ae74168d37f7da1745bfd3cbf1b6013cce1477c03ae59e87c8ebe0146c1d755b797020ac29ff6a1797e7ae7d4b61df89c34540f"
-        let data = try XCTUnwrap(Data(strictHex: "9dfab96f693363f48a641c628ae74168d37f7da1745bfd3cbf1b6013cce1477c03ae59e87c8ebe0146c1d755b797020ac29ff6a1797e7ae7d4b61df89c34540f"))
-        let result = Deeplink.publish(sign: data)
-
-        let parsedDeeplink = try parser.parse(string: string)
-
-        XCTAssertEqual(parsedDeeplink, result)
-    }
-
-    func testPublishTonkeeperUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/publish?sign=9dfab96f693363f48a641c628ae74168d37f7da1745bfd3cbf1b6013cce1477c03ae59e87c8ebe0146c1d755b797020ac29ff6a1797e7ae7d4b61df89c34540f"
+    func testPublishTonkeeprDemoModeDeeplinkParsing() throws {
+        let string = "tonkeeprdemomode://publish?sign=9dfab96f693363f48a641c628ae74168d37f7da1745bfd3cbf1b6013cce1477c03ae59e87c8ebe0146c1d755b797020ac29ff6a1797e7ae7d4b61df89c34540f"
         let data = try XCTUnwrap(Data(strictHex: "9dfab96f693363f48a641c628ae74168d37f7da1745bfd3cbf1b6013cce1477c03ae59e87c8ebe0146c1d755b797020ac29ff6a1797e7ae7d4b61df89c34540f"))
         let result = Deeplink.publish(sign: data)
 
@@ -240,11 +177,11 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testSignerLinkTonkeeperDeeplinkParsing() throws {
+    func testSignerLinkTonkeeprDemoModeDeeplinkParsing() throws {
         let pk = "db642e022c80911fe61f19eb4f22d7fb95c1ea0b589c0f74ecf0cbf6db746c13"
         let name = "MyKey"
         let publicKey = try TonSwift.PublicKey(data: XCTUnwrap(Data(strictHex: pk)))
-        let string = "tonkeeper://signer/link?pk=\(pk)&name=\(name)"
+        let string = "tonkeeprdemomode://signer/link?pk=\(pk)&name=\(name)"
         let result = Deeplink.externalSign(
             ExternalSignDeeplink.link(
                 publicKey: publicKey,
@@ -257,25 +194,8 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testSignerLinkTonkeeperUniversalLinkParsing() throws {
-        let pk = "db642e022c80911fe61f19eb4f22d7fb95c1ea0b589c0f74ecf0cbf6db746c13"
-        let name = "MyKey"
-        let publicKey = try TonSwift.PublicKey(data: XCTUnwrap(Data(strictHex: pk)))
-        let string = "https://app.tonkeeper.com/signer/link?pk=\(pk)&name=\(name)"
-        let result = Deeplink.externalSign(
-            ExternalSignDeeplink.link(
-                publicKey: publicKey,
-                name: name
-            )
-        )
-
-        let parsedDeeplink = try parser.parse(string: string)
-
-        XCTAssertEqual(parsedDeeplink, result)
-    }
-
-    func testReceiveTonkeeperDeeplinkParsing() throws {
-        let string = "tonkeeper://receive"
+    func testReceiveTonkeeprDemoModeDeeplinkParsing() throws {
+        let string = "tonkeeprdemomode://receive"
         let result = Deeplink.receive
 
         let parsedDeeplink = try parser.parse(string: string)
@@ -292,8 +212,8 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testBackupTonkeeperDeeplinkParsing() throws {
-        let string = "tonkeeper://backup"
+    func testBackupTonkeeprDemoModeDeeplinkParsing() throws {
+        let string = "tonkeeprdemomode://backup"
         let result = Deeplink.backup
 
         let parsedDeeplink = try parser.parse(string: string)
@@ -310,11 +230,11 @@ final class DeeplinksParserTests: XCTestCase {
         XCTAssertEqual(parsedDeeplink, result)
     }
 
-    func testAddWalletTonkeeperDeeplinkParsing() throws {
-        XCTAssertEqual(try parser.parse(string: "tonkeeper://add-wallet"), .addWallet)
+    func testAddWalletTonkeeprDemoModeDeeplinkParsing() throws {
+        XCTAssertEqual(try parser.parse(string: "tonkeeprdemomode://add-wallet"), .addWallet)
     }
 
-    func testDepositUniversalLinkParsing() throws {
+    func testDepositTonLinkParsing() throws {
         let params = RampDeeplinkParameters(
             fromToken: "TON",
             toToken: nil,
@@ -322,12 +242,12 @@ final class DeeplinksParserTests: XCTestCase {
             fromNetwork: nil,
             cashMethod: nil
         )
-        let string = "https://app.tonkeeper.com/deposit?ft=TON"
+        let string = "ton://deposit?ft=TON"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.deposit(params))
     }
 
-    func testWithdrawUniversalLinkParsing() throws {
+    func testWithdrawTonLinkParsing() throws {
         let params = RampDeeplinkParameters(
             fromToken: "USDT",
             toToken: "USDT",
@@ -335,73 +255,73 @@ final class DeeplinksParserTests: XCTestCase {
             fromNetwork: "trc20",
             cashMethod: nil
         )
-        let string = "https://app.tonkeeper.com/withdraw?ft=USDT&fn=trc20&tt=USDT&tn=ton"
+        let string = "ton://withdraw?ft=USDT&fn=trc20&tt=USDT&tn=ton"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.withdraw(params))
     }
 
-    func testTradingUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/trading"
+    func testTradingTonLinkParsing() throws {
+        let string = "ton://trading"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.trading(gridID: nil))
     }
 
-    func testTradingGridUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/trading/most_traded"
+    func testTradingGridTonLinkParsing() throws {
+        let string = "ton://trading/most_traded"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.trading(gridID: "most_traded"))
     }
 
-    func testTradeAssetUniversalLinkParsing() throws {
+    func testTradeAssetTonLinkParsing() throws {
         let assetID = "ton/mainnet/jetton/0:abcdef"
-        let string = "https://app.tonkeeper.com/assets/\(assetID)"
+        let string = "ton://assets/\(assetID)"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.tradeAsset(assetID: assetID))
     }
 
-    func testBrowserUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/browser"
+    func testBrowserTonLinkParsing() throws {
+        let string = "ton://browser"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.browser(network: nil))
     }
 
-    func testBrowserNetworkUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/browser?network=tron"
+    func testBrowserNetworkTonLinkParsing() throws {
+        let string = "ton://browser?network=tron"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.browser(network: .tron))
     }
 
     func testBrowserNetworkTrxAliasParsing() throws {
-        let string = "https://app.tonkeeper.com/browser?network=trx"
+        let string = "ton://browser?network=trx"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.browser(network: .tron))
     }
 
     func testBrowserUnknownNetworkParsing() throws {
-        let string = "https://app.tonkeeper.com/browser?network=foo"
+        let string = "ton://browser?network=foo"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.browser(network: nil))
     }
 
-    func testMigrationUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/migration"
+    func testMigrationTonLinkParsing() throws {
+        let string = "ton://migration"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.migration)
     }
 
     func testMigrateAliasParsing() throws {
-        XCTAssertEqual(try parser.parse(string: "tonkeeper://migrate"), Deeplink.migration)
-        XCTAssertEqual(try parser.parse(string: "https://app.tonkeeper.com/migrate"), Deeplink.migration)
+        XCTAssertEqual(try parser.parse(string: "tonkeeprdemomode://migrate"), Deeplink.migration)
+        XCTAssertEqual(try parser.parse(string: "ton://migrate"), Deeplink.migration)
     }
 
-    func testMainUniversalLinkParsing() throws {
-        let string = "https://app.tonkeeper.com/main"
+    func testMainTonLinkParsing() throws {
+        let string = "ton://main"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.main)
     }
 
-    func testMainUniversalLinkAppHostRootPath() throws {
-        let string = "https://app.tonkeeper.com/"
+    func testMainTonLinkAppHostRootPath() throws {
+        let string = "ton://"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(parsedDeeplink, Deeplink.main)
     }
@@ -442,9 +362,9 @@ final class DeeplinksParserTests: XCTestCase {
         )
     }
 
-    func testWalletConnectTonkeeperDeeplinkParsing() throws {
+    func testWalletConnectTonkeeprDemoModeDeeplinkParsing() throws {
         let uri = "wc:123@2?relay-protocol=irn&symKey=abc"
-        let string = "tonkeeper://wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc"
+        let string = "tonkeeprdemomode://wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(
             parsedDeeplink,
@@ -452,9 +372,9 @@ final class DeeplinksParserTests: XCTestCase {
         )
     }
 
-    func testWalletConnectTonkeeperDocsFormatDeeplinkParsing() throws {
+    func testWalletConnectTonkeeprDemoModeDocsFormatDeeplinkParsing() throws {
         let uri = "wc:123@2?relay-protocol=irn&symKey=abc"
-        let string = "tonkeeper://wc?uri=wc:123@2?relay-protocol=irn&symKey=abc"
+        let string = "tonkeeprdemomode://wc?uri=wc:123@2?relay-protocol=irn&symKey=abc"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(
             parsedDeeplink,
@@ -462,9 +382,9 @@ final class DeeplinksParserTests: XCTestCase {
         )
     }
 
-    func testWalletConnectUniversalLinkParsing() throws {
+    func testWalletConnectTonLinkParsing() throws {
         let uri = "wc:123@2?relay-protocol=irn&symKey=abc"
-        let string = "https://app.tonkeeper.com/wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc"
+        let string = "ton://wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(
             parsedDeeplink,
@@ -472,9 +392,9 @@ final class DeeplinksParserTests: XCTestCase {
         )
     }
 
-    func testWalletConnectUniversalDocsFormatLinkParsing() throws {
+    func testWalletConnectTonSchemeDocsFormatLinkParsing() throws {
         let uri = "wc:123@2?relay-protocol=irn&symKey=abc"
-        let string = "https://app.tonkeeper.com/wc?uri=wc:123@2?relay-protocol=irn&symKey=abc"
+        let string = "ton://wc?uri=wc:123@2?relay-protocol=irn&symKey=abc"
         let parsedDeeplink = try parser.parse(string: string)
         XCTAssertEqual(
             parsedDeeplink,
@@ -488,33 +408,33 @@ final class DeeplinksParserTests: XCTestCase {
         }
     }
 
-    func testWalletConnectTonkeeperIncompleteURIIsIgnored() throws {
-        XCTAssertThrowsError(try parser.parse(string: "tonkeeper://wc?uri=wc%3A123%402")) { error in
+    func testWalletConnectTonkeeprDemoModeIncompleteURIIsIgnored() throws {
+        XCTAssertThrowsError(try parser.parse(string: "tonkeeprdemomode://wc?uri=wc%3A123%402")) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
-    func testWalletConnectUniversalIncompleteURIIsIgnored() throws {
-        XCTAssertThrowsError(try parser.parse(string: "https://app.tonkeeper.com/wc?uri=wc%3A123%402")) { error in
+    func testWalletConnectTonSchemeIncompleteURIIsIgnored() throws {
+        XCTAssertThrowsError(try parser.parse(string: "ton://wc?uri=wc%3A123%402")) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
     func testWalletConnectWrappedIncompleteURIWithOuterQueryIsIgnored() throws {
-        XCTAssertThrowsError(try parser.parse(string: "tonkeeper://wc?uri=wc%3A123%402&source=outer")) { error in
+        XCTAssertThrowsError(try parser.parse(string: "tonkeeprdemomode://wc?uri=wc%3A123%402&source=outer")) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
-    func testWalletConnectUniversalSessionRequestRedirectIsIgnored() {
-        let string = "https://app.tonkeeper.com/wc?requestId=1787580460495163&sessionTopic=ac8d427e8f4c76c5cb1b8920d82a0944d910f5c3b96"
+    func testWalletConnectTonLinkSessionRequestRedirectIsIgnored() {
+        let string = "ton://wc?requestId=1787580460495163&sessionTopic=ac8d427e8f4c76c5cb1b8920d82a0944d910f5c3b96"
         XCTAssertThrowsError(try parser.parse(string: string)) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
     func testWalletConnectCustomSchemeSessionRequestRedirectIsIgnored() {
-        let string = "tonkeeper://wc?requestId=1787580460495163&sessionTopic=ac8d427e8f4c76c5cb1b8920d82a0944d910f5c3b96"
+        let string = "tonkeeprdemomode://wc?requestId=1787580460495163&sessionTopic=ac8d427e8f4c76c5cb1b8920d82a0944d910f5c3b96"
         XCTAssertThrowsError(try parser.parse(string: string)) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
@@ -527,20 +447,20 @@ final class DeeplinksParserTests: XCTestCase {
     }
 
     func testWalletConnectMobSchemeSessionRequestRedirectIsIgnored() {
-        XCTAssertThrowsError(try parser.parse(string: "tonkeeper-mob://wc?requestId=1787580460495163")) { error in
+        XCTAssertThrowsError(try parser.parse(string: "tonkeepr-demo-mode-mob://wc?requestId=1787580460495163")) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
     func testWalletConnectSessionRequestRedirectWithTrailingSlashIsIgnored() {
-        let string = "https://app.tonkeeper.com/wc/?requestId=1787580460495163&sessionTopic=topic"
+        let string = "ton://wc/?requestId=1787580460495163&sessionTopic=topic"
         XCTAssertThrowsError(try parser.parse(string: string)) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
     func testWalletConnectContainerWithInvalidWrappedURIIsReported() {
-        let string = "https://app.tonkeeper.com/wc?uri=notAWalletConnectURI"
+        let string = "ton://wc?uri=notAWalletConnectURI"
         XCTAssertThrowsError(try parser.parse(string: string)) { error in
             XCTAssertEqual(
                 error as? DeeplinkParserError,
@@ -550,32 +470,32 @@ final class DeeplinksParserTests: XCTestCase {
     }
 
     func testWalletConnectBareCustomSchemeRedirectIsIgnored() {
-        XCTAssertThrowsError(try parser.parse(string: "tonkeeper://wc")) { error in
+        XCTAssertThrowsError(try parser.parse(string: "tonkeeprdemomode://wc")) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
-    func testWalletConnectBareUniversalRedirectIsIgnored() {
-        XCTAssertThrowsError(try parser.parse(string: "https://app.tonkeeper.com/wc")) { error in
+    func testWalletConnectBareTonSchemeRedirectIsIgnored() {
+        XCTAssertThrowsError(try parser.parse(string: "ton://wc")) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
     func testWalletConnectRedirectWithUnknownQueryIsIgnored() {
-        XCTAssertThrowsError(try parser.parse(string: "https://app.tonkeeper.com/wc?sessionTopic=")) { error in
+        XCTAssertThrowsError(try parser.parse(string: "ton://wc?sessionTopic=")) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
     func testWalletConnectLinkModeEnvelopeIsIgnored() {
-        let string = "https://app.tonkeeper.com/wc?wc_ev=eyJ0IjoiMSJ9&topic=abc"
+        let string = "ton://wc?wc_ev=eyJ0IjoiMSJ9&topic=abc"
         XCTAssertThrowsError(try parser.parse(string: string)) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }
 
     func testWalletConnectDeepPathRedirectIsIgnored() {
-        XCTAssertThrowsError(try parser.parse(string: "https://app.tonkeeper.com/wc/session/request")) { error in
+        XCTAssertThrowsError(try parser.parse(string: "ton://wc/session/request")) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
         }
     }

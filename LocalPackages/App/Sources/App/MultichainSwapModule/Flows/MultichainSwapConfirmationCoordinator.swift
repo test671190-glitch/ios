@@ -53,7 +53,7 @@ final class MultichainSwapConfirmationCoordinator: RouterCoordinator<NavigationC
         openConfirmation()
     }
 
-    func handleTonkeeperPublishDeeplink(sign _: Data) -> Bool {
+    func handleTonkeeprDemoModePublishDeeplink(sign _: Data) -> Bool {
         false
     }
 

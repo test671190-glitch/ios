@@ -2,7 +2,7 @@
 # When wallet setup is broken app-wide, every shard would burn its full timeout
 # budget on the same failure — fail here once instead.
 # Not part of any shard: config.yaml globs do not cover flows/canary/**.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - launchApp:
     clearState: true

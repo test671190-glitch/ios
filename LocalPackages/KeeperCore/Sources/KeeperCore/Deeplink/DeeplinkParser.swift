@@ -43,14 +43,14 @@ public enum DeeplinkParserError: Swift.Error, LocalizedError, Equatable {
 }
 
 public struct DeeplinkParser: Sendable {
-    private let tonkeeperParser: TonkeeperDeeplinkParser
+    private let tonkeeprDemoModeParser: TonkeeprDemoModeDeeplinkParser
     private let ethereumTransferLinkParser = EthereumTransferLinkParser()
     private let walletConnectDeeplinkValidator: WalletConnectDeeplinkValidator
 
     init(
         walletConnectDeeplinkValidator: WalletConnectDeeplinkValidator
     ) {
-        self.tonkeeperParser = TonkeeperDeeplinkParser(
+        self.tonkeeprDemoModeParser = TonkeeprDemoModeDeeplinkParser(
             walletConnectDeeplinkValidator: walletConnectDeeplinkValidator
         )
         self.walletConnectDeeplinkValidator = walletConnectDeeplinkValidator
@@ -94,10 +94,10 @@ public struct DeeplinkParser: Sendable {
 
         let deeplinkPrefixes = [
             "ton://",
-            "tonkeeper://",
-            "tonkeeper-mob://",
-            "tonkeeper-mob://",
-            "tonkeeper-tc-mob://",
+            "tonkeeprdemomode://",
+            "tonkeepr-demo-mode-mob://",
+            "tonkeepr-demo-mode-mob://",
+            "tonkeepr-demo-mode-tc-mob://",
         ]
 
         guard let prefix = deeplinkPrefixes.first(where: { string.hasPrefix($0) }) else {
@@ -107,7 +107,7 @@ public struct DeeplinkParser: Sendable {
         let prefixIndex = string.index(string.startIndex, offsetBy: prefix.count)
         let unprefixedString = String(string[prefixIndex...])
 
-        return try tonkeeperParser.parse(
+        return try tonkeeprDemoModeParser.parse(
             string: unprefixedString,
             tonConnectSource: source ?? .deeplink
         )
@@ -119,8 +119,8 @@ public struct DeeplinkParser: Sendable {
     ) -> Deeplink? {
         let tonconnectDeeplinkPrefixes = [
             "tc://",
-            "tonkeeper-tc://",
-            "tonkeeper-tc-mob://",
+            "tonkeepr-demo-mode-tc://",
+            "tonkeepr-demo-mode-tc-mob://",
         ]
 
         guard let prefix = tonconnectDeeplinkPrefixes.first(where: { string.hasPrefix($0) }) else {
@@ -133,7 +133,7 @@ public struct DeeplinkParser: Sendable {
 
         do {
             return try .tonconnect(
-                tonkeeperParser.parseTonconnect(
+                tonkeeprDemoModeParser.parseTonconnect(
                     url: url,
                     source: source
                 )
@@ -205,8 +205,8 @@ public struct DeeplinkParser: Sendable {
             components.path.lowercased()
         ) {
         case ("ton", "wc", _),
-             ("tonkeeper", "wc", _),
-             ("tonkeeper-mob", "wc", _):
+             ("tonkeeprdemomode", "wc", _),
+             ("tonkeepr-demo-mode-mob", "wc", _):
             return .deeplink
         default:
             return nil

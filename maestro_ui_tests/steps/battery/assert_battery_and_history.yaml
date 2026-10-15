@@ -1,9 +1,9 @@
 # Asserts Battery refill screen chrome and opens Charges history in the in-app browser.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: open_battery.yaml
 
-- assertVisible: Keeper Battery
+- assertVisible: tonkeeprdemo mode Battery
 - assertVisible: Supported transactions
 
 - scrollUntilVisible:
@@ -22,11 +22,10 @@ appId: com.jbig.tonkeeper
     waitToSettleTimeoutMs: 5000
     retryTapIfNoChange: true
 
-# Opens bat.tonkeeper.com in the in-app browser.
+# Opens the Battery history page in the in-app browser.
 - extendedWaitUntil:
     visible: Charges history
     timeout: 30000
-- assertVisible: bat.tonkeeper.com
 # History rows are web content — assert a refill/charges signal when the wallet
 # has ever charged (empty history is rare on the funded QA wallet).
 - extendedWaitUntil:

@@ -1,6 +1,6 @@
 # Selects send + receive assets in Multichain Swap via token picker search.
 # Env: SEND_QUERY, SEND_ASSET_ID, RECEIVE_QUERY, RECEIVE_ASSET_ID
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - tapOn:
     id: swap_send_token

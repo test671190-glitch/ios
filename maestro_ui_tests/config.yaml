@@ -4,7 +4,7 @@
 clusters:
   multichain:
     gate_pipeline: true
-    build_artifact: maestro-ios-tonkeeper-app-multichain
+    build_artifact: maestro-ios-tonkeepr-demo-mode-app-multichain
     # Same JSON shape as MAESTRO_FEATURE_FLAG_OVERRIDES (disable_swap, disable_battery, …).
     # Merged into FlagsOverride.json on the simulator build — not via GHA job output.
     feature_flags_file: ci/multichain-flags.json

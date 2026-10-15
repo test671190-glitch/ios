@@ -5,7 +5,7 @@ public final class HomeBannersLoader {
     private let loader: WalletScopedLoader<[HomeBanner]?>
 
     init(
-        tonkeeperAPI: TonkeeperAPI,
+        tonkeeprDemoModeAPI: TonkeeprDemoModeAPI,
         homeBannersStore: HomeBannersStore,
         walletsStore: WalletsStore
     ) {
@@ -13,7 +13,7 @@ public final class HomeBannersLoader {
             walletsStore: walletsStore,
             fetch: { walletId in
                 do {
-                    return try await tonkeeperAPI.loadBanners(walletId: walletId)
+                    return try await tonkeeprDemoModeAPI.loadBanners(walletId: walletId)
                 } catch {
                     Log.w("Failed to load home banners for wallet \(walletId ?? "none"): \(error)")
                     return nil

@@ -54,8 +54,8 @@ final class WalletConnectRedirectRouterTests: XCTestCase {
             " ",
             "not a url",
             "https://example.com/wc",
-            "tonkeeper://wc",
-            "tonkeeper-mob://wc",
+            "tonkeeprdemomode://wc",
+            "tonkeepr-demo-mode-mob://wc",
             "wc://wc",
         ]
 

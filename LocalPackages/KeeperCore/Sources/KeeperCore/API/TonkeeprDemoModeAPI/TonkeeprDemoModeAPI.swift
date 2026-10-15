@@ -1,7 +1,7 @@
 import Foundation
-import TKTonkeeperAPI
+import TKTonkeeprDemoModeAPI
 
-public enum TonkeeperAPIError: Swift.Error {
+public enum TonkeeprDemoModeAPIError: Swift.Error {
     case cancelled
     case incorrectUrl
     case badStatus(
@@ -16,7 +16,7 @@ public enum TonkeeperAPIError: Swift.Error {
     )
 }
 
-extension TonkeeperAPIError: LocalizedError {
+extension TonkeeprDemoModeAPIError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .cancelled:
@@ -33,19 +33,19 @@ extension TonkeeperAPIError: LocalizedError {
     }
 }
 
-public protocol TonkeeperAPI {
+public protocol TonkeeprDemoModeAPI {
     func loadFiatMethods(countryCode: String?, walletId: String?) async throws -> FiatMethods
-    func loadPopularApps(lang: String, walletId: String?) async throws(TonkeeperAPIError) -> PopularAppsResponseData
+    func loadPopularApps(lang: String, walletId: String?) async throws(TonkeeprDemoModeAPIError) -> PopularAppsResponseData
     func loadBanners(walletId: String?) async throws -> [HomeBanner]
-    func loadNotifications(walletId: String?) async throws(TonkeeperAPIError) -> [InternalNotification]
+    func loadNotifications(walletId: String?) async throws(TonkeeprDemoModeAPIError) -> [InternalNotification]
     func loadStory(storyId: String, walletId: String?) async throws -> Story
-    func loadStories(storyIds: [String], walletId: String?) async throws(TonkeeperAPIError) -> [Story]
+    func loadStories(storyIds: [String], walletId: String?) async throws(TonkeeprDemoModeAPIError) -> [Story]
     func getIP() async throws -> String
     func getEthenaStakingDetails(address: String, walletId: String?) async throws -> EthenaStakingResponse
 }
 
-struct TonkeeperAPIImplementation: TonkeeperAPI {
-    typealias Components = TKTonkeeperAPI.Components
+struct TonkeeprDemoModeAPIImplementation: TonkeeprDemoModeAPI {
+    typealias Components = TKTonkeeprDemoModeAPI.Components
 
     private let urlSession: URLSession
     private let hostProvider: APIHostProvider
@@ -64,7 +64,7 @@ struct TonkeeperAPIImplementation: TonkeeperAPI {
         self.isNewUser = isNewUser
     }
 
-    func loadFiatMethods(countryCode: String?, walletId: String?) async throws(TonkeeperAPIError) -> FiatMethods {
+    func loadFiatMethods(countryCode: String?, walletId: String?) async throws(TonkeeprDemoModeAPIError) -> FiatMethods {
         let client = try await apiClient()
         let context = await requestContext()
         let response = try await apiCall(
@@ -106,7 +106,7 @@ struct TonkeeperAPIImplementation: TonkeeperAPI {
         }
     }
 
-    func loadPopularApps(lang: String, walletId: String?) async throws(TonkeeperAPIError) -> PopularAppsResponseData {
+    func loadPopularApps(lang: String, walletId: String?) async throws(TonkeeprDemoModeAPIError) -> PopularAppsResponseData {
         let client = try await apiClient()
         let context = await requestContext(language: lang)
         let response = try await apiCall(
@@ -188,7 +188,7 @@ struct TonkeeperAPIImplementation: TonkeeperAPI {
         }
     }
 
-    func loadNotifications(walletId: String?) async throws(TonkeeperAPIError) -> [InternalNotification] {
+    func loadNotifications(walletId: String?) async throws(TonkeeprDemoModeAPIError) -> [InternalNotification] {
         let client = try await apiClient()
         let context = await requestContext()
         let response = try await apiCall(
@@ -223,7 +223,7 @@ struct TonkeeperAPIImplementation: TonkeeperAPI {
         }
     }
 
-    func loadStory(storyId: String, walletId: String?) async throws(TonkeeperAPIError) -> Story {
+    func loadStory(storyId: String, walletId: String?) async throws(TonkeeprDemoModeAPIError) -> Story {
         let features = enabledFeatures()
         let client = try await apiClient()
         let context = await requestContext()
@@ -272,7 +272,7 @@ struct TonkeeperAPIImplementation: TonkeeperAPI {
         }
     }
 
-    func loadStories(storyIds: [String], walletId: String?) async throws(TonkeeperAPIError) -> [Story] {
+    func loadStories(storyIds: [String], walletId: String?) async throws(TonkeeprDemoModeAPIError) -> [Story] {
         let features = enabledFeatures()
         let client = try await apiClient()
         let context = await requestContext()
@@ -321,7 +321,7 @@ struct TonkeeperAPIImplementation: TonkeeperAPI {
         }
     }
 
-    func getIP() async throws(TonkeeperAPIError) -> String {
+    func getIP() async throws(TonkeeprDemoModeAPIError) -> String {
         let client = try await apiClient()
         let response = try await apiCall(
             await client.myIp()
@@ -350,7 +350,7 @@ struct TonkeeperAPIImplementation: TonkeeperAPI {
         }
     }
 
-    func getEthenaStakingDetails(address: String, walletId: String?) async throws(TonkeeperAPIError) -> EthenaStakingResponse {
+    func getEthenaStakingDetails(address: String, walletId: String?) async throws(TonkeeprDemoModeAPIError) -> EthenaStakingResponse {
         let client = try await apiClient()
         let context = await requestContext()
         let response = try await apiCall(
@@ -392,7 +392,7 @@ struct TonkeeperAPIImplementation: TonkeeperAPI {
 
 // MARK: - Convenience
 
-private extension TonkeeperAPIImplementation {
+private extension TonkeeprDemoModeAPIImplementation {
     struct RequestContext {
         let language: String
         let build: String
@@ -407,9 +407,9 @@ private extension TonkeeperAPIImplementation {
         ["multichain"]
     }
 
-    func apiClient() async throws(TonkeeperAPIError) -> TKTonkeeperAPI.Client {
+    func apiClient() async throws(TonkeeprDemoModeAPIError) -> TKTonkeeprDemoModeAPI.Client {
         do {
-            return try await TKTonkeeperAPI.Client(
+            return try await TKTonkeeprDemoModeAPI.Client(
                 hostProvider: hostProvider,
                 urlSession: urlSession
             )
@@ -435,7 +435,7 @@ private extension TonkeeperAPIImplementation {
 
     func apiCall<T>(
         _ block: @autoclosure () async throws -> T
-    ) async throws(TonkeeperAPIError) -> T {
+    ) async throws(TonkeeprDemoModeAPIError) -> T {
         do {
             return try await block()
         } catch {
@@ -448,18 +448,18 @@ private extension TonkeeperAPIImplementation {
 
     func decodeResponse<T>(
         _ block: @autoclosure () throws -> T
-    ) throws(TonkeeperAPIError) -> T {
+    ) throws(TonkeeprDemoModeAPIError) -> T {
         do {
             return try block()
         } catch {
-            throw TonkeeperAPIError.badResponse(underlying: error)
+            throw TonkeeprDemoModeAPIError.badResponse(underlying: error)
         }
     }
 
     func legacyModel<Payload: Encodable, Model: Decodable>(
         from payload: Payload,
         as _: Model.Type = Model.self
-    ) throws(TonkeeperAPIError) -> Model {
+    ) throws(TonkeeprDemoModeAPIError) -> Model {
         try decodeResponse(
             JSONDecoder().decode(
                 Model.self,
@@ -471,7 +471,7 @@ private extension TonkeeperAPIImplementation {
     func badStatus(
         statusCode: Int,
         response: Components.Responses.BadRequest
-    ) throws(TonkeeperAPIError) -> TonkeeperAPIError {
+    ) throws(TonkeeprDemoModeAPIError) -> TonkeeprDemoModeAPIError {
         try .badStatus(
             statusCode: statusCode,
             message: decodeResponse(response.body.json).error
@@ -481,7 +481,7 @@ private extension TonkeeperAPIImplementation {
     func badStatus(
         statusCode: Int,
         response: Components.Responses.NotFound
-    ) throws(TonkeeperAPIError) -> TonkeeperAPIError {
+    ) throws(TonkeeprDemoModeAPIError) -> TonkeeprDemoModeAPIError {
         try .badStatus(
             statusCode: statusCode,
             message: decodeResponse(response.body.json).error
@@ -491,14 +491,14 @@ private extension TonkeeperAPIImplementation {
     func badStatus(
         statusCode: Int,
         response: Components.Responses.InternalError
-    ) throws(TonkeeperAPIError) -> TonkeeperAPIError {
+    ) throws(TonkeeprDemoModeAPIError) -> TonkeeprDemoModeAPIError {
         try .badStatus(
             statusCode: statusCode,
             message: decodeResponse(response.body.json).error
         )
     }
 
-    func undocumentedStatus(_ statusCode: Int) -> TonkeeperAPIError {
+    func undocumentedStatus(_ statusCode: Int) -> TonkeeprDemoModeAPIError {
         .badStatus(
             statusCode: statusCode,
             message: "undocumented status code: \(statusCode)"

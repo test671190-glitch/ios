@@ -2705,7 +2705,7 @@ components:
                   aggregators.
                   Ignored (forced to false) only when the source asset is on
                   TON and the client reports build 26.9.0 or newer on Android,
-                  or 26.9.1 or newer on iOS, in its `Tonkeeper/<version>`
+                  or 26.9.1 or newer on iOS, in its `TonkeeprDemoMode/<version>`
                   User-Agent: a deposit address puts a TON source on a pricier
                   upstream bridge route that those clients no longer need.
                   Older clients, clients of an unknown platform below 26.9.1,
@@ -2749,7 +2749,7 @@ components:
                   route at all.
                   `omniston` is dropped from the default fan-out for clients
                   reporting build 26.9.0 or newer on Android, or 26.9.1 or
-                  newer on iOS, in their `Tonkeeper/<version>` User-Agent;
+                  newer on iOS, in their `TonkeeprDemoMode/<version>` User-Agent;
                   older clients still get it. For the newer clients it is a fallback too, and only on
                   a TON to TON pair, which is all it serves.
                   A requested aggregator that is disabled on the server is

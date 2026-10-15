@@ -120,7 +120,7 @@ function _toNanoString(decimalAmount, decimals) {
 // The relayer fee used to arrive as a second JettonTransfer with a "Call: …RelayerFee"
 // comment; TonAPI now folds it into a GasRelay action whose relayer_fee carries the
 // jetton and amount. Accept both shapes.
-var FEE_COMMENT = /^Call: (Tonkeeper|Keeper)RelayerFee$/;
+var FEE_COMMENT = /^Call: (TonkeeprDemoMode|Keeper)RelayerFee$/;
 
 var result = _withRetry(function () {
     var body = _httpGetJSON('/v2/accounts/' + addr + '/events?limit=1&subject_only=true');

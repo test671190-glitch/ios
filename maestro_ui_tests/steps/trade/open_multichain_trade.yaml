@@ -1,5 +1,5 @@
 # Opens Trade on a multichain wallet.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: ../launch_app_ensure_multichain_wallet.yaml
 - extendedWaitUntil:

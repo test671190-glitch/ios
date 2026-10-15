@@ -396,8 +396,8 @@ public extension Swift.Error {
             }
         case let clientError as OpenAPIRuntime.ClientError:
             return clientError.underlyingError.isCancelledError
-        case let tonkeeperAPIError as TonkeeperAPIError:
-            switch tonkeeperAPIError {
+        case let tonkeeprDemoModeAPIError as TonkeeprDemoModeAPIError:
+            switch tonkeeprDemoModeAPIError {
             case .cancelled:
                 return true
             default:

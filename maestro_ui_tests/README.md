@@ -1,6 +1,6 @@
 # Maestro UI tests
 
-iOS UI tests run with [Maestro](https://maestro.mobile.dev) against the Tonkeeper
+iOS UI tests run with [Maestro](https://maestro.mobile.dev) against the tonkeeprdemo mode
 app on the iOS Simulator — one multichain-enabled build, sharded by section and
 orchestrated by `.github/workflows/maestro-ui-tests.yml`.
 
@@ -41,7 +41,7 @@ ships `true` and which hides the crypto recharge entry the `ton_battery` flows d
 clusters:
   multichain:
     gate_pipeline: true
-    build_artifact: maestro-ios-tonkeeper-app-multichain
+    build_artifact: maestro-ios-tonkeepr-demo-mode-app-multichain
     feature_flags_file: ci/multichain-flags.json
     ton_wallet_shards: [ ton_battery, ton_browser, … ]
     flows: [ flows/multichain/<section>/* , ... ]
@@ -202,7 +202,7 @@ never fired). Rules:
 ## Task & branch workflow for autotest fixes
 
 Autotest work (fixing red flows, stabilising flakes, CI config for the suite) is tracked
-in Linear: team **Tonkeeper (TK)**, project **[QA] Maestro**. One CI incident → one issue
+in Linear: team **tonkeeprdemo mode (TK)**, project **[QA] Maestro**. One CI incident → one issue
 covering all its failures, root cause per flow spelled out in the description; keep
 "verified" (build, syntax, tooling) separate from "not verified" (a flow that has not run
 end-to-end against the CI wallets) — the real acceptance check is a `workflow_dispatch`
@@ -235,7 +235,7 @@ app; use `make -C ios compile` (or an existing build) and install it first.
 Authoring loop:
 1. `list_devices` → the iOS `device_id`. **Always pass it explicitly**: with an Android
    emulator also running, an omitted device silently picks the wrong platform.
-2. `launch_app` (`com.jbig.tonkeeper`), drive to the screen under test with `run_flow`
+2. `launch_app` (`com.jbig.tonkeeprdemomode`), drive to the screen under test with `run_flow`
    (ad-hoc YAML) or the `tap_on` / `input_text` / `back` shortcuts.
 3. `inspect_view_hierarchy` → CSV of `bounds` + `attributes`. `resource-id` is the
    `accessibilityIdentifier` to use as a locator; `accessibilityText` / `text` are the

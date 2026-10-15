@@ -7,7 +7,7 @@ REPO_ROOT=$(cd "$SCRIPT_DIR/../.." && pwd)
 ANALYTICS_SCHEMAS_REPO_URL=${ANALYTICS_SCHEMAS_REPO_URL:-}
 # Checkouts shared across the repository live in .context at the repository root.
 ANALYTICS_SCHEMAS_ROOT=${ANALYTICS_SCHEMAS_ROOT:-"$(git rev-parse --show-toplevel)/.context/analytics-schemas"}
-SRC_DIR=${ANALYTICS_MODELS_SRC_DIR:-"$ANALYTICS_SCHEMAS_ROOT/generated/openapi-swift/TonkeeperAnalytics/Classes/OpenAPIs/Models"}
+SRC_DIR=${ANALYTICS_MODELS_SRC_DIR:-"$ANALYTICS_SCHEMAS_ROOT/generated/openapi-swift/TonkeeprDemoModeAnalytics/Classes/OpenAPIs/Models"}
 GENERATED_DIR=${ANALYTICS_GENERATED_DIR:-"$REPO_ROOT/LocalPackages/TKCore/Sources/TKCore/Analytics/Events/Generated"}
 DEPRECATED_DIR=${ANALYTICS_DEPRECATED_DIR:-"$REPO_ROOT/LocalPackages/TKCore/Sources/TKCore/Analytics/Events/Deprecated"}
 WHITELIST_FILE=${ANALYTICS_WHITELIST_FILE:-"$SCRIPT_DIR/event_model_whitelist.txt"}

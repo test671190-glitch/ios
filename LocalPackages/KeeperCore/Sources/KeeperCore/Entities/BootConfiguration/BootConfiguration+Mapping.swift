@@ -15,7 +15,7 @@ extension BootConfiguration {
         mercuryoSecret = try? container.decodeIfPresent(String.self, forKey: .mercuryoSecret)
         supportLink = try? container.decodeIfPresent(URL.self, forKey: .supportLink)
         directSupportUrl = try? container.decodeIfPresent(URL.self, forKey: .directSupportUrl)
-        tonkeeperNewsUrl = try? container.decodeIfPresent(URL.self, forKey: .tonkeeperNewsUrl)
+        tonkeeprDemoModeNewsUrl = try? container.decodeIfPresent(URL.self, forKey: .tonkeeprDemoModeNewsUrl)
         stonfiUrl = try? container.decodeIfPresent(URL.self, forKey: .stonfiUrl)
         webSwapsUrl = try? container.decodeIfPresent(URL.self, forKey: .webSwapsUrl)
         faqUrl = try? container.decodeIfPresent(URL.self, forKey: .faqUrl)
@@ -46,7 +46,7 @@ extension BootConfiguration {
         tronApiUrl = try? container.decodeIfPresent(String.self, forKey: .tronApiUrl)
         tronSwapUrl = (try? container.decode(String.self, forKey: .tronSwapUrl)) ?? empty.tronSwapUrl
         tronSwapTitle = (try? container.decode(String.self, forKey: .tronSwapTitle)) ?? empty.tronSwapTitle
-        tonkeeperApiUrl = try? container.decodeIfPresent(String.self, forKey: .tonkeeperApiUrl)
+        tonkeeprDemoModeApiUrl = try? container.decodeIfPresent(String.self, forKey: .tonkeeprDemoModeApiUrl)
         aptabaseEndpoint = try? container.decodeIfPresent(String.self, forKey: .aptabaseEndpoint)
         multichainHelpUrl = try? container.decodeIfPresent(URL.self, forKey: .multichainHelpUrl) ?? empty.multichainHelpUrl
         multichain = (try? container.decode(Endpoint.self, forKey: .multichain)) ?? empty.multichain
@@ -64,7 +64,7 @@ extension BootConfiguration {
         case mercuryoSecret
         case supportLink
         case directSupportUrl
-        case tonkeeperNewsUrl
+        case tonkeeprDemoModeNewsUrl
         case stonfiUrl
         case webSwapsUrl = "web_swaps_url"
         case faqUrl = "faq_url"
@@ -95,7 +95,7 @@ extension BootConfiguration {
         case tronApiUrl = "tron_api_url"
         case tronSwapUrl = "tron_swap_url"
         case tronSwapTitle = "tron_swap_title"
-        case tonkeeperApiUrl = "tonkeeper_api_url"
+        case tonkeeprDemoModeApiUrl = "tonkeepr_demo_mode_api_url"
         case aptabaseEndpoint = "aptabase_endpoint"
         case multichainHelpUrl = "multichain_help_url"
         case multichain

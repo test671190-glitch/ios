@@ -1,8 +1,8 @@
 import Foundation
 import StreamURLSessionTransport
-import TKTonkeeperAPI
+import TKTonkeeprDemoModeAPI
 
-extension TKTonkeeperAPI.Client {
+extension TKTonkeeprDemoModeAPI.Client {
     enum InitFailure: Error {
         case badHost(
             rawValue: String

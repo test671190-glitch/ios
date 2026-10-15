@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Import the TON funded wallet (WALLET_WITH_MONEY, primed into UIPasteboard by CI) on the
 # multichain build: same import entry as a multichain phrase, but "Choose wallet" gets

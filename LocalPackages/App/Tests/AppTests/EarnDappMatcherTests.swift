@@ -42,7 +42,7 @@ final class EarnDappMatcherTests: XCTestCase {
     func test_earnHostsCoverProductionAndDemoStand() {
         XCTAssertEqual(
             EarnDappMatcher.earnHostSuffixes,
-            ["vaults.fyi", "vaults-tonkeeper-earn-latest-demo.fly.dev"]
+            ["vaults.fyi"]
         )
     }
 }

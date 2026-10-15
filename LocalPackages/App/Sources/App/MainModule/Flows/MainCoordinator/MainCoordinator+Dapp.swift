@@ -70,7 +70,7 @@ private extension MainCoordinator {
         )
 
         coordinator.didHandleDeeplink = { [weak self] deeplink, utm in
-            _ = self?.handleTonkeeperDeeplink(deeplink, fromStories: false, sendSource: .deepLink(utm: utm))
+            _ = self?.handleTonkeeprDemoModeDeeplink(deeplink, fromStories: false, sendSource: .deepLink(utm: utm))
         }
 
         addChild(coordinator)

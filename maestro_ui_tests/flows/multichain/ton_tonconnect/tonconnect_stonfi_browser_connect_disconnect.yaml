@@ -1,5 +1,5 @@
 # regress_EN: Ton Connect 2.0 + Browser — connect STON.fi from in-app browser, verify UI, disconnect from Connected, reconnect.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 - runFlow: "../../../steps/browser/open_browser_tab.yaml"

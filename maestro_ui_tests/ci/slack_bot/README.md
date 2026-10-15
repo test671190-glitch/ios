@@ -121,7 +121,7 @@ cd maestro_ui_tests/ci/slack_bot
 
 python3 post_maestro_slack_status.py --dry-run \
   --artifacts-dir /path/to/downloaded/maestro-ci-artifacts \
-  --run-url "https://github.com/tonkeeper/ios/actions/runs/123" \
+  --run-url "<workflow-run-url>" \
   --token dummy
 ```
 

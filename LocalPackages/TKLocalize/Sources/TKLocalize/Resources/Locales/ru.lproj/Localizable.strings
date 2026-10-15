@@ -40,7 +40,7 @@
 "toast.shown" = "Показано";
 
 "errors.unknown" = "Ошибка";
-"errors.multiaccount_error" = "Пожалуйста используйте Keeper Desktop для аккаунта мульти-кошелька";
+"errors.multiaccount_error" = "Пожалуйста используйте tonkeeprdemo mode Desktop для аккаунта мульти-кошелька";
 
 "dates.today" = "Сегодня";
 "dates.yesterday" = "Вчера";
@@ -300,7 +300,7 @@
 "browser.list.all" = "Все";
 
 "browser.connected_apps.empty_title" = "Ваши приложения будут здесь";
-"browser.connected_apps.empty_description" = "Исследуйте приложения и\U00A0сервисы в\U00A0браузере Keeper.";
+"browser.connected_apps.empty_description" = "Исследуйте приложения и\U00A0сервисы в\U00A0браузере tonkeeprdemo mode.";
 "browser.connected_apps.disconnect.title" = "Отключить";
 "browser.connected_apps.disconnect.button" = "Отключить";
 
@@ -334,7 +334,7 @@
 "settings.items.logout" = "Выйти";
 "settings.items.faq" = "FAQ";
 "settings.items.support" = "Поддержка";
-"settings.items.tk_news" = "Новости Keeper";
+"settings.items.tk_news" = "Новости tonkeeprdemo mode";
 "settings.items.contact_us" = "Написать команде";
 "settings.items.rate" = "Оценить %@";
 "settings.items.legal" = "Юридические документы";
@@ -437,7 +437,7 @@
 
 "settings.connected_apps.empty.title" = "Нет подключённых приложений";
 "settings.connected_apps.source.browser" = "Браузер телефона";
-"settings.connected_apps.source.dapp" = "Keeper";
+"settings.connected_apps.source.dapp" = "tonkeeprdemo mode";
 "settings.connected_apps.source.deeplink" = "Внешняя ссылка";
 "settings.connected_apps.source.qr" = "Другое устройство";
 
@@ -494,7 +494,7 @@
 "backup.safety_check.title" = "Проверка безопасности";
 "backup.safety_check.list.item1" = "Никогда никому не показывайте свою секретную фразу.";
 "backup.safety_check.list.item2" = "Любой, у кого есть ваша секретная фраза, может получить доступ к кошельку и вывести средства.";
-"backup.safety_check.list.item3" = "Поддержка Keeper никогда не запрашивает секретную фразу.";
+"backup.safety_check.list.item3" = "Поддержка tonkeeprdemo mode никогда не запрашивает секретную фразу.";
 "backup.safety_check.agreement.text" = "Я понимаю, что передача секретной фразы может привести к %@";
 "backup.safety_check.agreement.highlighted" = "безвозвратной потере средств.";
 
@@ -662,14 +662,14 @@
 "token.view_details" = "Подробнее";
 "token.hide_in_wallet" = "Скрыть в кошельке";
 "token.show_in_wallet" = "Показать в кошельке";
-"token.verified_popup.caption" = "Этот токен активно торгуется и широко известен. Верификация не является рекомендацией Keeper.";
+"token.verified_popup.caption" = "Этот токен активно торгуется и широко известен. Верификация не является рекомендацией tonkeeprdemo mode.";
 "token.unverified_popup.caption" = "Токен выглядит подозрительно по одной или нескольким из следующих причин:";
 "token.unverified_popup.low_liquidity" = "Низкая ликвидность. У токена может быть какая-то стоимость, но она крайне мала.";
 "token.unverified_popup.not_listed" = "Токен не представлен на торговых площадках, имеет ограниченный спрос.";
 "token.unverified_popup.used_for_spam" = "Используется для спама. Применяется для отправки нерелевантных сообщений в больших масштабах.";
 "token.unverified_popup.used_for_scam" = "Используется в мошенничестве. Название токена или изображение может вводить пользователей в заблуждение.";
 
-"onboarding.title" = "Keeper";
+"onboarding.title" = "tonkeeprdemo mode";
 "onboarding.caption" = "Создайте новый или подключите существующий кошелёк";
 "onboarding.buttons.create_new" = "Создать новый кошелёк";
 "onboarding.buttons.import_existing" = "Подключить существующий";
@@ -777,7 +777,7 @@
 "signer.scan.subtitle" = "Откройте Signer » Выберите нужный ключ » Отсканируйте QR-код";
 "signer.scan.open_signer_button" = "Открыть Signer на этом устройстве";
 
-"keystone.scan.subtitle" = "Откройте Keystone » Программные кошельки » Keeper";
+"keystone.scan.subtitle" = "Откройте Keystone » Программные кошельки » tonkeeprdemo mode";
 "keystone.scan.about_keystone_button" = "О Keystone";
 
 "chart.last_day" = "Последний день";
@@ -978,7 +978,7 @@
 "nft_details.actions.not_spam" = "Это не спам";
 "nft_details.manage_button.title" = "Управлять";
 
-"buy_list_popup.you_are_opening_external_app" = "Вы открываете внешнее приложение, которым не управляет Keeper.";
+"buy_list_popup.you_are_opening_external_app" = "Вы открываете внешнее приложение, которым не управляет tonkeeprdemo mode.";
 
 "ugly_buy_list.buy" = "Купить";
 
@@ -1010,7 +1010,7 @@
 "staking_list.minimal_deposit" = "Минимальный депозит";
 
 "staking_balance_details.minimal_deposit" = "Минимальный депозит";
-"staking_balance_details.description" = "Стейкинг основан на сторонних смарт-контрактах. Keeper не несет ответственности за стабильность и результат.";
+"staking_balance_details.description" = "Стейкинг основан на сторонних смарт-контрактах. tonkeeprdemo mode не несет ответственности за стабильность и результат.";
 "staking_balance_details.jetton_button_description" = "Когда вы вносите GRAM в пул, вы получаете токен tsTON, который отображает вашу долю в пуле. По мере накопления прибыли в пуле, tsTON представляет всё большее число GRAM.";
 "staking_balance_details.pending_stake" = "Будет зачислено";
 "staking_balance_details.pending_unstake" = "Ожидают вывода";
@@ -1046,7 +1046,7 @@
 "staking_pool_details.max_apy" = "MAX APY";
 "staking_pool_details.apy" = "APY";
 "staking_pool_details.minimal_deposit" = "Минимальный депозит";
-"staking_pool_details.description" = "Стейкинг основан на сторонних смарт-контрактах. Keeper не несет ответственности за стабильность и результат.";
+"staking_pool_details.description" = "Стейкинг основан на сторонних смарт-контрактах. tonkeeprdemo mode не несет ответственности за стабильность и результат.";
 "staking_pool_details.choose" = "Выбрать";
 
 "ton_connect_mapper.connect_to" = "Войти в ";
@@ -1154,10 +1154,10 @@
 "transaction_confirmation.tap_to_pay" = "Оплатить в %@";
 "transaction_confirmation.change_payment_method" = "Изменить способ оплаты";
 
-"extra_type.battery" = "Батарейка Keeper";
+"extra_type.battery" = "Батарейка tonkeeprdemo mode";
 "extra_type.ton" = "GRAM";
 
-"battery.refill.title" = "Батарейка Keeper";
+"battery.refill.title" = "Батарейка tonkeeprdemo mode";
 "battery.refill.empty_caption" = "Легко меняйте и отправляйте TON токены и платите меньше комиссии в TRC-20";
 "battery.refill.negative_balance_caption" = "Заряды закончились из-за возвратов покупок. Пополните баланс, чтобы продолжить.";
 "battery.refill.supported_transactions" = "Поддерживаемые транзакции";
@@ -1189,8 +1189,8 @@
 "battery.refill.toast.recharged" = "Батарейка заряжена";
 
 "battery.settings.title" = "Настройки батарейки";
-"battery.settings.caption" = "Выбранные транзакции будут оплачены батарейкой Keeper.";
-"battery.settings.items.swaps.title" = "Обмен через Keeper";
+"battery.settings.caption" = "Выбранные транзакции будут оплачены батарейкой tonkeeprdemo mode.";
+"battery.settings.items.swaps.title" = "Обмен через tonkeeprdemo mode";
 "battery.settings.items.swaps.caption" = "за обмен";
 "battery.settings.items.token.title" = "Отправка токенов";
 "battery.settings.items.token.caption" = "за отправку";
@@ -1213,11 +1213,11 @@
 "dapp.disconnect_toast.button" = "Отключить";
 
 "dapp.sharing_popup.title" = "Поделиться %@";
-"dapp.sharing_popup.caption" = "Эта ссылка откроет %@ напрямую в Keeper. Вы можете сохранить её для себя или поделиться ею.";
+"dapp.sharing_popup.caption" = "Эта ссылка откроет %@ напрямую в tonkeeprdemo mode. Вы можете сохранить её для себя или поделиться ею.";
 "dapp.sharing_popup.buttons.copy" = "Скопировать ссылку";
 "dapp.sharing_popup.buttons.share" = "Поделиться";
 
-"dapp.open_warning_popup.warning" = "Вы открываете внешнее приложение, которым не управляет Keeper. Переходите, только если доверяете источнику.";
+"dapp.open_warning_popup.warning" = "Вы открываете внешнее приложение, которым не управляет tonkeeprdemo mode. Переходите, только если доверяете источнику.";
 
 "sign_data.title" = "Подписать данные";
 "sign_data.caption" = "Внимательно прочитайте сообщение и, если вы согласны, подпишите транзакцию.";
@@ -1228,7 +1228,7 @@
 "sign_data.slider.title" = "Подписать";
 "sign_data.slider.subtitle" = "Свайп вправо";
 
-"token_details.trc20.usdt.battery_banner.title" = "Для USD₮ TRC20 требуется батарейка Keeper";
+"token_details.trc20.usdt.battery_banner.title" = "Для USD₮ TRC20 требуется батарейка tonkeeprdemo mode";
 "token_details.trc20.usdt.battery_banner.caption" = "Заряд батарейки покрывает комиссии за транзакции, упрощая и удешевляя переводы.";
 "token_details.trc20.usdt.battery_banner.charge_button" = "Зарядить батарейку";
 
@@ -1371,10 +1371,10 @@
 "subscription_plugin_warning.title.many" = "У вас есть %@ устаревших подписок от @donate";
 "subscription_plugin_warning.title.other" = "У вас есть %@ устаревших подписок от @donate";
 
-"subscription_plugin_warning.caption_one" = "Она может продолжать списывать средства с кошелька. Управляйте подписками в Keeper Web — войдите с помощью секретной фразы.";
-"subscription_plugin_warning.caption_many" = "Подписки могут продолжать списывать средства с кошелька. Управляйте подписками в Keeper Web — войдите с помощью секретной фразы.";
+"subscription_plugin_warning.caption_one" = "Она может продолжать списывать средства с кошелька. Управляйте подписками в tonkeeprdemo mode Web — войдите с помощью секретной фразы.";
+"subscription_plugin_warning.caption_many" = "Подписки могут продолжать списывать средства с кошелька. Управляйте подписками в tonkeeprdemo mode Web — войдите с помощью секретной фразы.";
 
-"subscription_plugin_warning.button" = "Открыть Keeper Web";
+"subscription_plugin_warning.button" = "Открыть tonkeeprdemo mode Web";
 
 "stories_updates.all_updates" = "Все новости";
 "actions.retry" = "Повторить";
@@ -1400,7 +1400,7 @@
 "trade.search.placeholder" = "Поиск по тикеру или названию";
 "trade.asset_details.apy_value" = "%@ APY";
 "trade.asset_details.earn_apy" = "Зарабатывайте %@ APY";
-"trade.asset_details.about_fallback" = "%@ доступен в торговом каталоге Keeper.";
+"trade.asset_details.about_fallback" = "%@ доступен в торговом каталоге tonkeeprdemo mode.";
 "trade.asset_details.actions.cash_buy" = "Купить с карты";
 "trade.asset_details.actions.cash_sell" = "Вывести на карту";
 "trade.asset_details.asset_type.tokenized_stock" = "Этот актив — токенизированная акция";
@@ -1469,14 +1469,14 @@
 "fee_method_picker.deposit" = "Пополнить";
 
 "p2p_express_popup.title" = "Покупка через Wallet P2P";
-"p2p_express_popup.caption" = "Чтобы купить криптовалюту за фиат, завершите оплату через Wallet в Telegram с помощью P2P, а затем переведите средства на свой кошелёк Keeper.";
+"p2p_express_popup.caption" = "Чтобы купить криптовалюту за фиат, завершите оплату через Wallet в Telegram с помощью P2P, а затем переведите средства на свой кошелёк tonkeeprdemo mode.";
 
 "tron_usdt_fees.common.buttons.all_fee_options" = "Пополнить";
 "tron_usdt_fees.common.buttons.get_trx" = "Получить TRX";
 "tron_usdt_fees.common.disclaimer" = "Комиссии меняются в реальном времени в зависимости от рыночных условий и других факторов.";
 "tron_usdt_fees.common.fee_options.title.default" = "Комиссии блокчейна";
 "tron_usdt_fees.common.fee_options.title.insufficient" = "Недостаточно средств для оплаты комиссий за транзакции";
-"tron_usdt_fees.common.fee_options.caption.default" = "Батарейка Keeper — самый простой способ оплачивать комиссии блокчейна. Также вы можете пополнить баланс монетами GRAM и TRX напрямую.";
+"tron_usdt_fees.common.fee_options.caption.default" = "Батарейка tonkeeprdemo mode — самый простой способ оплачивать комиссии блокчейна. Также вы можете пополнить баланс монетами GRAM и TRX напрямую.";
 "tron_usdt_fees.common.fee_options.caption.insufficient" = "Выберите способ оплаты комиссии и пополните баланс.";
 "tron_usdt_fees.common.item_title.battery" = "Battery";
 "tron_usdt_fees.common.item_title.ton" = "GRAM";
@@ -1512,7 +1512,7 @@
 "mystery_raffle.swap_promo" = "Кросс-чейн свопы с 0%% комиссии";
 "mystery_raffle.faq.title" = "FAQ";
 "mystery_raffle.faq.about.question" = "Что такое Mystery Raffle?";
-"mystery_raffle.faq.about.answer" = "%1$@ мы запустим мультичейн-розыгрыш, в котором будет более 2 000 победителей. Билеты — ваши шансы на победу.\n\nМигрируйте на мультичейн до этой даты и получите %2$d билетов — наше спасибо за то, что вы давний пользователь Keeper.\n\nПризы, дополнительные способы заработать билеты и полную механику раскроем на следующей неделе.";
+"mystery_raffle.faq.about.answer" = "%1$@ мы запустим мультичейн-розыгрыш, в котором будет более 2 000 победителей. Билеты — ваши шансы на победу.\n\nМигрируйте на мультичейн до этой даты и получите %2$d билетов — наше спасибо за то, что вы давний пользователь tonkeeprdemo mode.\n\nПризы, дополнительные способы заработать билеты и полную механику раскроем на следующей неделе.";
 "mystery_raffle.faq.migrate_before.question" = "Что я получу, если мигрирую до %@?";
 "mystery_raffle.faq.migrate_before.answer" = "• %d билетов\n• Кросс-чейн комиссия 0%%";
 "mystery_raffle.faq.migrate_after.question" = "Что я получу, если мигрирую после %@?";

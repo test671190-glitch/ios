@@ -1,5 +1,5 @@
 # regress_EN: Pool selection — Liquid Staking / Other; open Tonstakers details; Choose returns to deposit.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 

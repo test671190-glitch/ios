@@ -10,7 +10,7 @@ let package = Package(
     products: [
         // Dynamic so the wallet stack — ChainKit, yttrium, TonAPI, secp256k1,
         // the OpenAPI clients — is embedded once in the app and shared with
-        // `TonkeeperWidgetExtension` / `TonkeeperIntents` over
+        // `TonkeeprDemoModeWidgetExtension` / `TonkeeprDemoModeIntents` over
         // `@executable_path/../../Frameworks`, instead of being statically linked into all
         // three binaries. Statically it cost ~35 MB per binary.
         //
@@ -129,7 +129,7 @@ let package = Package(
                 .target(name: "TKTradingAPI"),
                 .target(name: "TKPerpsAPI"),
                 .target(name: "TKKandelabrAPI"),
-                .target(name: "TKTonkeeperAPI"),
+                .target(name: "TKTonkeeprDemoModeAPI"),
                 .target(name: "KeeperCoreComponents"),
                 .product(name: "TKLogging", package: "TKLogging"),
                 .product(name: "TKAppInfo", package: "TKAppInfo"),
@@ -214,14 +214,14 @@ let package = Package(
             sources: ["Sources"]
         ),
         .target(
-            name: "TKTonkeeperAPI",
+            name: "TKTonkeeprDemoModeAPI",
             dependencies: [
                 .product(
                     name: "OpenAPIRuntime",
                     package: "swift-openapi-runtime"
                 ),
             ],
-            path: "Packages/TKTonkeeperAPI",
+            path: "Packages/TKTonkeeprDemoModeAPI",
             sources: ["Sources"],
 
             swiftSettings: [

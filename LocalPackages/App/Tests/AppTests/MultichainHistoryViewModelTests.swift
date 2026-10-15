@@ -2572,7 +2572,7 @@ final class MultichainHistoryViewModelTests: XCTestCase {
                         activity(
                             id: "dns-renew",
                             activityType: .dnsRenew,
-                            protocolName: "tonkeepertesttesttest.ton",
+                            protocolName: "tonkeeprdemomodetesttesttest.ton",
                             fromChain: .ton,
                             toChain: .ton,
                             direction: .outgoing
@@ -2598,7 +2598,7 @@ final class MultichainHistoryViewModelTests: XCTestCase {
         }
 
         let items = currentItems(in: queryViewModel)
-        XCTAssertEqual(items[0].comment, "tonkeepertesttesttest.ton")
+        XCTAssertEqual(items[0].comment, "tonkeeprdemomodetesttesttest.ton")
         XCTAssertNil(
             items[1].comment,
             "only a domain renewal reads its comment out of the protocol name"
@@ -2611,7 +2611,7 @@ final class MultichainHistoryViewModelTests: XCTestCase {
         let nftService = FakeNFTService()
         nftService.nftsByAddress[nftAddress] = FakeNFTService.makeNFT(
             address: nftAddress,
-            name: "tonkeepertesttesttest.ton",
+            name: "tonkeeprdemomodetesttesttest.ton",
             collectionName: "TON DNS Domains"
         )
         let service = MultichainServiceSpy()
@@ -2624,7 +2624,7 @@ final class MultichainHistoryViewModelTests: XCTestCase {
                             activityType: .dnsRenew,
                             feeToken: asset(symbol: "TON", decimals: 9, assetId: "ton/mainnet/coin"),
                             feeAmount: "100000000",
-                            protocolName: "tonkeepertesttesttest.ton",
+                            protocolName: "tonkeeprdemomodetesttesttest.ton",
                             fromChain: .ton,
                             toChain: .ton,
                             direction: .outgoing,
@@ -2649,7 +2649,7 @@ final class MultichainHistoryViewModelTests: XCTestCase {
 
         let item = try XCTUnwrap(currentItems(in: queryViewModel).first)
         XCTAssertEqual(nftService.loadedAddresses, [[nftAddress]])
-        XCTAssertEqual(item.nft?.name, "tonkeepertesttesttest.ton")
+        XCTAssertEqual(item.nft?.name, "tonkeeprdemomodetesttesttest.ton")
         XCTAssertEqual(item.nft?.collectionName, "TON DNS Domains")
         XCTAssertEqual(
             item.primaryAmount?.text,
@@ -2667,14 +2667,14 @@ final class MultichainHistoryViewModelTests: XCTestCase {
             activity: activity(
                 id: "dns-renew",
                 activityType: .dnsRenew,
-                protocolName: "tonkeepertesttesttest.ton",
+                protocolName: "tonkeeprdemomodetesttesttest.ton",
                 fromChain: .ton,
                 toChain: .ton,
                 direction: .outgoing
             )
         )
 
-        XCTAssertEqual(model.amountLines.map(\.amount), ["tonkeepertesttesttest.ton"])
+        XCTAssertEqual(model.amountLines.map(\.amount), ["tonkeeprdemomodetesttesttest.ton"])
         XCTAssertNil(model.amountLines.first?.chain)
         XCTAssertNil(model.fiat)
 

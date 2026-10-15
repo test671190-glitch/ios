@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - assertVisible: Sent
 - assertVisible: ${"− 0.001 " + NATIVE_TOKEN_SHORT_TEXT}

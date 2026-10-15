@@ -674,7 +674,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/BindAccountRequest/deadline`.
             public var deadline: Swift.Int64?
-            /// EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            /// EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             /// Read only while the wallet has proved no L1 address yet; missing when it is needed answers 400 address_proof_required.
             ///
             /// - Remark: Generated from `#/components/schemas/BindAccountRequest/signature`.
@@ -688,7 +688,7 @@ public enum Components {
             ///
             /// - Parameters:
             ///   - deadline: Unix seconds past which the signature below is refused, capped by the service at ten minutes ahead. Travels with signature: one without the other is a 400.
-            ///   - signature: EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            ///   - signature: EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             ///   - proof: The wallet's consent to this binding, signed with its own root key: hex of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("perps.account.bind.v1") | LP(wallet_id) | LP(l1_address), in the same length-prefixed framing the other writes use. l1_address is lowercase with its 0x and is named here and nowhere in the body.
             public init(
                 deadline: Swift.Int64? = nil,
@@ -721,7 +721,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/IssueRoTokenRequest/deadline`.
             public var deadline: Swift.Int64?
-            /// EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            /// EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             /// Read only while the wallet has proved no L1 address yet; missing when it is needed answers 400 address_proof_required.
             ///
             /// - Remark: Generated from `#/components/schemas/IssueRoTokenRequest/signature`.
@@ -738,7 +738,7 @@ public enum Components {
             ///   - lighter_auth: The short-lived Lighter authorization the caller's L2 key produced locally, typically good for ten minutes. Carried in the body rather than a header so it is never confused with this API's own authorization, which is a different credential answering a different question. Passed through to Lighter and never stored.
             ///   - name: Optional client-supplied label for the token.
             ///   - deadline: Unix seconds past which the signature below is refused, capped by the service at ten minutes ahead. Travels with signature: one without the other is a 400.
-            ///   - signature: EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            ///   - signature: EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             ///   - proof: The wallet's consent to this mint, signed with its own root key: hex of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("perps.rotoken.issue.v1") | LP(wallet_id) | LP(l1_address) | LP(auth_hash) | LP(name), in the same length-prefixed framing the other writes use. auth_hash is sha256 of lighter_auth in lowercase hex; name is what this body carries, empty string when omitted; l1_address is lowercase with its 0x and is named here and nowhere in the body.
             public init(
                 lighter_auth: Swift.String,
@@ -838,7 +838,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/SaveRoTokenRequest/deadline`.
             public var deadline: Swift.Int64?
-            /// EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form of a signature is refused so one proof has one encoding.
+            /// EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form of a signature is refused so one proof has one encoding.
             /// Read only while the wallet has proved no L1 address yet, which for most callers happened on their first deposit. Send it when you can: the client cannot tell when it is needed, and missing when it is answers 400 address_proof_required.
             ///
             /// - Remark: Generated from `#/components/schemas/SaveRoTokenRequest/signature`.
@@ -855,7 +855,7 @@ public enum Components {
             ///   - name: Optional client-supplied label for the token.
             ///   - issued_at: When the client says the token was issued. Recorded and forwarded to Argus, whose event schema carries the field; nothing here depends on it, because a read-only token states no issue time of its own and this cannot be checked.
             ///   - deadline: Unix seconds past which the signature below is refused, capped by the service at ten minutes ahead. Travels with signature: one without the other is a 400, because a missing deadline would otherwise be reported as a signature that has expired.
-            ///   - signature: EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form of a signature is refused so one proof has one encoding.
+            ///   - signature: EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form of a signature is refused so one proof has one encoding.
             ///   - proof: The wallet's consent to storing this token, signed with its own root key: hex of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("perps.rotoken.store.v1") | LP(wallet_id) | LP(l1_address) | LP(token_hash) | LP(name) | LP(issued_at), in the same length-prefixed framing custodial-battery uses for its send proof. token_hash is sha256 of the X-Lighter-Auth value in lowercase hex — the token is named by its hash, never signed as itself; name is what this body carries, empty string when omitted; issued_at is unix nanoseconds in decimal, because it is kept and forwarded at that precision; l1_address is lowercase with its 0x.
             public init(
                 name: Swift.String? = nil,
@@ -945,7 +945,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/ReportTransactionsRequest/deadline`.
             public var deadline: Swift.Int64?
-            /// EIP-712 signature proving this wallet's L1 address, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            /// EIP-712 signature proving this wallet's L1 address, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             /// Read only while the wallet has proved no address yet; sign it in the same vault unlock as the trade being reported, so the user confirms once. Missing when it is needed answers 400 address_proof_required.
             ///
             /// - Remark: Generated from `#/components/schemas/ReportTransactionsRequest/signature`.
@@ -966,7 +966,7 @@ public enum Components {
             ///   - submitted_at: When the client submitted the transactions to Lighter.
             ///   - transactions: In submission order. The order matters to consumers, which see one event per entry: a leverage change that preceded an order must precede it here too.
             ///   - deadline: Unix seconds past which the signature below is refused, capped by the service at ten minutes ahead. Travels with signature: one without the other is a 400.
-            ///   - signature: EIP-712 signature proving this wallet's L1 address, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            ///   - signature: EIP-712 signature proving this wallet's L1 address, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             ///   - proof: The wallet's consent to this report, signed with its own root key: hex of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("perps.transactions.report.v1") | LP(wallet_id) | LP(l1_address) | LP(submitted_at) | LP(type) | LP(tx_hash) | ..., one length-prefixed pair per entry in the order they appear in transactions, and submitted_at as unix nanoseconds in decimal. The same length-prefixed framing custodial-battery uses for its send proof.
             public init(
                 operation_id: Swift.String? = nil,
@@ -3341,7 +3341,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/OpenDepositRequest/deadline`.
             public var deadline: Swift.Int64?
-            /// EIP-712 signature proving the caller holds the key to the L1 address this deposit is recorded against, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            /// EIP-712 signature proving the caller holds the key to the L1 address this deposit is recorded against, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             /// Send it every time, signed in the same vault unlock as the deposit transaction: it is read only while the wallet has proved no address yet, and the client cannot tell when that is. Missing when it is needed answers 400 address_proof_required.
             ///
             /// - Remark: Generated from `#/components/schemas/OpenDepositRequest/signature`.
@@ -3361,7 +3361,7 @@ public enum Components {
             ///   - execution_id: The swap this deposit is funded by, as the swap backend named it. Optional, kept for correlation and support: it is what a failed swap is told apart by, and what a server-side resolver will one day turn into the Ethereum hash so that l1_tx_hash stops being required. Nothing reads it yet.
             ///   - l1_tx_hash: The Ethereum transaction that called Lighter's gateway. Required: it is the only handle this service can confirm a deposit with — Lighter resolves it to the credit, the amount and the account index, and does so without a read-only token, which a first deposit could not have anyway since the account does not exist yet.
             ///   - deadline: Unix seconds past which the signature below is refused, capped by the service at ten minutes ahead. Travels with signature: one without the other is a 400, because a missing deadline would otherwise be reported as a signature that has expired.
-            ///   - signature: EIP-712 signature proving the caller holds the key to the L1 address this deposit is recorded against, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            ///   - signature: EIP-712 signature proving the caller holds the key to the L1 address this deposit is recorded against, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             ///   - proof: The wallet's consent to this deposit, signed with its own root key: hex of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("perps.deposit.register.v1") | LP(wallet_id) | LP(l1_address) | LP(operation_id) | LP(amount) | LP(asset_id) | LP(l1_tx_hash) | LP(execution_id), in the same length-prefixed framing custodial-battery uses for its send proof. Every term as this service records it: as sent here with surrounding whitespace trimmed and l1_tx_hash lowercased, execution_id an empty string when omitted, l1_address lowercase with its 0x.
             public init(
                 operation_id: Swift.String,
@@ -4048,7 +4048,7 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/WalletAuthHeader`.
         public typealias WalletAuthHeader = Swift.String
-        /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+        /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
         /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
         /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
         /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -4275,7 +4275,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/account/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -4293,7 +4293,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -4536,7 +4536,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/account/bind/POST/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -4554,7 +4554,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -4827,7 +4827,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/transactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -4845,7 +4845,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -5070,7 +5070,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/transactions/send/POST/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -5088,7 +5088,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -5433,7 +5433,7 @@ public enum Operations {
             public var query: Operations.getNextNonce.Input.Query
             /// - Remark: Generated from `#/paths/transactions/next-nonce/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -5451,7 +5451,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -5717,7 +5717,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/integrator/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -5735,7 +5735,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -5973,7 +5973,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/account/ro-token/POST/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -5991,7 +5991,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -6240,7 +6240,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/account/ro-token/issue/POST/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -6258,7 +6258,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -6530,7 +6530,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/positions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -6548,7 +6548,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -6799,7 +6799,7 @@ public enum Operations {
             public var path: Operations.getOpenPosition.Input.Path
             /// - Remark: Generated from `#/paths/positions/{id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -6817,7 +6817,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -7112,7 +7112,7 @@ public enum Operations {
             public var query: Operations.getPositionState.Input.Query
             /// - Remark: Generated from `#/paths/positions/{id}/state/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -7130,7 +7130,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -7376,7 +7376,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/portfolio/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -7394,7 +7394,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -7631,7 +7631,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orders/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -7649,7 +7649,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -7900,7 +7900,7 @@ public enum Operations {
             public var path: Operations.getOrder.Input.Path
             /// - Remark: Generated from `#/paths/orders/{id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -7918,7 +7918,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -8476,7 +8476,7 @@ public enum Operations {
             public var query: Operations.getTradingScreen.Input.Query
             /// - Remark: Generated from `#/paths/screens/trading/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -8494,7 +8494,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -8757,7 +8757,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/screens/portfolio/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -8775,7 +8775,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -9054,7 +9054,7 @@ public enum Operations {
             public var query: Operations.getTruncatedOrderBook.Input.Query
             /// - Remark: Generated from `#/paths/orderbook/truncated/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -9072,7 +9072,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -9358,7 +9358,7 @@ public enum Operations {
             public var query: Operations.getActivity.Input.Query
             /// - Remark: Generated from `#/paths/activity/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -9376,7 +9376,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -9620,7 +9620,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/funding/deposit/POST/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -9638,7 +9638,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -9927,7 +9927,7 @@ public enum Operations {
             public var path: Operations.getDeposit.Input.Path
             /// - Remark: Generated from `#/paths/funding/deposit/{deposit_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -9945,7 +9945,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -10214,7 +10214,7 @@ public enum Operations {
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/funding/quote/POST/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -10232,7 +10232,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(
@@ -10518,7 +10518,7 @@ public enum Operations {
             public var path: Operations.getFundingStatus.Input.Path
             /// - Remark: Generated from `#/paths/funding/status/{execution_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                /// tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 /// Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
                 /// The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
                 /// Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -10536,7 +10536,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - X_hyphen_Wallet_hyphen_Id: Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+                ///   - X_hyphen_Wallet_hyphen_Id: tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
                 ///   - X_hyphen_Wallet_hyphen_Authorization: Proof that the wallet owns the access token in Authorization: base64url of a 65-byte recoverable secp256k1 signature (R | S | V) over LP("keeper.wallet.auth.v1") | LP(blake2b256(access_token)), padding optional. The same header custodial-battery takes, so a client that signs one signs both.
                 ///   - accept:
                 public init(

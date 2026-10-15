@@ -1,5 +1,5 @@
 # regress_EN: Browser Screen — Explore / Connected tabs; Connected empty state.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 - runFlow: "../../../steps/browser/open_browser_tab.yaml"

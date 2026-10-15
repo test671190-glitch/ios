@@ -21,7 +21,7 @@ APIS=(
   "multichain MultichainAPI"
   "swap SwapAPI"
   "tonconnect TonConnectAPI"
-  "tonkeeper TKTonkeeperAPI"
+  "tonkeeprdemomode TKTonkeeprDemoModeAPI"
   "trading TKTradingAPI"
   "perps TKPerpsAPI"
   "kandelabr TKKandelabrAPI"

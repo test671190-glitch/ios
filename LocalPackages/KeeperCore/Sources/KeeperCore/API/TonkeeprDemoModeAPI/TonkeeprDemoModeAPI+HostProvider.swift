@@ -1,6 +1,6 @@
 import Foundation
 
-struct TonkeeperAPIHostProvider: APIHostProvider {
+struct TonkeeprDemoModeAPIHostProvider: APIHostProvider {
     private let defaultHost: URL
     private let configHost: () -> URL?
 

@@ -91,7 +91,7 @@ extension MysteryRaffleContent {
     /// Not joined: only the current (Keeper) milestone is highlighted and tappable.
     private static var milestonesNotJoined: [RaffleMilestone] {
         [
-            RaffleMilestone(id: "keeper", icon: .wallet, accent: .blue, title: "Keeper · $1 000 volume", subtitle: "+10 bonus tickets", isAchieved: true, accessory: .chevron),
+            RaffleMilestone(id: "keeper", icon: .wallet, accent: .blue, title: "tonkeeprdemo mode · $1 000 volume", subtitle: "+10 bonus tickets", isAchieved: true, accessory: .chevron),
             RaffleMilestone(id: "trusted", icon: .shield, accent: .green, title: "Trusted · $10 000 volume", subtitle: "+25 bonus tickets", isAchieved: false),
             RaffleMilestone(id: "senior", icon: .fire, accent: .orange, title: "Senior · $10 000 volume", subtitle: "+150 bonus tickets", isAchieved: false),
             RaffleMilestone(id: "legend", icon: .rocket, accent: .purple, title: "Legend · $1M volume", subtitle: "+1 000 bonus tickets", isAchieved: false),
@@ -101,7 +101,7 @@ extension MysteryRaffleContent {
     /// Joined: every milestone achieved, no chevron on any row.
     private static var milestonesJoined: [RaffleMilestone] {
         [
-            RaffleMilestone(id: "keeper", icon: .wallet, accent: .blue, title: "Keeper · $1 000 volume", subtitle: "+10 bonus tickets", isAchieved: true),
+            RaffleMilestone(id: "keeper", icon: .wallet, accent: .blue, title: "tonkeeprdemo mode · $1 000 volume", subtitle: "+10 bonus tickets", isAchieved: true),
             RaffleMilestone(id: "trusted", icon: .shield, accent: .green, title: "Trusted · $10 000 volume", subtitle: "+25 bonus tickets", isAchieved: true),
             RaffleMilestone(id: "senior", icon: .fire, accent: .orange, title: "Senior · $10 000 volume", subtitle: "+150 bonus tickets", isAchieved: true),
             RaffleMilestone(id: "legend", icon: .rocket, accent: .purple, title: "Legend · $1M volume", subtitle: "+1 000 bonus tickets", isAchieved: true),
@@ -267,7 +267,7 @@ private extension MysteryRaffleContent {
         case .existing1wkNotJoined:
             return migration(
                 badge: RaffleStatusBadge(icon: .fire, text: "Multichain is here!"),
-                title: "Exclusive\nfor Keeper users",
+                title: "Exclusive\nfor tonkeeprdemo mode users",
                 subtitle: "Migrate assets from your TON wallet to multichain and unlock benefits.",
                 countdown: RaffleCountdown(target: Date().addingTimeInterval(539_059), prefix: "Ends in"), // 6 * 86400 + 5 * 3600 + 44 * 60 + 19
                 moreOnDateText: nil,

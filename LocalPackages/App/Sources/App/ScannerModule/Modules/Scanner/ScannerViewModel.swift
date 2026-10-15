@@ -103,7 +103,7 @@ final class ScannerViewModelImplementation: NSObject, ScannerViewModel, ScannerV
 
     // MARK: - State
 
-    private let sessionQueue = DispatchQueue(label: "com.tonkeeper.scanner.session")
+    private let sessionQueue = DispatchQueue(label: "com.tonkeeprdemomode.scanner.session")
     private let metadataOutputQueue = DispatchQueue(label: "metadata.capturesession.queue")
     private let captureSession = AVCaptureSession()
 

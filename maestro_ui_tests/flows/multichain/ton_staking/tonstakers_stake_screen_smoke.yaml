@@ -1,5 +1,5 @@
 # regress_EN: Stake Screen — entry Wallet → Stake; Available; pool picker; list shows Tonstakers; Continue present.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 

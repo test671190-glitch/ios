@@ -1,7 +1,7 @@
 # From Network fee modal: Deposit opens Battery refill. After a crypto recharge,
 # Battery remains available and Deposit disappears after the recharge lands.
 # The transfer is deliberately not sent.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_multichain_wallet.yaml"
 
@@ -49,13 +49,13 @@ appId: com.jbig.tonkeeper
 
 # Fee modal: Battery is listed but needs a top-up.
 - runFlow: "../../../steps/battery/open_network_fee_picker.yaml"
-- assertVisible: Keeper Battery
+- assertVisible: tonkeeprdemo mode Battery
 - assertVisible: Deposit
 - tapOn: Deposit
 - waitForAnimationToEnd:
     timeout: 5000
 - extendedWaitUntil:
-    visible: Keeper Battery
+    visible: tonkeeprdemo mode Battery
     timeout: 30000
 
 # Crypto recharge from the refill screen opened via Deposit (already on Battery).
@@ -97,7 +97,7 @@ appId: com.jbig.tonkeeper
     visible: Network fee
     timeout: 180000
 - runFlow: "../../../steps/battery/open_network_fee_picker.yaml"
-- assertVisible: Keeper Battery
+- assertVisible: tonkeeprdemo mode Battery
 
 # Recharge settlement can take a few minutes. Stop once Battery no longer offers Deposit;
 # do not select the fee method or sign the transfer.

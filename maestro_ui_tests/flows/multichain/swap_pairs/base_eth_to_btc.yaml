@@ -1,5 +1,5 @@
 # Multichain Swap success: Base ETH → BTC at $4 fiat send amount.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_multichain_wallet.yaml"
 - runFlow: "../../../steps/swap/open_swap.yaml"

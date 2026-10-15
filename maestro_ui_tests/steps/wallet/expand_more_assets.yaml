@@ -1,7 +1,7 @@
 # Expand the collapsed "More assets" row on the wallet list when it exists.
 # Tokens below the first ~6 sit behind it and are not in the hierarchy until tap.
 # Optional: short lists have no More assets button.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - scrollUntilVisible:
     element: "More assets"

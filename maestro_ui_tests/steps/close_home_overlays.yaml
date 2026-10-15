@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Stories popup and home banners block scrolling and are UI the tests don't need.
 - tapOn:

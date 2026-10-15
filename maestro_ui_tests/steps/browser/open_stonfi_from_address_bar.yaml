@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Opens app.ston.fi by URL. The Explore shelf tile "STON.fi" points at whatever the dapp
 # catalog links to (a campaign landing at the time of writing), so the TonConnect flow

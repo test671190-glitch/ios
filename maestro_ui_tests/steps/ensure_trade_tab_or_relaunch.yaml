@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Trade tab can be missing from the tab bar until a fresh launch; recover without failing the suite.
 - runFlow:

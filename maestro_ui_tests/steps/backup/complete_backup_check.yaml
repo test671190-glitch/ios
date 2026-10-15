@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Backup check: 3 random phrase positions, 3 options each — tap the correct word per row.
 # Requires output.captured[] from the recovery phrase screen (1-based index → captured[i - 1]).

@@ -447,7 +447,7 @@ private extension WalletTransferSignCoordinator {
 
         var string = "tonsign://v1/?pk=\(hexPublicKey)&body=\(hexBody)&v=\(v)&tn=\(network.rawValue)"
         if isOnDevice {
-            string.append("&return=\("tonkeeper-mob://publish".percentEncoded ?? "")")
+            string.append("&return=\("tonkeepr-demo-mode-mob://publish".percentEncoded ?? "")")
         }
         return URL(string: string)
     }
@@ -468,7 +468,7 @@ private extension WalletTransferSignCoordinator {
             }
         }
 
-        let tonSignRequest = try TonSignRequest(requestId: nil, signData: transfer, dataType: 1, cryptoKeypath: cryptoKeypath, address: wallet.address.toFriendly(bounceable: false).toString(), origin: "Tonkeeper")
+        let tonSignRequest = try TonSignRequest(requestId: nil, signData: transfer, dataType: 1, cryptoKeypath: cryptoKeypath, address: wallet.address.toFriendly(bounceable: false).toString(), origin: "TonkeeprDemoMode")
 
         return try UR(type: "ton-sign-request", cbor: tonSignRequest.toCBOR())
     }

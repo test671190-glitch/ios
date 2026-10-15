@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # TK-3331 pushes a push-permission step ("Get instant notifications") after
 # passcode creation in every add-wallet flow whenever the system permission is

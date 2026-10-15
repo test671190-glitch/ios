@@ -1,6 +1,6 @@
 # Wallet list → unverified token (RAVE or KII) → asset details banner → info popup.
 # Color of the orange "Unverified token" subtitle is not assertable via Maestro selectors.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_multichain_wallet.yaml"
 

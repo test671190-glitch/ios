@@ -11,11 +11,11 @@ public protocol StoriesService {
 }
 
 final class StoriesServiceImplementation: StoriesService {
-    private let api: TonkeeperAPI
+    private let api: TonkeeprDemoModeAPI
     private let shownStoriesRepository: ShownStoriesRepository
 
     init(
-        api: TonkeeperAPI,
+        api: TonkeeprDemoModeAPI,
         shownStoriesRepository: ShownStoriesRepository
     ) {
         self.api = api

@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Menu items are snapshotted at tap time; "Hide in Wallet" needs asset visibility
 # loaded from network/cache. CI is slower than local, so wait for balance UI first.

@@ -110,8 +110,8 @@ final class TKTypographyTests: XCTestCase {
         let base = try bundledFont(.ttfirsneueMd)
 
         XCTAssertNotEqual(
-            glyphs(of: "GRAM & hello@tonkeeper.com", in: base.applying(.display)),
-            glyphs(of: "GRAM & hello@tonkeeper.com", in: base)
+            glyphs(of: "GRAM & hello@example.com", in: base.applying(.display)),
+            glyphs(of: "GRAM & hello@example.com", in: base)
         )
     }
 

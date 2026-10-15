@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: tk-perps API
   version: 1.0.536
-  description: An aggregating BFF proxy sitting between self-custody TonKeeper clients and the Lighter perpetuals exchange. It serves screen-shaped read responses so the client can render a full screen in a single round-trip.
+  description: An aggregating BFF proxy sitting between self-custody tonkeeprdemo mode clients and the Lighter perpetuals exchange. It serves screen-shaped read responses so the client can render a full screen in a single round-trip.
 servers:
   - url: https://{host}/tk-perps/public-api/v1
     variables:
@@ -1061,7 +1061,7 @@ components:
       in: header
       required: true
       description: |-
-        Tonkeeper wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
+        tonkeeprdemo mode wallet_id the request is about. The access token names the device, and a device carries up to two hundred wallets, so which one a request concerns is something only the client knows.
         Required, and never taken on trust where an endpoint acts on it. On the writes it is checked against X-Wallet-Authorization: the id is recomputed from the key recovered out of that signature and must come out equal, so naming a wallet you hold no key to fails as 401 wallet_auth_invalid. It is inside every operation proof as well, which is what stops one being moved to another wallet. A blank header is 400.
         The reads check it the same way, and take the Lighter account from it rather than from a header: the account a request acts on is the one the wallet's proved address owns, so no caller can read a balance, an address or a position by naming an index. A wallet that has proved no address yet, or whose address owns no Lighter account, is served the public parts and empty private ones.
         Not knowing is not the same as not having: when Lighter cannot say which account an address owns, /account and /screens/portfolio answer 503 rather than report an account state they did not establish. /screens/trading and /activity degrade instead, because each has an answer that does not depend on the account -- the market data for one, this service's own deposit records for the other -- and their private halves already come back empty on an upstream failure.
@@ -1092,7 +1092,7 @@ components:
           type: string
           pattern: ^0x[0-9a-fA-F]{130}$
           description: |-
-            EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             Read only while the wallet has proved no L1 address yet; missing when it is needed answers 400 address_proof_required.
           example: 0x4355c47d63924e8a72e509b65029052eb6c299d53a04e167c5775fd466751c9d07299936d304c153f6443dfa05f40ff007d72911b6f72307f996231605b915621c
         proof:
@@ -1126,7 +1126,7 @@ components:
           type: string
           pattern: ^0x[0-9a-fA-F]{130}$
           description: |-
-            EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             Read only while the wallet has proved no L1 address yet; missing when it is needed answers 400 address_proof_required.
           example: 0x4355c47d63924e8a72e509b65029052eb6c299d53a04e167c5775fd466751c9d07299936d304c153f6443dfa05f40ff007d72911b6f72307f996231605b915621c
         proof:
@@ -1199,7 +1199,7 @@ components:
         signature:
           type: string
           description: |-
-            EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form of a signature is refused so one proof has one encoding.
+            EIP-712 signature over LinkWallet(string walletId,uint64 deadline), under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form of a signature is refused so one proof has one encoding.
             Read only while the wallet has proved no L1 address yet, which for most callers happened on their first deposit. Send it when you can: the client cannot tell when it is needed, and missing when it is answers 400 address_proof_required.
           pattern: ^0x[0-9a-fA-F]{130}$
           example: 0x4355c47d63924e8a72e509b65029052eb6c299d53a04e167c5775fd466751c9d07299936d304c153f6443dfa05f40ff007d72911b6f72307f996231605b915621c
@@ -1280,7 +1280,7 @@ components:
           type: string
           pattern: ^0x[0-9a-fA-F]{130}$
           description: |-
-            EIP-712 signature proving this wallet's L1 address, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            EIP-712 signature proving this wallet's L1 address, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             Read only while the wallet has proved no address yet; sign it in the same vault unlock as the trade being reported, so the user confirms once. Missing when it is needed answers 400 address_proof_required.
           example: 0x99ce24c2b78cd46c35a3608007ccece84254a4696045b7f5962a6e758ebeadcc250da971d87099ce2e03e429f0321c42ed4de6cd0c468507480a63b65e64ab801b
         proof:
@@ -2403,7 +2403,7 @@ components:
           type: string
           pattern: ^0x[0-9a-fA-F]{130}$
           description: |-
-            EIP-712 signature proving the caller holds the key to the L1 address this deposit is recorded against, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeperPerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
+            EIP-712 signature proving the caller holds the key to the L1 address this deposit is recorded against, over LinkWallet(string walletId,uint64 deadline) under domain {name: TonkeeprDemoModePerps, version: "1", chainId: 1} with no verifyingContract. Encoded as 65 bytes of r‖s‖v hex; v may be 27/28 or 0/1, and the high-s form is refused.
             Send it every time, signed in the same vault unlock as the deposit transaction: it is read only while the wallet has proved no address yet, and the client cannot tell when that is. Missing when it is needed answers 400 address_proof_required.
           example: 0x99ce24c2b78cd46c35a3608007ccece84254a4696045b7f5962a6e758ebeadcc250da971d87099ce2e03e429f0321c42ed4de6cd0c468507480a63b65e64ab801b
         proof:

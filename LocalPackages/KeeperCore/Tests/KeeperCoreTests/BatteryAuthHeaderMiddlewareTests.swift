@@ -107,7 +107,7 @@ private extension BatteryAuthHeaderMiddlewareTests {
                 path: "/wallet/send"
             ),
             body: HTTPBody(Data(body.utf8)),
-            baseURL: URL(string: "https://battery.tonkeeper.com")!,
+            baseURL: URL(string: "https://battery.example.com")!,
             operationID: operationID,
             next: { request, body, _ in
                 recorder.request = request

@@ -1,6 +1,6 @@
 # Trending shelf network filter (All control to the right of Trending).
 # Opens 3 filtered tokens and asserts their details header matches the network.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/trade/open_multichain_trade.yaml"
 

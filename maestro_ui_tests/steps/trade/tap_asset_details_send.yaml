@@ -1,5 +1,5 @@
 # Send/Receive live under "Your balance" (below the chart), not in the header.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - scrollUntilVisible:
     element:

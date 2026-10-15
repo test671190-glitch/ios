@@ -3,7 +3,7 @@ import Foundation
 import KeeperCoreComponents
 import TonSwift
 
-struct TonkeeperDeeplinkParser {
+struct TonkeeprDemoModeDeeplinkParser {
     private let walletConnectDeeplinkValidator: WalletConnectDeeplinkValidator
 
     init(walletConnectDeeplinkValidator: WalletConnectDeeplinkValidator) {

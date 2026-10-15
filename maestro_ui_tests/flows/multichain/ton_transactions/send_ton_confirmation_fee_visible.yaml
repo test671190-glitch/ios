@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Asserts TON send confirmation shows network fee (Fee row) before signing.
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"

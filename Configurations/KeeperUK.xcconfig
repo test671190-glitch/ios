@@ -1,11 +1,11 @@
 
 #include "KeeperRelease.xcconfig"
 
-APP_NAME = Keeper UK
+APP_NAME = tonkeeprdemo mode UK
 
 BUNDLE_DISPLAY_NAME = $(APP_NAME)
 ICON_NAME = AppIcon
 
-BASE_BUNDLE_IDENTIFIER = com.jbig.tonkeeperUK
+BASE_BUNDLE_IDENTIFIER = com.jbig.tonkeeprDemoModeUK
 
 BUNDLE_IDENTIFIER = $(BASE_BUNDLE_IDENTIFIER)

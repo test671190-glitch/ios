@@ -1,7 +1,7 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - openLink:
-    link: "tonkeeper://backup"
+    link: "tonkeeprdemomode://backup"
 
 - tapOn:
     text: "Open"

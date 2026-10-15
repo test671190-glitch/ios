@@ -1,20 +1,20 @@
 import Foundation
 
 public final class BuySellAssembly {
-    private let tonkeeperApiAssembly: TonkeeperAPIAssembly
+    private let tonkeeprDemoModeApiAssembly: TonkeeprDemoModeAPIAssembly
     private let coreAssembly: CoreAssembly
 
     init(
-        tonkeeperApiAssembly: TonkeeperAPIAssembly,
+        tonkeeprDemoModeApiAssembly: TonkeeprDemoModeAPIAssembly,
         coreAssembly: CoreAssembly
     ) {
-        self.tonkeeperApiAssembly = tonkeeperApiAssembly
+        self.tonkeeprDemoModeApiAssembly = tonkeeprDemoModeApiAssembly
         self.coreAssembly = coreAssembly
     }
 
     public func buySellMethodsService() -> BuySellMethodsService {
         BuySellMethodsServiceImplementation(
-            api: tonkeeperApiAssembly.api,
+            api: tonkeeprDemoModeApiAssembly.api,
             buySellMethodsRepository: buySellMethodsRepository()
         )
     }

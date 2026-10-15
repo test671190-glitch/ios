@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Import mnemonic as TON-only v3R2 on a multichain-enabled build.
 # Pasteboard must hold TON_v4 (CI: import shard primes UIPasteboard via simctl pbcopy).

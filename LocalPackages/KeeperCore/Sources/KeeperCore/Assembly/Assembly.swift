@@ -69,11 +69,11 @@ public final class Assembly {
         coreAssembly: coreAssembly
     )
     private lazy var buySellAssembly = BuySellAssembly(
-        tonkeeperApiAssembly: tonkeeperApiAssembly,
+        tonkeeprDemoModeApiAssembly: tonkeeprDemoModeApiAssembly,
         coreAssembly: coreAssembly
     )
     private lazy var knownAccountsAssembly = KnownAccountsAssembly(
-        tonkeeperApiAssembly: tonkeeperApiAssembly,
+        tonkeeprDemoModeApiAssembly: tonkeeprDemoModeApiAssembly,
         coreAssembly: coreAssembly
     )
 
@@ -95,7 +95,7 @@ public final class Assembly {
         configurationAssembly: configurationAssembly,
         firebaseUserIdProvider: dependencies.firebaseUserIdProvider
     )
-    lazy var tonkeeperApiAssembly = TonkeeperAPIAssembly(
+    lazy var tonkeeprDemoModeApiAssembly = TonkeeprDemoModeAPIAssembly(
         appInfoProvider: dependencies.appInfoProvider,
         coreAssembly: coreAssembly,
         tkAppSettings: dependencies.tkAppSettings
@@ -169,7 +169,7 @@ public final class Assembly {
         repositoriesAssembly: repositoriesAssembly,
         storesAssembly: storesAssembly,
         apiAssembly: apiAssembly,
-        tonkeeperAPIAssembly: tonkeeperApiAssembly,
+        tonkeeprDemoModeAPIAssembly: tonkeeprDemoModeApiAssembly,
         scamAPIAssembly: scamAPIAssembly,
         coreAssembly: coreAssembly,
         secureAssembly: secureAssembly,
@@ -220,7 +220,7 @@ public final class Assembly {
     private lazy var loadersAssembly = LoadersAssembly(
         servicesAssembly: servicesAssembly,
         storesAssembly: storesAssembly,
-        tonkeeperAPIAssembly: tonkeeperApiAssembly,
+        tonkeeprDemoModeAPIAssembly: tonkeeprDemoModeApiAssembly,
         apiAssembly: apiAssembly,
         knownAccountsAssembly: knownAccountsAssembly,
         tronAssembly: tronUSDTAssembly,
@@ -286,7 +286,7 @@ public extension Assembly {
             buySellAssembly: buySellAssembly,
             batteryAssembly: batteryAssembly,
             knownAccountsAssembly: knownAccountsAssembly,
-            tonkeeperAPIAssembly: tonkeeperApiAssembly,
+            tonkeeprDemoModeAPIAssembly: tonkeeprDemoModeApiAssembly,
             apiAssembly: apiAssembly,
             loadersAssembly: loadersAssembly,
             backgroundUpdateAssembly: backgroundUpdateAssembly,

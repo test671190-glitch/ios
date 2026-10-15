@@ -13,7 +13,7 @@ public struct InfoProvider {
         case platform = "PLATFORM"
         case termsOfServiceURL = "TermsOfServiceURL"
         case privacyPolicyURL = "PrivacyPolicyURL"
-        case tonkeeperSwapURL = "TonkeeperSwapURL"
+        case tonkeeprDemoModeSwapURL = "TonkeeprDemoModeSwapURL"
     }
 
     static func value<T>(key: Keys) -> T? {
@@ -60,5 +60,5 @@ public struct InfoProvider {
 }
 
 private extension String {
-    static let defaultAppName = "Keeper"
+    static let defaultAppName = "tonkeeprdemo mode"
 }

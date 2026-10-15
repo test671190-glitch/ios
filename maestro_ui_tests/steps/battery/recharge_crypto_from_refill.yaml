@@ -1,9 +1,9 @@
 # Buys the smallest crypto pack (750 charges) on an already-open Battery refill screen.
 # Env: RECHARGE_TOKEN — symbol after "Recharge with ", e.g. GRAM / USD₮
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - extendedWaitUntil:
-    visible: Keeper Battery
+    visible: tonkeeprdemo mode Battery
     timeout: 30000
 
 - scrollUntilVisible:

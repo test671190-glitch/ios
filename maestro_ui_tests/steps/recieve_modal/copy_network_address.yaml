@@ -2,7 +2,7 @@
 # Ends by relaunching the app: the Receive sheets have no identifier on their close
 # buttons, so a relaunch is the only deterministic way back to the wallet home.
 # Env: NETWORK_NAME, ADDRESS_TITLE
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - extendedWaitUntil:
     visible: Add Funds

@@ -31,6 +31,6 @@
 --exclude LocalPackages/KeeperCore/Packages/TKKandelabrAPI/Sources/TKKandelabrAPI
 --exclude LocalPackages/KeeperCore/Packages/TKTradingAPI/Sources/TKTradingAPI
 --exclude LocalPackages/KeeperCore/Packages/TKPerpsAPI/Sources/TKPerpsAPI
---exclude LocalPackages/KeeperCore/Packages/TKTonkeeperAPI/Sources/TKTonkeeperAPI
+--exclude LocalPackages/KeeperCore/Packages/TKTonkeeprDemoModeAPI/Sources/TKTonkeeprDemoModeAPI
 --exclude LocalPackages/KeeperCore/Packages/MultichainAPI/Sources/MultichainAPI
 --exclude LocalPackages/KeeperCore/Packages/SwapAPI/Sources/SwapAPI

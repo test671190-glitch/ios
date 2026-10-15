@@ -55,7 +55,7 @@ final class BlockchainExplorerURLMatcherTests: XCTestCase {
 
     func test_urlWithoutHostDoesNotMatch() throws {
         XCTAssertFalse(
-            try makeMatcher().matches(url: url("mailto:support@tonkeeper.com"))
+            try makeMatcher().matches(url: url("mailto:support@example.com"))
         )
     }
 }

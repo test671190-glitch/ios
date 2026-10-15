@@ -1,7 +1,7 @@
 # Refunds the remaining Battery balance: Charges history → Details → Return charges.
 # Prerequisite: Battery refill screen is open.
 # Ends back on the refill screen, scrolled to the history section, browser closed.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: reveal_refill_bottom.yaml
 - tapOn:
@@ -9,7 +9,7 @@ appId: com.jbig.tonkeeper
     waitToSettleTimeoutMs: 5000
     retryTapIfNoChange: true
 
-# Opens bat.tonkeeper.com in the in-app browser — the native title shows at once, the web
+# Opens the Battery history page in the in-app browser — the native title shows at once, the web
 # content with the purchase card arrives later. Above the 15s house limit: it is a page
 # load over the network on a cold CI simulator.
 - extendedWaitUntil:

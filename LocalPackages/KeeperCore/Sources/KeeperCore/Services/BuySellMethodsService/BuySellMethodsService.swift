@@ -6,11 +6,11 @@ public protocol BuySellMethodsService {
 }
 
 final class BuySellMethodsServiceImplementation: BuySellMethodsService {
-    private let api: TonkeeperAPI
+    private let api: TonkeeprDemoModeAPI
     private let buySellMethodsRepository: BuySellMethodsRepository
 
     init(
-        api: TonkeeperAPI,
+        api: TonkeeprDemoModeAPI,
         buySellMethodsRepository: BuySellMethodsRepository
     ) {
         self.api = api

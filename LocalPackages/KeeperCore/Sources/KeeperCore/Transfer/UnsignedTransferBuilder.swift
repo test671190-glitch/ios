@@ -13,12 +13,12 @@ public struct UnsignedTransferBuilder {
     }
 
     public static func newWalletQueryId() -> BigUInt {
-        let tonkeeperSignature: [UInt8] = [0x54, 0x6D, 0xE4, 0xEF]
+        let tonkeeprDemoModeSignature: [UInt8] = [0x54, 0x6D, 0xE4, 0xEF]
 
         var randomBytes = [UInt8](repeating: 0, count: 4)
         arc4random_buf(&randomBytes, 4)
 
-        let hexString = Data(tonkeeperSignature + randomBytes).hexString()
+        let hexString = Data(tonkeeprDemoModeSignature + randomBytes).hexString()
         return BigUInt(hexString, radix: 16) ?? BigUInt(0)
     }
 

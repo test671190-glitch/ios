@@ -3,7 +3,7 @@
 # confirmation and opens History, so the new row is the success signal.
 # Env: SEARCH_QUERY, ASSET_ID, AMOUNT (crypto units, e.g. "0.0001"), TOKEN_SYMBOL, RECIPIENT,
 # CHAIN_ID (optional, see steps/token_picker/select_asset.yaml)
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 env:
   CHAIN_ID: ""
 ---

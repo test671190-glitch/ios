@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Create New Wallet on the multichain build creates a multichain (bip39) wallet with a
 # 12-word phrase. After the passcode the onboarding pushes the backup intro (header Skip)

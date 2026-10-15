@@ -33,7 +33,7 @@ final class APILoggingTests: XCTestCase {
             operationInput: "secret-input",
             request: request,
             requestBody: HTTPBody(#"{"address":"secret-address"}"#),
-            baseURL: XCTUnwrap(URL(string: "https://swap.tonkeeper.com")),
+            baseURL: XCTUnwrap(URL(string: "https://swap.example.com")),
             response: HTTPResponse(status: .badRequest),
             responseBody: HTTPBody(#"{"error":"secret-response"}"#),
             causeDescription: "Unknown",
@@ -90,7 +90,7 @@ final class APILoggingTests: XCTestCase {
         XCTAssertEqual(record.category, "API")
         XCTAssertTrue(record.message.hasPrefix("createCrossSwapQuote POST /v2/cross/quote → 400 in"), record.message)
         XCTAssertEqual(record.extraInfo["responseBody"], payload)
-        XCTAssertEqual(record.extraInfo["host"], "swap.tonkeeper.com")
+        XCTAssertEqual(record.extraInfo["host"], "swap.example.com")
 
         let forwarded = try await Data(collecting: XCTUnwrap(body), upTo: 1024)
         XCTAssertEqual(String(decoding: forwarded, as: UTF8.self), payload)
@@ -234,7 +234,7 @@ private extension APILoggingTests {
             operationID: "createCrossSwapQuote",
             operationInput: "input",
             request: HTTPRequest(method: .post, scheme: nil, authority: nil, path: path),
-            baseURL: URL(string: "https://swap.tonkeeper.com")!,
+            baseURL: URL(string: "https://swap.example.com")!,
             response: response,
             causeDescription: causeDescription,
             underlyingError: underlying
@@ -273,7 +273,7 @@ private extension APILoggingTests {
         try await APILoggingMiddleware(slowRequestThreshold: slowRequestThreshold).intercept(
             HTTPRequest(method: .post, scheme: nil, authority: nil, path: "/v2/cross/quote"),
             body: nil,
-            baseURL: URL(string: "https://swap.tonkeeper.com")!,
+            baseURL: URL(string: "https://swap.example.com")!,
             operationID: "createCrossSwapQuote",
             next: { _, _, _ in
                 if let failure {

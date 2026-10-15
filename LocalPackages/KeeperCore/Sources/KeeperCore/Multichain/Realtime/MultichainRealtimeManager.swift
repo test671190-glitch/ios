@@ -29,7 +29,7 @@ public final class MultichainRealtimeManager {
     private let historyInvalidationObservers = LockedObserverStore<String>()
     private let subscriptionObservers = LockedObserverStore<String?>()
 
-    private let syncQueue = DispatchQueue(label: "com.tonkeeper.multichain.realtime.manager")
+    private let syncQueue = DispatchQueue(label: "com.tonkeeprdemomode.multichain.realtime.manager")
     private let subscriptionLock = NSLock()
     private var appliedSeq = [String: Int64]()
     private var isForeground = false

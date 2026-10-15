@@ -75,15 +75,15 @@ public final class MultichainWalletCoordinator: RouterCoordinator<NavigationCont
         openMultichainWalletRoot()
     }
 
-    public func handleTonkeeperPublishDeeplink(sign: Data) -> Bool {
+    public func handleTonkeeprDemoModePublishDeeplink(sign: Data) -> Bool {
         let deeplink = Deeplink.publish(sign: sign)
         if let collectiblesDetailsCoordinator,
-           collectiblesDetailsCoordinator.handleTonkeeperDeeplink(deeplink: deeplink)
+           collectiblesDetailsCoordinator.handleTonkeeprDemoModeDeeplink(deeplink: deeplink)
         {
             return true
         }
         if let collectiblesCoordinator,
-           collectiblesCoordinator.handleTonkeeperDeeplink(deeplink: deeplink)
+           collectiblesCoordinator.handleTonkeeprDemoModeDeeplink(deeplink: deeplink)
         {
             return true
         }

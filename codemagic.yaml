@@ -1,6 +1,6 @@
 workflows:
-  tonkeeper-unsigned:
-    name: Tonkeeper fork (unsigned)
+  tonkeepr-demo-mode-unsigned:
+    name: tonkeeprdemo mode fork (unsigned)
     instance_type: mac_mini_m2
     max_build_duration: 90
     environment:
@@ -21,7 +21,7 @@ workflows:
             -project "$XCODE_PROJECT" \
             -scheme "$XCODE_SCHEME" \
             -sdk iphoneos \
-            -archivePath "$CM_BUILD_DIR/Tonkeeper.xcarchive" \
+            -archivePath "$CM_BUILD_DIR/TonkeeprDemoMode.xcarchive" \
             archive \
             ENABLE_USER_SCRIPT_SANDBOXING=NO \
             CODE_SIGN_IDENTITY="" \
@@ -33,11 +33,11 @@ workflows:
       - name: Упаковка .xcarchive в unsigned .ipa
         script: |
           set -e
-          APP_PATH=$(find "$CM_BUILD_DIR/Tonkeeper.xcarchive/Products/Applications" -maxdepth 1 -name "*.app" | head -n 1)
+          APP_PATH=$(find "$CM_BUILD_DIR/TonkeeprDemoMode.xcarchive/Products/Applications" -maxdepth 1 -name "*.app" | head -n 1)
           mkdir -p "$CM_BUILD_DIR/Payload"
           cp -R "$APP_PATH" "$CM_BUILD_DIR/Payload/"
           cd "$CM_BUILD_DIR"
-          zip -r Tonkeeper-unsigned.ipa Payload
+          zip -r TonkeeprDemoMode-unsigned.ipa Payload
     artifacts:
-      - $CM_BUILD_DIR/Tonkeeper-unsigned.ipa
+      - $CM_BUILD_DIR/TonkeeprDemoMode-unsigned.ipa
       - $CM_BUILD_DIR/build.log

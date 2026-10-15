@@ -41,7 +41,7 @@ final class StakingConfirmationCoordinator: RouterCoordinator<NavigationControll
         openConfirmation(wallet: wallet, item: item)
     }
 
-    func handleTonkeeperPublishDeeplink(sign: Data) -> Bool {
+    func handleTonkeeprDemoModePublishDeeplink(sign: Data) -> Bool {
         guard let walletTransferSignCoordinator = walletTransferSignCoordinator else { return false }
         walletTransferSignCoordinator.externalSignHandler?(sign)
         walletTransferSignCoordinator.externalSignHandler = nil

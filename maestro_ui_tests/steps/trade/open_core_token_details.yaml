@@ -1,6 +1,6 @@
 # Opens SYMBOL from the Core tokens shelf and asserts price / balance / activity.
 # Env: SYMBOL (BTC, ETH, BNB, TRX, GRAM, USD₮), EXPECT_TRANSACTION_HISTORY
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - scrollUntilVisible:
     element: "Core tokens"

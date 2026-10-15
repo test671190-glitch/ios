@@ -9,7 +9,7 @@
 # assets on the same chain push them out of the window: USD₮ (TON) drops out as soon as the
 # suite runs a few TON swaps, so a green run yesterday says nothing about today.
 # The assertions stay enabled on purpose so the suite keeps reporting the bug.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/trade/open_multichain_trade.yaml"
 

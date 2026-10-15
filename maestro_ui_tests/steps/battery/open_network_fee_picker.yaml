@@ -1,5 +1,5 @@
 # Opens the Network fee method picker from a confirmation screen.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - extendedWaitUntil:
     visible:

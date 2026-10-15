@@ -6,7 +6,7 @@
 # Params: MAX_CHARGES (refund threshold, in charges).
 # Prerequisite: wallet screen. Leaves the Battery refill screen open — the caller
 # relaunches the app to get back to the wallet.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 env:
   MAX_CHARGES: "100"
 ---
@@ -24,7 +24,7 @@ env:
       # which sits between the screen title and the settings row.
       - copyTextFrom:
           text: "[0-9]+ charge[s]?"
-          below: Keeper Battery
+          below: tonkeeprdemo mode Battery
           above: Battery Settings
       - evalScript: ${output.batteryCharges = parseInt(maestro.copiedText.replace(/[^0-9]/g, ""), 10)}
 

@@ -3,7 +3,7 @@
 # Expands "More assets" when present — Tonstakers is hidden behind it on multichain wallets.
 # Preconditions: ≥ some liquid stake (run deposit first in the same shard).
 # API asserts run only when WALLET_WITH_MONEY_ADDR + auth are set (CI).
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_multichain_wallet.yaml"
 

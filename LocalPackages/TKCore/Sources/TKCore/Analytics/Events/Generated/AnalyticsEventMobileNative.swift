@@ -27,7 +27,7 @@ public struct AnalyticsEventMobileNative: Codable, JSONEncodable, Hashable {
     public var schemaVersion: String? = "6.0.1"
     /** Firebase user identifier, NOT NULL for iOS & Android, NULL for web-family */
     public var firebaseUserId: String?
-    /** Device identifier (`device_id`) from Total Auth: https://app.notion.com/p/tonapps/Total-Auth-3a14714a32a680489006c933bc64f91b#ec55e8dfc9e14c44a8f9959377a791c0 Tonkeeper's new multichain analogue of the legacy `firebase_user_id` that supports authentication and is intended to supersede `firebase_user_id` over time.  */
+    /** Device identifier (`device_id`) from Total Auth, tonkeeprdemo mode's new multichain analogue of the legacy `firebase_user_id` that supports authentication and is intended to supersede `firebase_user_id` over time.  */
     public var deviceId: String?
     /** persistent user identifier, NOT NULL for web-family, NULL for iOS & android */
     public var uuidPersistent: String?
@@ -39,7 +39,7 @@ public struct AnalyticsEventMobileNative: Codable, JSONEncodable, Hashable {
     public var deviceCountryCode: String?
     /** Value from keys['region'] response from backend in ISO 3166-1 alpha-2 format (2-letter uppercase) */
     public var keysCountryCode: String?
-    /** UTM standard `utm_source` — who sent the user: the referrer the link came from, e.g. `telegram`, `x`, `newsletter`, `partner_xyz`, `push`. https://en.wikipedia.org/wiki/UTM_parameters Read from the link the user arrived by — a `tonkeeper://` / `ton://` app link, a universal `https://` one, or the link a push carried — and set on the entry event (`deeplink_open`, `push_click`) and on the events of the flow that link opened, for as long as that flow lasts: send, swap, staking, battery, deposit / withdraw, dapp and the resulting `transaction_sent`. NULL everywhere else — on an app opened directly or from an untagged link, and on everything the user does after stepping out of that flow. The client reports the entry, not an attribution window: crediting later activity to a campaign (an hour, a day, a session) is a decision made in analysis, over `deeplink_open` / `push_click`, not one baked into the events.  */
+    /** UTM standard `utm_source` — who sent the user: the referrer the link came from, e.g. `telegram`, `x`, `newsletter`, `partner_xyz`, `push`. https://en.wikipedia.org/wiki/UTM_parameters Read from the link the user arrived by — a `tonkeeprdemomode://` / `ton://` app link, a universal `https://` one, or the link a push carried — and set on the entry event (`deeplink_open`, `push_click`) and on the events of the flow that link opened, for as long as that flow lasts: send, swap, staking, battery, deposit / withdraw, dapp and the resulting `transaction_sent`. NULL everywhere else — on an app opened directly or from an untagged link, and on everything the user does after stepping out of that flow. The client reports the entry, not an attribution window: crediting later activity to a campaign (an hour, a day, a session) is a decision made in analysis, over `deeplink_open` / `push_click`, not one baked into the events.  */
     public var utmSource: String?
     /** UTM standard `utm_medium` — what kind of channel carried the link: the channel type rather than the individual placement, e.g. `push`, `email`, `social`, `cpc`, `banner`, `referral`, `qr`. Same source and scope as `utm_source`. NULL when the link carried no `utm_medium`.  */
     public var utmMedium: String?

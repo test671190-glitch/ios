@@ -1,5 +1,5 @@
 # TonAPI → formatted strings matching History list (DepositStake TON outcome + JettonMint tsTON income).
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Poll until TonAPI indexes the deposit we just sent — otherwise the script matches the
 # previous run's event and the asserted amounts drift with the tsTON/TON rate.

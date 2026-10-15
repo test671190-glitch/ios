@@ -6,7 +6,7 @@ final class BootConfigurationReloadTests: XCTestCase {
     func testFailedLoadIsRetriedByTheNextCaller() async throws {
         let service = try BootConfigurationServiceSpy(results: [
             .failure(LoadError.offline),
-            .success(makeConfigurations(multichainDomain: "https://block-multi.tonkeeper.com")),
+            .success(makeConfigurations(multichainDomain: "https://block-multi.example.com")),
         ])
         let configuration = makeConfiguration(service: service)
 
@@ -16,12 +16,12 @@ final class BootConfigurationReloadTests: XCTestCase {
         XCTAssertEqual(service.loadCount, 2)
         XCTAssertEqual(
             afterFailure.mainnet.multichain.domain,
-            URL(string: "https://multi.tonkeeper.com"),
+            URL.noServer,
             "a failed load falls back to the bundled default"
         )
         XCTAssertEqual(
             afterRetry.mainnet.multichain.domain,
-            URL(string: "https://block-multi.tonkeeper.com"),
+            URL(string: "https://block-multi.example.com"),
             "the retry has to reach the network again, not replay the cached failure"
         )
     }
@@ -30,7 +30,7 @@ final class BootConfigurationReloadTests: XCTestCase {
         let service = try BootConfigurationServiceSpy(results: [
             .failure(LoadError.offline),
             .failure(LoadError.offline),
-            .success(makeConfigurations(multichainDomain: "https://block-multi.tonkeeper.com")),
+            .success(makeConfigurations(multichainDomain: "https://block-multi.example.com")),
         ])
         let configuration = makeConfiguration(service: service)
 
@@ -39,12 +39,12 @@ final class BootConfigurationReloadTests: XCTestCase {
         let third = await configuration.loadConfigurations()
 
         XCTAssertEqual(service.loadCount, 3)
-        XCTAssertEqual(third.mainnet.multichain.domain, URL(string: "https://block-multi.tonkeeper.com"))
+        XCTAssertEqual(third.mainnet.multichain.domain, URL(string: "https://block-multi.example.com"))
     }
 
     func testSuccessfulLoadStaysCached() async throws {
         let service = try BootConfigurationServiceSpy(results: [
-            .success(makeConfigurations(multichainDomain: "https://block-multi.tonkeeper.com")),
+            .success(makeConfigurations(multichainDomain: "https://block-multi.example.com")),
         ])
         let configuration = makeConfiguration(service: service)
 
@@ -57,17 +57,17 @@ final class BootConfigurationReloadTests: XCTestCase {
     func testHostAccessorsPickUpTheRetriedConfiguration() async throws {
         let service = try BootConfigurationServiceSpy(results: [
             .failure(LoadError.offline),
-            .success(makeConfigurations(multichainDomain: "https://block-multi.tonkeeper.com")),
+            .success(makeConfigurations(multichainDomain: "https://block-multi.example.com")),
         ])
         let configuration = makeConfiguration(service: service)
 
         let duringOutage = await configuration.multichainHost(network: .mainnet)
         let afterRecovery = await configuration.multichainHost(network: .mainnet)
 
-        XCTAssertEqual(duringOutage, URL(string: "https://multi.tonkeeper.com"))
+        XCTAssertEqual(duringOutage, URL.noServer)
         XCTAssertEqual(
             afterRecovery,
-            URL(string: "https://block-multi.tonkeeper.com"),
+            URL(string: "https://block-multi.example.com"),
             "the API clients build their serverURL from this, so a stuck value pins every request"
         )
     }

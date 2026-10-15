@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-/** A link opened the app: a &#x60;tonkeeper://&#x60; / &#x60;ton://&#x60; app link, or a universal &#x60;https://app.tonkeeper.com/...&#x60; link — either launching the app or arriving while it was already running. Sent once per link, before the app routes it, so links the app cannot use are visible too (&#x60;link_type: unknown&#x60;). A push tap is not counted here: it reports &#x60;push_click&#x60;, and links opened from inside the app (banners, stories, dapps) report their own placement events.  */
+/** A link opened the app: a &#x60;tonkeeprdemomode://&#x60; / &#x60;ton://&#x60; app link, or a universal &#x60;https://&#x60; link — either launching the app or arriving while it was already running. Sent once per link, before the app routes it, so links the app cannot use are visible too (&#x60;link_type: unknown&#x60;). A push tap is not counted here: it reports &#x60;push_click&#x60;, and links opened from inside the app (banners, stories, dapps) report their own placement events.  */
 public struct DeeplinkOpen: Codable, JSONEncodable, Hashable {
 
     public enum From: String, Codable, CaseIterable {
@@ -44,7 +44,7 @@ public struct DeeplinkOpen: Codable, JSONEncodable, Hashable {
         case unknown = "unknown"
     }
     public var eventName: String = "deeplink_open"
-    /** How the link reached the app: `app_link` for a custom URL scheme (`tonkeeper://`, `ton://`, `tc://`), `universal_link` for an `https://` link resolved through the associated domain.  */
+    /** How the link reached the app: `app_link` for a custom URL scheme (`tonkeeprdemomode://`, `ton://`, `tc://`), `universal_link` for an `https://` link resolved through the associated domain.  */
     public var from: From
     /** What the link asks the app to open, taken from the parsed link. `main` is a bare link with no destination; `unknown` is a link the app could not parse, which is what a broken campaign link looks like.  */
     public var linkType: LinkType

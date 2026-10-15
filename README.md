@@ -1,4 +1,4 @@
-# Tonkeeper iOS
+# tonkeeprdemo mode iOS
 
 This directory is the iOS app; every command below runs from `ios/` (`cd ios`, or `make -C ios <target>` from the repository root).
 

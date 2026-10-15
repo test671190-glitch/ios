@@ -1,5 +1,5 @@
-# Opens the Keeper Battery refill screen from the wallet header.
-appId: com.jbig.tonkeeper
+# Opens the tonkeeprdemo mode Battery refill screen from the wallet header.
+appId: com.jbig.tonkeeprdemomode
 ---
 - scrollUntilVisible:
     element:
@@ -11,5 +11,5 @@ appId: com.jbig.tonkeeper
 - waitForAnimationToEnd:
     timeout: 5000
 - extendedWaitUntil:
-    visible: Keeper Battery
+    visible: tonkeeprdemo mode Battery
     timeout: 30000

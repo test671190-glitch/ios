@@ -248,9 +248,9 @@
 "settings.items.theme" = "Thema";
 "settings.items.logout" = "Abmelden";
 "settings.items.support" = "Support";
-"settings.items.tk_news" = "Keeper-Nachrichten";
+"settings.items.tk_news" = "tonkeeprdemo mode-Nachrichten";
 "settings.items.contact_us" = "Kontaktieren Sie uns";
-"settings.items.rate" = "Bewerten Sie Keeper X";
+"settings.items.rate" = "Bewerten Sie tonkeeprdemo mode X";
 "settings.items.legal" = "Rechtliches";
 "settings.items.delete_account" = "Konto löschen";
 "settings.items.setup_wallet_description" = "Name und Farbe bearbeiten";
@@ -316,7 +316,7 @@
 "connection_status.updated_at" = "Aktualisiert %@";
 "token.unverified" = "Ungeprüfter Token";
 "token.scam" = "Scam";
-"onboarding.title" = "Keeper";
+"onboarding.title" = "tonkeeprdemo mode";
 "onboarding.caption" = "Erstellen Sie eine neue Wallet oder fügen Sie eine vorhandene hinzu";
 "onboarding.buttons.create_new" = "Neue Geldbörse erstellen";
 "onboarding.buttons.import_existing" = "Bestehendes Wallet importieren";
@@ -469,7 +469,7 @@
 "toast.hidden" = "Ausgeblendet";
 "toast.shown" = "Angezeigt";
 "errors.unknown" = "Fehler";
-"errors.multiaccount_error" = "Bitte verwenden Sie Keeper Desktop für Multi-Wallet-Konto";
+"errors.multiaccount_error" = "Bitte verwenden Sie tonkeeprdemo mode Desktop für Multi-Wallet-Konto";
 "tabs.collectibles" = "Sammlerstücke";
 "list.show_all" = "Alle anzeigen";
 "list.hide" = "Verstecken";
@@ -502,7 +502,7 @@
 "bridge_web.share" = "Teilen";
 "bridge_web.copy_link" = "Link kopieren";
 "browser.connected_apps.empty_title" = "Verbundene Apps werden hier angezeigt";
-"browser.connected_apps.empty_description" = "Entdecken Sie Apps und Dienste im\\U00A0Keeper Browser.";
+"browser.connected_apps.empty_description" = "Entdecken Sie Apps und Dienste im\\U00A0tonkeeprdemo mode Browser.";
 "browser.connected_apps.disconnect.title" = "Entfernen";
 "browser.connected_apps.disconnect.button" = "Entfernen";
 "browser.search.duckgo_search.title" = "DuckDuckGo-Suche";
@@ -605,7 +605,7 @@
 "settings.connected_apps.actions.cancel" = "Abbrechen";
 "settings.connected_apps.empty.title" = "Keine verbundenen Apps";
 "settings.connected_apps.source.browser" = "Handy-Browser";
-"settings.connected_apps.source.dapp" = "Keeper";
+"settings.connected_apps.source.dapp" = "tonkeeprdemo mode";
 "settings.connected_apps.source.deeplink" = "Externer Link";
 "settings.connected_apps.source.qr" = "Anderes Gerät";
 "currency.items.uzs" = "Usbekische Summe";
@@ -633,7 +633,7 @@
 "backup.safety_check.title" = "Sicherheitsprüfung";
 "backup.safety_check.list.item1" = "Teilen Sie Ihre Wiederherstellungsphrase niemals mit jemandem.";
 "backup.safety_check.list.item2" = "Wer Ihre Wiederherstellungsphrase kennt, kann auf Ihr Wallet zugreifen und Guthaben abheben.";
-"backup.safety_check.list.item3" = "Der Keeper-Support wird Sie niemals nach Ihrer Wiederherstellungsphrase fragen.";
+"backup.safety_check.list.item3" = "Der tonkeeprdemo mode-Support wird Sie niemals nach Ihrer Wiederherstellungsphrase fragen.";
 "backup.safety_check.agreement.text" = "Ich verstehe: Die Weitergabe meiner Wiederherstellungsphrase kann zu %@";
 "backup.safety_check.agreement.highlighted" = "einem dauerhaften Verlust meines Guthabens führen.";
 "backup.show.title" = "Wiederherstellungssatz";
@@ -679,7 +679,7 @@
 "token.view_details" = "Details anzeigen";
 "token.hide_in_wallet" = "In Wallet ausblenden";
 "token.show_in_wallet" = "In Wallet anzeigen";
-"token.verified_popup.caption" = "Dieser Token wird aktiv gehandelt und ist weithin anerkannt. Die Verifizierung ist keine Empfehlung durch Keeper.";
+"token.verified_popup.caption" = "Dieser Token wird aktiv gehandelt und ist weithin anerkannt. Die Verifizierung ist keine Empfehlung durch tonkeeprdemo mode.";
 "token.unverified_popup.caption" = "Dieses Token sieht aus einem oder mehreren der folgenden Gründe verdächtig aus:";
 "token.unverified_popup.low_liquidity" = "Geringe Liquidität. Der Token mag zwar einen gewissen Wert haben, dieser ist jedoch äußerst gering.";
 "token.unverified_popup.not_listed" = "Der Token ist nicht auf Handelsplattformen gelistet und die Nachfrage ist begrenzt.";
@@ -724,7 +724,7 @@
 "add_wallet.items.pair_keystone.title" = "Kombiniere es mit Keystone";
 "add_wallet.items.pair_keystone.subtitle" = "Ein hohes Maß an Sicherheit mit einer AIR-GAP-Hardware-Wallet";
 "add_wallet.sections.other_options" = "Andere Optionen";
-"keystone.scan.subtitle" = "Keystone öffnen » Software-Wallet verbinden » Keeper";
+"keystone.scan.subtitle" = "Keystone öffnen » Software-Wallet verbinden » tonkeeprdemo mode";
 "keystone.scan.about_keystone_button" = "Über Keystone";
 "balance_header.your_address" = "Ihre Adresse: ";
 "balance_header.address" = "Adresse: ";
@@ -808,7 +808,7 @@
 "nft_details.actions.report_spam" = "Spam melden";
 "nft_details.actions.not_spam" = "Kein Spam";
 "nft_details.manage_button.title" = "Verwalten";
-"buy_list_popup.you_are_opening_external_app" = "Sie öffnen eine externe App, die nicht von Keeper betrieben wird.";
+"buy_list_popup.you_are_opening_external_app" = "Sie öffnen eine externe App, die nicht von tonkeeprdemo mode betrieben wird.";
 "ugly_buy_list.buy" = "Kaufen";
 "settings_list_notifications_configurator.connectedAppsTitle" = "Apps";
 "settings_list_notifications_configurator.connectedAppsSectionCaption" = "Benachrichtigungen von verbundenen Apps in Ihrer Aktivität";
@@ -832,7 +832,7 @@
 "max_apy" = "MAX APY";
 "staking_list.minimal_deposit" = "Minimale Anzahlung";
 "staking_balance_details.minimal_deposit" = "Minimale Anzahlung";
-"staking_balance_details.description" = "Das Abstecken basiert auf Smart Contracts von Dritten. Keeper ist nicht für die Einsatzerfahrung verantwortlich.";
+"staking_balance_details.description" = "Das Abstecken basiert auf Smart Contracts von Dritten. tonkeeprdemo mode ist nicht für die Einsatzerfahrung verantwortlich.";
 "staking_balance_details.jetton_button_description" = "Wenn Sie GRAM in einem Tonstakers-Pool einsetzen, erhalten Sie einen Token namens tsTON, der Ihren Anteil am Pool darstellt. Wenn der Pool Gewinne ansammelt, stellt Ihr tsTON eine größere Menge an GRAM dar.";
 "staking_balance_details.pending_stake" = "Ausstehender Einsatz";
 "staking_balance_details.pending_unstake" = "Ausstehende Aufhebung des Einsatzes";
@@ -861,7 +861,7 @@
 "staking_pool_details.max_apy" = "MAX APY";
 "staking_pool_details.apy" = "APY";
 "staking_pool_details.minimal_deposit" = "Minimale Anzahlung";
-"staking_pool_details.description" = "Das Abstecken basiert auf Smart Contracts von Dritten. Keeper ist nicht für die Einsatzerfahrung verantwortlich.";
+"staking_pool_details.description" = "Das Abstecken basiert auf Smart Contracts von Dritten. tonkeeprdemo mode ist nicht für die Einsatzerfahrung verantwortlich.";
 "staking_pool_details.choose" = "Wählen Sie";
 "ton_connect_mapper.connect_to" = "Verbinden mit ";
 "ton_connect_mapper.requesting_capture" = "%@ fordert Zugriff auf Ihre Wallet-Adresse%@";
@@ -957,8 +957,8 @@
 "transaction_confirmation.buttons.confirm_and_collect" = "Bestätigen und abholen";
 "transaction_confirmation.tap_to_pay" = "Zum Bezahlen tippen %@";
 "transaction_confirmation.change_payment_method" = "Zahlungsmethode ändern";
-"battery.refill.title" = "Keeper Batterie";
-"battery.refill.empty_caption" = "Tauschen Sie über Keeper, senden Sie Token und lösen Sie den Einsatz von TON.";
+"battery.refill.title" = "tonkeeprdemo mode Batterie";
+"battery.refill.empty_caption" = "Tauschen Sie über tonkeeprdemo mode, senden Sie Token und lösen Sie den Einsatz von TON.";
 "battery.refill.negative_balance_caption" = "Ihre Batterie ist wegen zurückerstatteter Käufe leer. Laden Sie Ihre Ladungen auf, um weiterzumachen.";
 "battery.refill.supported_transactions" = "Unterstützte Transaktionen";
 "battery.refill.transactions" = "Transaktionen";
@@ -987,8 +987,8 @@
 "battery.refill.promocode" = "Promo-Code";
 "battery.refill.toast.recharged" = "Batterie aufgeladen";
 "battery.settings.title" = "Batterieeinstellungen";
-"battery.settings.caption" = "Ausgewählte Transaktionen werden von der Keeper Batterie bezahlt.";
-"battery.settings.items.swaps.title" = "Swaps über Keeper";
+"battery.settings.caption" = "Ausgewählte Transaktionen werden von der tonkeeprdemo mode Batterie bezahlt.";
+"battery.settings.items.swaps.title" = "Swaps über tonkeeprdemo mode";
 "battery.settings.items.swaps.caption" = "pro Tausch";
 "battery.settings.items.token.title" = "Token-Übertragungen";
 "battery.settings.items.token.caption" = "pro Überweisung";
@@ -1015,13 +1015,13 @@
 "dapp.disconnect_toast.title" = "Trennen";
 "dapp.disconnect_toast.button" = "Trennen";
 "dapp.sharing_popup.title" = "Teilen %@";
-"dapp.sharing_popup.caption" = "Dieser Link öffnet %@ direkt in Keeper. Sie können es später erneut verwenden oder bei Bedarf teilen.";
+"dapp.sharing_popup.caption" = "Dieser Link öffnet %@ direkt in tonkeeprdemo mode. Sie können es später erneut verwenden oder bei Bedarf teilen.";
 "dapp.sharing_popup.buttons.copy" = "Link kopieren";
 "dapp.sharing_popup.buttons.share" = "Teilen";
-"dapp.open_warning_popup.warning" = "Sie öffnen eine externe App, die nicht von Keeper betrieben wird. Fahren Sie nur fort, wenn Sie der Quelle vertrauen.";
+"dapp.open_warning_popup.warning" = "Sie öffnen eine externe App, die nicht von tonkeeprdemo mode betrieben wird. Fahren Sie nur fort, wenn Sie der Quelle vertrauen.";
 "extra_type.ton" = "GRAM";
-"extra_type.battery" = "Keeper Batterie";
-"token_details.trc20.usdt.battery_banner.title" = "Keeper Batterie für USD₮ TRC20 erforderlich";
+"extra_type.battery" = "tonkeeprdemo mode Batterie";
+"token_details.trc20.usdt.battery_banner.title" = "tonkeeprdemo mode Batterie für USD₮ TRC20 erforderlich";
 "token_details.trc20.usdt.battery_banner.caption" = "Batterieladungen werden zur Deckung der Transaktionsgebühren verwendet, wodurch Überweisungen einfacher und kostengünstiger werden.";
 "token_details.trc20.usdt.battery_banner.charge_button" = "Akku laden";
 "tonconnect_manifest_error.incorrect_url" = "Ungültige Manifest-URL";
@@ -1133,9 +1133,9 @@
 "subscription_plugin_warning.title.few" = "Sie haben %@ abgelaufene Abonnements von @donate";
 "subscription_plugin_warning.title.many" = "Sie haben %@ abgelaufene Abonnements von @donate";
 "subscription_plugin_warning.title.other" = "Sie haben %@ abgelaufene Abonnements von @donate";
-"subscription_plugin_warning.caption_one" = "Das Abo kann deine Wallet weiterhin belasten. Verwalte es in Keeper Web – melde dich mit deiner Wiederherstellungsphrase an.";
-"subscription_plugin_warning.caption_many" = "Einige Abos können deine Wallet weiterhin belasten. Verwalte sie in Keeper Web – melde dich mit deiner Wiederherstellungsphrase an.";
-"subscription_plugin_warning.button" = "Keeper Web öffnen";
+"subscription_plugin_warning.caption_one" = "Das Abo kann deine Wallet weiterhin belasten. Verwalte es in tonkeeprdemo mode Web – melde dich mit deiner Wiederherstellungsphrase an.";
+"subscription_plugin_warning.caption_many" = "Einige Abos können deine Wallet weiterhin belasten. Verwalte sie in tonkeeprdemo mode Web – melde dich mit deiner Wiederherstellungsphrase an.";
+"subscription_plugin_warning.button" = "tonkeeprdemo mode Web öffnen";
 "stories_updates.all_updates" = "Alle Updates";
 "actions.retry" = "Wiederholen";
 "actions.try_again" = "Erneut versuchen";
@@ -1160,7 +1160,7 @@
 "trade.search.placeholder" = "Nach Ticker oder Namen suchen";
 "trade.asset_details.apy_value" = "%@ APY";
 "trade.asset_details.earn_apy" = "Verdiene %@ APY";
-"trade.asset_details.about_fallback" = "%@ ist im Keeper-Handelskatalog verfügbar.";
+"trade.asset_details.about_fallback" = "%@ ist im tonkeeprdemo mode-Handelskatalog verfügbar.";
 "trade.asset_details.actions.cash_buy" = "Bar kaufen";
 "trade.asset_details.actions.cash_sell" = "Bar verkaufen";
 "trade.asset_details.asset_type.tokenized_stock" = "Dieser Vermögenswert ist eine tokenisierte Aktie";
@@ -1247,7 +1247,7 @@
 "fee_method_picker.deposit" = "Einzahlen";
 
 "p2p_express_popup.title" = "Über Wallet P2P kaufen";
-"p2p_express_popup.caption" = "Um Krypto mit Fiat zu kaufen, schließen Sie die Zahlung über Wallet in Telegram per P2P ab und überweisen Sie das Geld anschließend an Ihre Keeper-Wallet.";
+"p2p_express_popup.caption" = "Um Krypto mit Fiat zu kaufen, schließen Sie die Zahlung über Wallet in Telegram per P2P ab und überweisen Sie das Geld anschließend an Ihre tonkeeprdemo mode-Wallet.";
 
 "ramp.deposit.title" = "Guthaben hinzufügen";
 "ramp.deposit.network" = "Netzwerk";
@@ -1325,7 +1325,7 @@
 "tron_usdt_fees.common.disclaimer" = "Die Gebühren ändern sich in Echtzeit je nach Marktbedingungen und anderen Faktoren.";
 "tron_usdt_fees.common.fee_options.title.default" = "Blockchain-Gebühren";
 "tron_usdt_fees.common.fee_options.title.insufficient" = "Nicht genügend Guthaben zur Deckung der Transaktionsgebühren";
-"tron_usdt_fees.common.fee_options.caption.default" = "Keeper Battery ist der einfachste Weg, um Blockchain-Gebühren zu bezahlen. Sie können Ihr Guthaben auch direkt mit GRAM- und TRX-Coins aufladen.";
+"tron_usdt_fees.common.fee_options.caption.default" = "tonkeeprdemo mode Battery ist der einfachste Weg, um Blockchain-Gebühren zu bezahlen. Sie können Ihr Guthaben auch direkt mit GRAM- und TRX-Coins aufladen.";
 "tron_usdt_fees.common.fee_options.caption.insufficient" = "Wählen Sie eine Gebührenzahlungsmethode und laden Sie auf.";
 "tron_usdt_fees.common.item_caption.balance_required" = "Guthaben: %@\nErforderlich: %@";
 "tron_usdt_fees.common.item_title.battery" = "Battery";
@@ -1361,7 +1361,7 @@
 "mystery_raffle.swap_promo" = "Cross-Chain-Swaps mit 0%% Gebühr";
 "mystery_raffle.faq.title" = "FAQ";
 "mystery_raffle.faq.about.question" = "Was ist das Mystery Raffle?";
-"mystery_raffle.faq.about.answer" = "Am %1$@ starten wir ein Multichain-Gewinnspiel mit mehr als 2.000 Gewinnern. Tickets sind deine Gewinnchancen.\n\nWechsle bis dahin zu Multichain und du erhältst %2$d Tickets – unser Dankeschön dafür, dass du ein früher Keeper-Nutzer bist.\n\nPreise, weitere Wege zu Tickets und die vollständige Mechanik verraten wir nächste Woche.";
+"mystery_raffle.faq.about.answer" = "Am %1$@ starten wir ein Multichain-Gewinnspiel mit mehr als 2.000 Gewinnern. Tickets sind deine Gewinnchancen.\n\nWechsle bis dahin zu Multichain und du erhältst %2$d Tickets – unser Dankeschön dafür, dass du ein früher tonkeeprdemo mode-Nutzer bist.\n\nPreise, weitere Wege zu Tickets und die vollständige Mechanik verraten wir nächste Woche.";
 "mystery_raffle.faq.migrate_before.question" = "Was bekomme ich, wenn ich vor dem %@ migriere?";
 "mystery_raffle.faq.migrate_before.answer" = "• %d Tickets\n• 0%% Cross-Chain-Gebühr";
 "mystery_raffle.faq.migrate_after.question" = "Was bekomme ich, wenn ich nach dem %@ migriere?";

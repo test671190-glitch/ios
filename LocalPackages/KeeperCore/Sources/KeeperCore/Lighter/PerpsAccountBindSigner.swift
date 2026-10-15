@@ -17,7 +17,7 @@ enum PerpsAccountBindSigningError: Error {
 
 struct PerpsAccountBindSigner {
     static let proofDomain = "perps.account.bind.v1"
-    static let typedDataDomainName = "TonkeeperPerps"
+    static let typedDataDomainName = "TonkeeprDemoModePerps"
     static let typedDataDomainVersion = "1"
     static let typedDataChainId = 1
 

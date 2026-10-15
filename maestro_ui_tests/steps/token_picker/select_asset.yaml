@@ -4,7 +4,7 @@
 # Pass CHAIN_ID whenever the same ticker exists on several chains or the on-chain title
 # differs from the query (TON USD₮ vs the typed "USDT"): the tab narrows the list to one
 # chain, so the row is reachable without scrolling past same-symbol assets.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 env:
   CHAIN_ID: ""
 ---

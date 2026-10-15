@@ -596,7 +596,7 @@ private extension MultichainMiddlewaresTests {
             }
         }
 
-        let (response, _) = try await next(request, body, URL(string: "https://multi.tonkeeper.com")!)
+        let (response, _) = try await next(request, body, URL(string: "https://multi.example.com")!)
         return (captured.requests, response)
     }
 }

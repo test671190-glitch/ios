@@ -1,5 +1,5 @@
 # Waits until Multichain Swap Continue is enabled (quote ready), then confirms + signs.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Continue stays visible but disabled until a quote arrives, so wait on the enabled state
 # itself. This replaced a 40-attempt JS retry loop: every attempt cost a full hierarchy

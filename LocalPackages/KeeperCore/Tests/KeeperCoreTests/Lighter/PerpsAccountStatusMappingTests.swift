@@ -64,7 +64,7 @@ final class PerpsAccountStatusMappingTests: XCTestCase {
 
         XCTAssertEqual(parsed["primaryType"] as? String, "LinkWallet")
         let domain = try XCTUnwrap(parsed["domain"] as? [String: Any])
-        XCTAssertEqual(domain["name"] as? String, "TonkeeperPerps")
+        XCTAssertEqual(domain["name"] as? String, "TonkeeprDemoModePerps")
         XCTAssertEqual(domain["version"] as? String, "1")
         XCTAssertEqual(domain["chainId"] as? Int, 1)
         XCTAssertNil(domain["verifyingContract"])

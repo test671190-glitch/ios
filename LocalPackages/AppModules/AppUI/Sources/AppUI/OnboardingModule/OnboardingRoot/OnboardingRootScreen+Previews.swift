@@ -12,7 +12,7 @@ import TKUIKit
 
 private extension OnboardingRootScreenState {
     static let preview = OnboardingRootScreenState(
-        title: "Keeper",
+        title: "tonkeeprdemo mode",
         caption: "Create a new wallet\u{00A0}or add an\u{00A0}existing one",
         createButtonTitle: "Create New Wallet",
         importButtonTitle: "Import Existing Wallet",

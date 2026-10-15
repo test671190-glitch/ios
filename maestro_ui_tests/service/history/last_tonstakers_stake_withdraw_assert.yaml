@@ -1,5 +1,5 @@
 # TonAPI → formatted string matching History list (WithdrawStakeRequest tsTON outcome).
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runScript:
     file: ../../scripts/api/v2/accounts/getLastTonstakersStakeWithdrawEvent.js

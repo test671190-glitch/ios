@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper.dev
+appId: com.jbig.tonkeeprdemomode.dev
 ---
 - tapOn: History
 - assertVisible: |-

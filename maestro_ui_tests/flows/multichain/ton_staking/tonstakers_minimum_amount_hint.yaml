@@ -1,5 +1,5 @@
 # regress_EN: Tonstakers min deposit — amount below pool minimum shows "Minimum …" (AmountInput balance hint).
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 

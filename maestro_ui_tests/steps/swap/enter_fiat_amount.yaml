@@ -1,5 +1,5 @@
 # Switches Multichain Swap send amount to fiat mode and types FIAT_AMOUNT (e.g. "5").
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - extendedWaitUntil:
     visible:

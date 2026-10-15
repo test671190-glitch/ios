@@ -1,6 +1,6 @@
 # Tonstakers from main asset list → Unstake → withdraw 1 TON (sign in UI).
 # Preconditions: English UI; Tonstakers row on wallet list; ≥1 TON equivalent staked (e.g. after tonstakers_asset_list_deposit_one_ton in the same shard).
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 - runFlow: "../../../service/account/compare_ton_balance.yaml"

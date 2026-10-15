@@ -1753,7 +1753,7 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/XLang`.
         public typealias XLang = Swift.String
-        /// Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+        /// Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
         ///
         ///
         /// - Remark: Generated from `#/components/parameters/UserAgent`.
@@ -2135,7 +2135,7 @@ public enum Operations {
             public var query: Operations.getShelvesConfig.Input.Query
             /// - Remark: Generated from `#/paths/api/v1/trading/shelves/config/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                /// Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///
                 ///
                 /// - Remark: Generated from `#/paths/api/v1/trading/shelves/config/GET/header/User-Agent`.
@@ -2149,7 +2149,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///   - X_hyphen_Lang: Язык для локализуемых текстов (например about), ISO 639-1 (en, ru, ...). Клиент должен ВСЕГДА передавать язык интерфейса. Если не задан — дефолт en.
                 ///   - accept:
                 public init(
@@ -2421,7 +2421,7 @@ public enum Operations {
             public var query: Operations.getShelvesConfigV2.Input.Query
             /// - Remark: Generated from `#/paths/api/v2/trading/shelves/config/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                /// Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///
                 ///
                 /// - Remark: Generated from `#/paths/api/v2/trading/shelves/config/GET/header/User-Agent`.
@@ -2435,7 +2435,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///   - X_hyphen_Lang: Язык для локализуемых текстов (например about), ISO 639-1 (en, ru, ...). Клиент должен ВСЕГДА передавать язык интерфейса. Если не задан — дефолт en.
                 ///   - accept:
                 public init(
@@ -2782,7 +2782,7 @@ public enum Operations {
             public var query: Operations.getAssetsCatalog.Input.Query
             /// - Remark: Generated from `#/paths/api/v1/trading/assets/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                /// Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///
                 ///
                 /// - Remark: Generated from `#/paths/api/v1/trading/assets/GET/header/User-Agent`.
@@ -2796,7 +2796,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///   - X_hyphen_Lang: Язык для локализуемых текстов (например about), ISO 639-1 (en, ru, ...). Клиент должен ВСЕГДА передавать язык интерфейса. Если не задан — дефолт en.
                 ///   - accept:
                 public init(
@@ -3173,7 +3173,7 @@ public enum Operations {
             public var query: Operations.getAssetsCatalogV2.Input.Query
             /// - Remark: Generated from `#/paths/api/v2/trading/assets/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                /// Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///
                 ///
                 /// - Remark: Generated from `#/paths/api/v2/trading/assets/GET/header/User-Agent`.
@@ -3187,7 +3187,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///   - X_hyphen_Lang: Язык для локализуемых текстов (например about), ISO 639-1 (en, ru, ...). Клиент должен ВСЕГДА передавать язык интерфейса. Если не задан — дефолт en.
                 ///   - accept:
                 public init(
@@ -3497,7 +3497,7 @@ public enum Operations {
             public var query: Operations.getAssetDetails.Input.Query
             /// - Remark: Generated from `#/paths/api/v1/trading/assets/{assetId}/details/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                /// Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///
                 ///
                 /// - Remark: Generated from `#/paths/api/v1/trading/assets/{assetId}/details/GET/header/User-Agent`.
@@ -3511,7 +3511,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///   - X_hyphen_Lang: Язык для локализуемых текстов (например about), ISO 639-1 (en, ru, ...). Клиент должен ВСЕГДА передавать язык интерфейса. Если не задан — дефолт en.
                 ///   - accept:
                 public init(
@@ -3824,7 +3824,7 @@ public enum Operations {
             public var query: Operations.getAssetDetailsV2.Input.Query
             /// - Remark: Generated from `#/paths/api/v2/trading/assets/{assetId}/details/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                /// Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///
                 ///
                 /// - Remark: Generated from `#/paths/api/v2/trading/assets/{assetId}/details/GET/header/User-Agent`.
@@ -3838,7 +3838,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///   - X_hyphen_Lang: Язык для локализуемых текстов (например about), ISO 639-1 (en, ru, ...). Клиент должен ВСЕГДА передавать язык интерфейса. Если не задан — дефолт en.
                 ///   - accept:
                 public init(
@@ -4166,7 +4166,7 @@ public enum Operations {
             public var query: Operations.getAssetCharts.Input.Query
             /// - Remark: Generated from `#/paths/api/v1/trading/assets/{assetId}/charts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                /// Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///
                 ///
                 /// - Remark: Generated from `#/paths/api/v1/trading/assets/{assetId}/charts/GET/header/User-Agent`.
@@ -4180,7 +4180,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///   - X_hyphen_Lang: Язык для локализуемых текстов (например about), ISO 639-1 (en, ru, ...). Клиент должен ВСЕГДА передавать язык интерфейса. Если не задан — дефолт en.
                 ///   - accept:
                 public init(
@@ -4508,7 +4508,7 @@ public enum Operations {
             public var query: Operations.getAssetChartsV2.Input.Query
             /// - Remark: Generated from `#/paths/api/v2/trading/assets/{assetId}/charts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                /// Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                /// Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///
                 ///
                 /// - Remark: Generated from `#/paths/api/v2/trading/assets/{assetId}/charts/GET/header/User-Agent`.
@@ -4522,7 +4522,7 @@ public enum Operations {
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
-                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "Tonkeeper/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "Tonkeeper%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
+                ///   - User_hyphen_Agent: Юзер агент (для совместимости и фичефлагов). Формат: "TonkeeprDemoMode/<app version> (<OS>; <OS version>; <device model>)". Должен передаваться как обычный текст, БЕЗ URL-кодирования (iOS-клиент сейчас шлет "TonkeeprDemoMode%2F26.07.1%20..." — так platform/build не распарсятся у downstream-сервисов, которым он форвардится).
                 ///   - X_hyphen_Lang: Язык для локализуемых текстов (например about), ISO 639-1 (en, ru, ...). Клиент должен ВСЕГДА передавать язык интерфейса. Если не задан — дефолт en.
                 ///   - accept:
                 public init(

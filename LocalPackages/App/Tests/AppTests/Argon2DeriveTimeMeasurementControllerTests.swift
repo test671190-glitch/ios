@@ -270,7 +270,7 @@ private extension Argon2DeriveTimeMeasurementControllerTests {
     }
 
     func normalizedSuiteName(for suiteName: String) -> String {
-        "com.tonkeeper.tests." + suiteName
+        "com.tonkeeprdemomode.tests." + suiteName
             .replacingOccurrences(of: "[^A-Za-z0-9_.-]", with: "_", options: .regularExpression)
     }
 }

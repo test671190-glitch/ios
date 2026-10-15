@@ -169,7 +169,7 @@ final class AnalyticsProviderTests: XCTestCase {
 
         provider.log(
             eventKey: .storyOpen,
-            utm: UtmParameters(link: "tonkeeper://staking?utm_source=newsletter&utm_campaign=autumn")
+            utm: UtmParameters(link: "tonkeeprdemomode://staking?utm_source=newsletter&utm_campaign=autumn")
         )
 
         let call = try XCTUnwrap(service.calls.first)

@@ -1110,10 +1110,10 @@ components:
           example: "update-4.1.2"
         title:
           type: string
-          example: "Update Tonkeeper"
+          example: "Update tonkeeprdemo mode"
         caption:
           type: string
-          example: "A new version of Tonkeeper is available"
+          example: "A new version of tonkeeprdemo mode is available"
         mode:
           type: string
           enum:

@@ -38,8 +38,8 @@ final class StakingCoordinator: RouterCoordinator<NavigationControllerRouter> {
         openStakingDepositInput()
     }
 
-    func handleTonkeeperPublishDeeplink(sign: Data) -> Bool {
-        confirmationCoordinator?.handleTonkeeperPublishDeeplink(sign: sign) ?? false
+    func handleTonkeeprDemoModePublishDeeplink(sign: Data) -> Bool {
+        confirmationCoordinator?.handleTonkeeprDemoModePublishDeeplink(sign: sign) ?? false
     }
 
     func openStakingDepositInput() {

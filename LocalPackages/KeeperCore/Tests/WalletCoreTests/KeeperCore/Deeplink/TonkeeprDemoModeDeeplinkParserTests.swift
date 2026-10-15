@@ -1,7 +1,7 @@
 @testable import KeeperCore
 import XCTest
 
-final class TonkeeperDeeplinkParserTests: XCTestCase {
+final class TonkeeprDemoModeDeeplinkParserTests: XCTestCase {
     // Transfer deeplink
 
     func testTransferDeeplinkCommentDifferentEncodings() throws {
@@ -19,7 +19,7 @@ final class TonkeeperDeeplinkParserTests: XCTestCase {
         deeplink: String,
         expectedComment: String
     ) throws {
-        let parser = TonkeeperDeeplinkParser(
+        let parser = TonkeeprDemoModeDeeplinkParser(
             walletConnectDeeplinkValidator: WalletConnectDeeplinkValidatorImplementation()
         )
         let parsed = try parser.parse(string: deeplink)

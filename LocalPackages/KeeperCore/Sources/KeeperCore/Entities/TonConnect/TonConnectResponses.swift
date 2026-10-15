@@ -9,7 +9,7 @@ public enum TonConnect {
 public extension TonConnect {
     struct DeviceInfo: Encodable {
         public let platform = "iphone"
-        public let appName = "Tonkeeper"
+        public let appName = "TonkeeprDemoMode"
         public let maxProtocolVersion = 2
         public let features: [FeatureCompatible]
         public let appVersion: String

@@ -17,7 +17,7 @@ public struct BootConfiguration: Codable, Equatable {
     public let mercuryoSecret: String?
     public let supportLink: URL?
     public let directSupportUrl: URL?
-    public let tonkeeperNewsUrl: URL?
+    public let tonkeeprDemoModeNewsUrl: URL?
     public let stonfiUrl: URL?
     public let webSwapsUrl: URL?
     public let faqUrl: URL?
@@ -48,7 +48,7 @@ public struct BootConfiguration: Codable, Equatable {
     public let tronApiUrl: String?
     public let tronSwapUrl: String
     public let tronSwapTitle: String
-    public let tonkeeperApiUrl: String?
+    public let tonkeeprDemoModeApiUrl: String?
     /// Analytics ingestion host. Scheme and host only — the path is appended by the sender.
     /// Absent means the endpoint compiled into the bundle stands.
     public let aptabaseEndpoint: String?
@@ -122,7 +122,7 @@ extension BootConfiguration {
             mercuryoSecret: nil,
             supportLink: nil,
             directSupportUrl: nil,
-            tonkeeperNewsUrl: nil,
+            tonkeeprDemoModeNewsUrl: nil,
             stonfiUrl: nil,
             webSwapsUrl: nil,
             faqUrl: nil,
@@ -153,7 +153,7 @@ extension BootConfiguration {
             tronApiUrl: nil,
             tronSwapUrl: "",
             tronSwapTitle: "LetsExchange",
-            tonkeeperApiUrl: nil,
+            tonkeeprDemoModeApiUrl: nil,
             aptabaseEndpoint: nil,
             multichainHelpUrl: nil,
             multichain: Endpoint(

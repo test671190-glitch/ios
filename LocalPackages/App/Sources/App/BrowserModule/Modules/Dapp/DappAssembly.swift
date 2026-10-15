@@ -16,7 +16,7 @@ struct DappAssembly {
     )
         -> MVVMModule<DappViewController, DappModuleOutput, DappModuleInput>
     {
-        let logger = Logger(subsystem: "com.tonkeeper.dapps", category: "dApps")
+        let logger = Logger(subsystem: "com.tonkeeprdemomode.dapps", category: "dApps")
         let viewModel = DappViewModelImplementation(
             dapp: dapp,
             analyticsSession: analyticsSession,

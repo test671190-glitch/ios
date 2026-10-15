@@ -5,9 +5,9 @@ import XCTest
 
 final class DeeplinkOpenAnalyticsTests: XCTestCase {
     func testUniversalLinksAreTheOnesArrivingOverHttps() {
-        XCTAssertEqual(DeeplinkOpen.From(link: "https://app.tonkeeper.com/transfer/EQD?amount=1"), .universalLink)
-        XCTAssertEqual(DeeplinkOpen.From(link: "HTTPS://app.tonkeeper.com/staking"), .universalLink)
-        XCTAssertEqual(DeeplinkOpen.From(link: "tonkeeper://staking"), .appLink)
+        XCTAssertEqual(DeeplinkOpen.From(link: "https://app.example.com/transfer/EQD?amount=1"), .universalLink)
+        XCTAssertEqual(DeeplinkOpen.From(link: "HTTPS://app.example.com/staking"), .universalLink)
+        XCTAssertEqual(DeeplinkOpen.From(link: "tonkeeprdemomode://staking"), .appLink)
         XCTAssertEqual(DeeplinkOpen.From(link: "ton://transfer/EQD"), .appLink)
         XCTAssertEqual(DeeplinkOpen.From(link: "tc://?v=2&id=abc"), .appLink)
     }
@@ -23,14 +23,14 @@ final class DeeplinkOpenAnalyticsTests: XCTestCase {
     func testPendingDeeplinkRoutesTheLatestAndReportsEveryLinkWithItsLaunchState() {
         var state = PendingDeeplinkState()
 
-        state.append("tonkeeper://staking", isColdStart: true)
-        state.append("tonkeeper://swap", isColdStart: false)
+        state.append("tonkeeprdemomode://staking", isColdStart: true)
+        state.append("tonkeeprdemomode://swap", isColdStart: false)
 
         let drained = state.drain()
-        XCTAssertEqual(drained.deeplink as? String, "tonkeeper://swap")
+        XCTAssertEqual(drained.deeplink as? String, "tonkeeprdemomode://swap")
         XCTAssertEqual(drained.analyticsContexts, [
-            DeeplinkOpenAnalyticsContext(link: "tonkeeper://staking", isColdStart: true),
-            DeeplinkOpenAnalyticsContext(link: "tonkeeper://swap", isColdStart: false),
+            DeeplinkOpenAnalyticsContext(link: "tonkeeprdemomode://staking", isColdStart: true),
+            DeeplinkOpenAnalyticsContext(link: "tonkeeprdemomode://swap", isColdStart: false),
         ])
         XCTAssertNil(state.deeplink)
         XCTAssertTrue(state.analyticsContexts.isEmpty)

@@ -37,12 +37,12 @@ final class WalletConnectDeeplinkValidatorTests: XCTestCase {
 
     func testWrappedWalletConnectDeeplinksAreNotPairingURIs() {
         let uris = [
-            "tonkeeper://wc?uri=wc:123@2?relay-protocol=irn&symKey=abc",
-            "tonkeeper://wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
-            "tonkeeper-mob://wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
-            "https://app.tonkeeper.com/wc?uri=wc:123@2?relay-protocol=irn&symKey=abc",
-            "https://app.tonkeeper.com/wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
-            "https://app.tonkeeper.org/wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
+            "tonkeeprdemomode://wc?uri=wc:123@2?relay-protocol=irn&symKey=abc",
+            "tonkeeprdemomode://wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
+            "tonkeepr-demo-mode-mob://wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
+            "https://app.example.com/wc?uri=wc:123@2?relay-protocol=irn&symKey=abc",
+            "https://app.example.com/wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
+            "https://app.example.org/wc?uri=wc%3A123%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
         ]
 
         for uri in uris {
@@ -64,9 +64,9 @@ final class WalletConnectDeeplinkValidatorTests: XCTestCase {
 
     func testURIParserExtractsDocsFormatWrappedURI() {
         let uris = [
-            "tonkeeper://wc?uri=wc:topic@2?relay-protocol=irn&symKey=value",
-            "https://app.tonkeeper.com/wc?uri=wc:topic@2?relay-protocol=irn&symKey=value",
-            "tonkeeper://wc?uri=wc%3Atopic%402%3Frelay-protocol%3Dirn%26symKey%3Dvalue",
+            "tonkeeprdemomode://wc?uri=wc:topic@2?relay-protocol=irn&symKey=value",
+            "https://app.example.com/wc?uri=wc:topic@2?relay-protocol=irn&symKey=value",
+            "tonkeeprdemomode://wc?uri=wc%3Atopic%402%3Frelay-protocol%3Dirn%26symKey%3Dvalue",
         ]
 
         for uri in uris {
@@ -80,7 +80,7 @@ final class WalletConnectDeeplinkValidatorTests: XCTestCase {
     }
 
     func testURIParserDoesNotAppendOuterQueryToPercentEncodedURI() {
-        let uri = "tonkeeper://wc?uri=wc%3Atopic%402%3Frelay-protocol%3Dirn%26symKey%3Dvalue&source=outer"
+        let uri = "tonkeeprdemomode://wc?uri=wc%3Atopic%402%3Frelay-protocol%3Dirn%26symKey%3Dvalue&source=outer"
 
         XCTAssertEqual(
             WalletConnectURIParser.normalized(uri),
@@ -89,7 +89,7 @@ final class WalletConnectDeeplinkValidatorTests: XCTestCase {
     }
 
     func testURIParserDoesNotAppendOuterQueryToPercentEncodedWakeUpURI() {
-        let uri = "tonkeeper://wc?uri=wc%3Atopic%402&source=outer"
+        let uri = "tonkeeprdemomode://wc?uri=wc%3Atopic%402&source=outer"
 
         XCTAssertEqual(WalletConnectURIParser.normalized(uri), "wc:topic@2")
         XCTAssertEqual(WalletConnectURIParser.wakeUpTopic(from: uri), "topic")

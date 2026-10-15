@@ -51,7 +51,7 @@ final class BootConfigurationAPIImplementation: BootConfigurationAPI {
             for: url,
             additionalQueryItems: queryItems
         )
-        guard let url = components.url else { throw TonkeeperAPIError.incorrectUrl }
+        guard let url = components.url else { throw TonkeeprDemoModeAPIError.incorrectUrl }
         let (data, _) = try await urlSession.data(from: url)
         return try JSONDecoder().decode(BootConfigurations.self, from: data)
     }

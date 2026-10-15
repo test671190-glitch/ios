@@ -261,17 +261,17 @@ final class MysteryRaffleContentMappingTests: XCTestCase {
     /// The backend resolves the CTA per state, so the payload — not the phase — picks the
     /// destination.
     func test_ctaRouteFollowsThePayload() {
-        XCTAssertEqual(route(payload: "tonkeeper://migrate"), .migrate)
-        XCTAssertEqual(route(payload: "https://app.tonkeeper.com/migration"), .migrate)
-        XCTAssertEqual(route(payload: "tonkeeper://swap?ft=TON&tt=USDT"), .swap)
+        XCTAssertEqual(route(payload: "tonkeeprdemomode://migrate"), .migrate)
+        XCTAssertEqual(route(payload: "ton://migration"), .migrate)
+        XCTAssertEqual(route(payload: "tonkeeprdemomode://swap?ft=TON&tt=USDT"), .swap)
     }
 
     /// A `.link` CTA is the external results page; a deeplink the raffle doesn't own goes
     /// to the generic dispatch; anything unparseable falls back to the qualifying swap
     /// instead of dead-ending the button.
     func test_ctaRouteFallbacks() {
-        XCTAssertEqual(route(payload: "https://t.me/tonkeeper", action: .link), .resultsLink)
-        XCTAssertEqual(route(payload: "tonkeeper://battery"), .deeplink("tonkeeper://battery"))
+        XCTAssertEqual(route(payload: "https://example.com/results", action: .link), .resultsLink)
+        XCTAssertEqual(route(payload: "tonkeeprdemomode://battery"), .deeplink("tonkeeprdemomode://battery"))
         XCTAssertEqual(route(payload: "not a url at all"), .swap)
         XCTAssertEqual(route(payload: ""), .swap)
     }
@@ -479,7 +479,7 @@ final class MysteryRaffleContentMappingTests: XCTestCase {
             title: "Migrate assets from your TON wallets",
             subtitle: nil,
             rewardTickets: rewardTickets,
-            deeplink: "tonkeeper://migrate",
+            deeplink: "tonkeeprdemomode://migrate",
             done: nil
         )
     }

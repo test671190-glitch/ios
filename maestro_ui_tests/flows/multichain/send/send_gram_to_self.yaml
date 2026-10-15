@@ -1,5 +1,5 @@
 # Multichain Send: GRAM on TON to self (address from Receive).
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_multichain_wallet.yaml"
 - runFlow:

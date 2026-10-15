@@ -69,19 +69,19 @@ final class BatteryWebBridgeTests: XCTestCase {
     }
 
     func test_trustedOrigin_requiresSameHttpsHostAndPort() throws {
-        let start = try XCTUnwrap(URL(string: "https://bat.tonkeeper.com/?token=abc"))
+        let start = try XCTUnwrap(URL(string: "https://bat.example.com/?token=abc"))
 
-        XCTAssertTrue(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "https://bat.tonkeeper.com/history"), startURL: start))
-        XCTAssertTrue(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "https://BAT.tonkeeper.com/"), startURL: start))
-        XCTAssertTrue(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "https://bat.tonkeeper.com:443/"), startURL: start))
+        XCTAssertTrue(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "https://bat.example.com/history"), startURL: start))
+        XCTAssertTrue(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "https://BAT.example.com/"), startURL: start))
+        XCTAssertTrue(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "https://bat.example.com:443/"), startURL: start))
 
-        XCTAssertFalse(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "http://bat.tonkeeper.com/"), startURL: start))
-        XCTAssertFalse(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "https://bat.tonkeeper.com:8443/"), startURL: start))
+        XCTAssertFalse(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "http://bat.example.com/"), startURL: start))
+        XCTAssertFalse(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "https://bat.example.com:8443/"), startURL: start))
         XCTAssertFalse(BatteryWebBridge.isTrustedOrigin(pageURL: URL(string: "https://evil.example.com/"), startURL: start))
         XCTAssertFalse(BatteryWebBridge.isTrustedOrigin(pageURL: nil, startURL: start))
         XCTAssertFalse(try BatteryWebBridge.isTrustedOrigin(
-            pageURL: URL(string: "http://bat.tonkeeper.com/"),
-            startURL: XCTUnwrap(URL(string: "http://bat.tonkeeper.com/"))
+            pageURL: URL(string: "http://bat.example.com/"),
+            startURL: XCTUnwrap(URL(string: "http://bat.example.com/"))
         ))
     }
 }

@@ -16,7 +16,7 @@ public struct PushClick: Codable, JSONEncodable, Hashable {
     public var eventName: String = "push_click"
     /** Push template identifier when present. Observed values include transaction-flow IDs such as `incoming_ton`, `in_progress_send_ton_push_type`, `success_sent_ton_push_type`, and campaign-style IDs such as `deposit_open`, `2025_trx_battery`. Other values may appear.  */
     public var pushId: String?
-    /** Deep link URL opened from the notification (e.g. tonkeeper://...). */
+    /** Deep link URL opened from the notification (e.g. tonkeeprdemomode://...). */
     public var deepLink: String?
 
     public init(eventName: String = "push_click", pushId: String? = nil, deepLink: String? = nil) {

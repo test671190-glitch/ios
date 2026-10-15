@@ -134,7 +134,7 @@ final class DappBrowserAnalyticsTests: XCTestCase {
         controller.logBrowserOpen(
             from: .wallet,
             tab: .explore,
-            utm: UtmParameters(link: "tonkeeper://browser?utm_source=campaign")
+            utm: UtmParameters(link: "tonkeeprdemomode://browser?utm_source=campaign")
         )
         controller.logBrowserOpen(from: .story, tab: .connected)
 
@@ -217,7 +217,7 @@ final class DappBrowserAnalyticsTests: XCTestCase {
         let request = controller.directOpenRequest(
             source: .deepLink,
             dapp: makeDapp(url: "https://dedust.io"),
-            utm: UtmParameters(link: "tonkeeper://dapp?url=https://dedust.io&utm_source=campaign")
+            utm: UtmParameters(link: "tonkeeprdemomode://dapp?url=https://dedust.io&utm_source=campaign")
         )
 
         request.analyticsSession.logClick()

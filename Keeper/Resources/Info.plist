@@ -39,7 +39,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tonkeeper</string>
+				<string>tonkeeprdemomode</string>
 			</array>
 		</dict>
 		<dict>
@@ -47,7 +47,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tonkeeper-mob</string>
+				<string>tonkeepr-demo-mode-mob</string>
 			</array>
 		</dict>
 		<dict>
@@ -55,7 +55,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tonkeeper-tc</string>
+				<string>tonkeepr-demo-mode-tc</string>
 			</array>
 		</dict>
 		<dict>
@@ -63,7 +63,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tonkeeper-tc-mob</string>
+				<string>tonkeepr-demo-mode-tc-mob</string>
 			</array>
 		</dict>
 	</array>
@@ -94,8 +94,8 @@
 	<string>$(PRIVACY_POLICY_URL)</string>
 	<key>TermsOfServiceURL</key>
 	<string>$(TERMS_OF_SERVICE_URL)</string>
-	<key>TonkeeperSwapURL</key>
-	<string>$(TONKEEPER_SWAP_URL)</string>
+	<key>TonkeeprDemoModeSwapURL</key>
+	<string>$(TONKEEPR_DEMO_MODE_SWAP_URL)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

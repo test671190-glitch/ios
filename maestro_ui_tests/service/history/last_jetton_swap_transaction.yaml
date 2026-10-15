@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Poll until TonAPI indexes the swap we just sent — limit=1 often returns a non-swap event
 # right after signing, or a stale swap from a previous run.

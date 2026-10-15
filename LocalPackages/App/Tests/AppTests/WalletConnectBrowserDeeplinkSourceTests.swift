@@ -6,7 +6,7 @@ import XCTest
 final class WalletConnectBrowserDeeplinkSourceTests: XCTestCase {
     func testParserOverridesWalletConnectCustomSchemeSourceToBrowser() throws {
         let deeplink = try parser.parse(
-            string: "tonkeeper://wc?uri=wc%3Atopic%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
+            string: "tonkeeprdemomode://wc?uri=wc%3Atopic%402%3Frelay-protocol%3Dirn%26symKey%3Dabc",
             source: .browser
         )
 
@@ -34,7 +34,7 @@ final class WalletConnectBrowserDeeplinkSourceTests: XCTestCase {
 
     func testParserKeepsSilentWalletConnectWakeUpWithBrowserSource() {
         XCTAssertThrowsError(try parser.parse(
-            string: "tonkeeper://wc?uri=wc%3Atopic%402",
+            string: "tonkeeprdemomode://wc?uri=wc%3Atopic%402",
             source: .browser
         )) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
@@ -43,7 +43,7 @@ final class WalletConnectBrowserDeeplinkSourceTests: XCTestCase {
 
     func testParserKeepsSilentWalletConnectSessionRequestRedirectWithBrowserSource() {
         XCTAssertThrowsError(try parser.parse(
-            string: "tonkeeper://wc?requestId=1787580460495163&sessionTopic=topic",
+            string: "tonkeeprdemomode://wc?requestId=1787580460495163&sessionTopic=topic",
             source: .browser
         )) { error in
             XCTAssertEqual(error as? DeeplinkParserError, .ignoredWalletConnectWakeUp)
@@ -58,7 +58,7 @@ final class WalletConnectBrowserDeeplinkSourceTests: XCTestCase {
             }
         )
 
-        let url = try XCTUnwrap(URL(string: "tonkeeper://wc?requestId=1787580460495163&sessionTopic=topic"))
+        let url = try XCTUnwrap(URL(string: "tonkeeprdemomode://wc?requestId=1787580460495163&sessionTopic=topic"))
         let result = handler.handlerURLOpen(url)
         guard case .notOpen = result else {
             return XCTFail("Expected navigation to be cancelled")
@@ -73,7 +73,7 @@ final class WalletConnectBrowserDeeplinkSourceTests: XCTestCase {
             }
         )
 
-        let result = try handler.handlerURLOpen(XCTUnwrap(URL(string: "tonkeeper://wc?uri=wc%3Atopic%402")))
+        let result = try handler.handlerURLOpen(XCTUnwrap(URL(string: "tonkeeprdemomode://wc?uri=wc%3Atopic%402")))
         guard case .notOpen = result else {
             return XCTFail("Expected navigation to be cancelled")
         }
@@ -88,7 +88,7 @@ final class WalletConnectBrowserDeeplinkSourceTests: XCTestCase {
             }
         )
 
-        let url = try XCTUnwrap(URL(string: "tonkeeper://staking?utm_source=merchant&utm_campaign=autumn"))
+        let url = try XCTUnwrap(URL(string: "tonkeeprdemomode://staking?utm_source=merchant&utm_campaign=autumn"))
         guard case .notOpen = handler.handlerURLOpen(url) else {
             return XCTFail("Expected navigation to be handled as a deeplink")
         }

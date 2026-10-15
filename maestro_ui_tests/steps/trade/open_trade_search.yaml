@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - tapOn: "Search by ticker or name"
 - extendedWaitUntil:

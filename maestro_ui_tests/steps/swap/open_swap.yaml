@@ -1,5 +1,5 @@
 # Opens Multichain Swap from the wallet home action row.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - extendedWaitUntil:
     visible: Swap

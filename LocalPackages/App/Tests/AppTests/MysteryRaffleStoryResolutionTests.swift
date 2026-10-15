@@ -18,7 +18,7 @@ final class MysteryRaffleStoryResolutionTests: XCTestCase {
     func test_resolvesLastPathComponentOfDeeplink() {
         let raffle = raffle(storyIds: ["intro"])
 
-        let story = MysteryRaffleStoriesRouter.story(forPayload: "tonkeeper://stories/intro", in: raffle)
+        let story = MysteryRaffleStoriesRouter.story(forPayload: "tonkeeprdemomode://stories/intro", in: raffle)
 
         XCTAssertEqual(story?.id, "intro")
     }
@@ -26,7 +26,7 @@ final class MysteryRaffleStoryResolutionTests: XCTestCase {
     func test_resolvesIdQueryItem() {
         let raffle = raffle(storyIds: ["intro"])
 
-        let story = MysteryRaffleStoriesRouter.story(forPayload: "tonkeeper://stories?id=intro", in: raffle)
+        let story = MysteryRaffleStoriesRouter.story(forPayload: "tonkeeprdemomode://stories?id=intro", in: raffle)
 
         XCTAssertEqual(story?.id, "intro")
     }
@@ -35,8 +35,8 @@ final class MysteryRaffleStoryResolutionTests: XCTestCase {
     func test_unrelatedDeeplinkResolvesToNil() {
         let raffle = raffle(storyIds: ["intro"])
 
-        XCTAssertNil(MysteryRaffleStoriesRouter.story(forPayload: "tonkeeper://swap", in: raffle))
-        XCTAssertNil(MysteryRaffleStoriesRouter.story(forPayload: "tonkeeper://stories/other", in: raffle))
+        XCTAssertNil(MysteryRaffleStoriesRouter.story(forPayload: "tonkeeprdemomode://swap", in: raffle))
+        XCTAssertNil(MysteryRaffleStoriesRouter.story(forPayload: "tonkeeprdemomode://stories/other", in: raffle))
     }
 
     func test_raffleWithoutStoriesResolvesToNil() {

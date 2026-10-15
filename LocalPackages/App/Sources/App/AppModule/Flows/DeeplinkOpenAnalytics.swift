@@ -28,7 +28,7 @@ struct PendingDeeplinkState {
 
 extension DeeplinkOpen.From {
     /// Universal links reach the app over `https`; every other scheme we register
-    /// (`tonkeeper://`, `ton://`, `tc://`, …) is an app link.
+    /// (`tonkeeprdemomode://`, `ton://`, `tc://`, …) is an app link.
     init(link: String) {
         let scheme = URLComponents(string: link)?.scheme?.lowercased()
         self = scheme == "https" || scheme == "http" ? .universalLink : .appLink

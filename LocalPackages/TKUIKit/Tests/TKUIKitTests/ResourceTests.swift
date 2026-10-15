@@ -403,7 +403,7 @@ final class ResourceTests: XCTestCase {
             UIImage.TKUIKit.Icons.Size44.currencyUsdt,
             UIImage.TKUIKit.Artwork.Stories.gasless,
             UIImage.TKUIKit.Icons.Size72.serviceWallet,
-            UIImage.TKUIKit.Icons.Size72.tonkeeperLogo,
+            UIImage.TKUIKit.Icons.Size72.tonkeeprDemoModeLogo,
             UIImage.TKUIKit.Textures.textSpoiler,
         ]
 
@@ -425,7 +425,7 @@ final class ResourceTests: XCTestCase {
         _ = SwiftUI.Image.TKUIKit.Icons.Size72.serviceWallet
         _ = SwiftUI.Image.TKUIKit.Icons.Size16.batteryFlash
         _ = SwiftUI.Image.TKUIKit.Icons.Size16.walletAvatarWallet
-        _ = SwiftUI.Image.TKUIKit.Icons.Size72.tonkeeperLogo
+        _ = SwiftUI.Image.TKUIKit.Icons.Size72.tonkeeprDemoModeLogo
     }
 
     func testLottieAndFontFacadesDoNotDeclareRawFilenames() throws {

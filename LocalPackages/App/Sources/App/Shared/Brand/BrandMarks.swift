@@ -5,12 +5,12 @@ import UIKit
 enum BrandMarks {
     /// Beside a connected dapp in the settings list.
     static var small: UIImage {
-        .TKUIKit.Icons.Size20.tonkeeperSmall
+        .TKUIKit.Icons.Size20.tonkeeprDemoModeSmall
     }
 
     /// The staking-pool badge, sitting in a row of full-colour discs.
     static var stakingPoolBadge: UIImage {
-        .TKUIKit.Icons.Size44.tonkeeperLogo
+        .TKUIKit.Icons.Size44.tonkeeprDemoModeLogo
     }
 
     /// The tile that stands for this app beside a dapp's own icon on the connect screens.

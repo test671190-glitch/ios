@@ -1,5 +1,5 @@
 # regress_EN: Ton Connect 2.0 — universal tc:// deeplink opens the connect sheet.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 

@@ -421,5 +421,5 @@ enum DappBridgeFunctionType: String, Codable {
 }
 
 private extension String {
-    static let windowKey = "tonkeeper"
+    static let windowKey = "tonkeeprdemomode"
 }

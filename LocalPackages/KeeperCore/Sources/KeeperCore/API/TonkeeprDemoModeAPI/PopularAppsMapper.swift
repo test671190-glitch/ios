@@ -1,5 +1,5 @@
 import Foundation
-import TKTonkeeperAPI
+import TKTonkeeprDemoModeAPI
 
 extension PopularAppsResponseData {
     init(_ payload: Components.Responses.PopularApps.Body.jsonPayload.dataPayload) {

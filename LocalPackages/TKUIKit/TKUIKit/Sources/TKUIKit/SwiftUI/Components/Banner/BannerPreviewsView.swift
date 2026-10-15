@@ -123,7 +123,7 @@ private extension BannerPreviewsView {
     var customBannerItem: BannerItem {
         BannerItem(
             id: "banner-custom",
-            title: "Boost rewards with Keeper Battery",
+            title: "Boost rewards with tonkeeprdemo mode Battery",
             description: "Top up once and cover network fees automatically",
             actionTitle: "Open",
             imageURL: URL(string: ""),

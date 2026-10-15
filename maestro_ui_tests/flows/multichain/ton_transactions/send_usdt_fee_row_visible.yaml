@@ -1,4 +1,4 @@
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 # Send confirmation must show the Fee row. Uses TON — USD₮ is not guaranteed on QA wallets.
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"

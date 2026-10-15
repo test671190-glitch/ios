@@ -4,8 +4,8 @@ import KeeperCoreComponents
 import TonSwift
 import XCTest
 
-final class TonkeeperDeeplinksParserTests: XCTestCase {
-    let parser = TonkeeperDeeplinkParser(
+final class TonkeeprDemoModeDeeplinksParserTests: XCTestCase {
+    let parser = TonkeeprDemoModeDeeplinkParser(
         walletConnectDeeplinkValidator: WalletConnectDeeplinkValidatorImplementation()
     )
 

@@ -9,7 +9,7 @@ import UIKit
 enum TKUIKitGeneratedImageAsset: CaseIterable {
     case artworkBannersMultichain
     case artworkBrandKeeperAppIcon
-    case artworkBrandTonkeeperLogoFull
+    case artworkBrandTonkeeprDemoModeLogoFull
     case artworkChartsChartLinePlaceholder
     case artworkLedgerBluetooth
     case artworkLedgerDeviceBase
@@ -123,7 +123,7 @@ enum TKUIKitGeneratedImageAsset: CaseIterable {
     case iconsSize20LinkSmall
     case iconsSize20QrCodeSmall
     case iconsSize20TonChain
-    case iconsSize20TonkeeperSmall
+    case iconsSize20TonkeeprDemoModeSmall
     case iconsSize20TrxChain
     case iconsSize24BatteryBody
     case iconsSize24Flash
@@ -228,14 +228,14 @@ enum TKUIKitGeneratedImageAsset: CaseIterable {
     case iconsSize44TonNominatorsLogo
     case iconsSize44TonStakersLogo
     case iconsSize44TonWhalesLogo
-    case iconsSize44TonkeeperLogo
+    case iconsSize44TonkeeprDemoModeLogo
     case iconsSize44TrxChain
     case iconsSize52BatteryBody
     case iconsSize56FlashlightOff
     case iconsSize56Globe
     case iconsSize64CurrencyUsde
     case iconsSize72ServiceWallet
-    case iconsSize72TonkeeperLogo
+    case iconsSize72TonkeeprDemoModeLogo
     case iconsSize84Camera
     case iconsSize84ExclamationmarkCircle
     case iconsSize84ExclamationmarkTriangle
@@ -252,8 +252,8 @@ enum TKUIKitGeneratedImageAsset: CaseIterable {
             return "Artwork/Banners/multichain"
         case .artworkBrandKeeperAppIcon:
             return "Artwork/Brand/keeper-app-icon"
-        case .artworkBrandTonkeeperLogoFull:
-            return "Artwork/Brand/tonkeeper-logo-full"
+        case .artworkBrandTonkeeprDemoModeLogoFull:
+            return "Artwork/Brand/tonkeepr-demo-mode-logo-full"
         case .artworkChartsChartLinePlaceholder:
             return "Artwork/Charts/chart-line-placeholder"
         case .artworkLedgerBluetooth:
@@ -480,8 +480,8 @@ enum TKUIKitGeneratedImageAsset: CaseIterable {
             return "Icons/Size20/qr-code-small"
         case .iconsSize20TonChain:
             return "Icons/Size20/ton-chain"
-        case .iconsSize20TonkeeperSmall:
-            return "Icons/Size20/tonkeeper-small"
+        case .iconsSize20TonkeeprDemoModeSmall:
+            return "Icons/Size20/tonkeepr-demo-mode-small"
         case .iconsSize20TrxChain:
             return "Icons/Size20/trx-chain"
         case .iconsSize24BatteryBody:
@@ -690,8 +690,8 @@ enum TKUIKitGeneratedImageAsset: CaseIterable {
             return "Icons/Size44/ton-stakers-logo"
         case .iconsSize44TonWhalesLogo:
             return "Icons/Size44/ton-whales-logo"
-        case .iconsSize44TonkeeperLogo:
-            return "Icons/Size44/tonkeeper-logo"
+        case .iconsSize44TonkeeprDemoModeLogo:
+            return "Icons/Size44/tonkeepr-demo-mode-logo"
         case .iconsSize44TrxChain:
             return "Icons/Size44/trx-chain"
         case .iconsSize52BatteryBody:
@@ -704,8 +704,8 @@ enum TKUIKitGeneratedImageAsset: CaseIterable {
             return "Icons/Size64/currency-usde"
         case .iconsSize72ServiceWallet:
             return "Icons/Size72/service-wallet"
-        case .iconsSize72TonkeeperLogo:
-            return "Icons/Size72/tonkeeper-logo"
+        case .iconsSize72TonkeeprDemoModeLogo:
+            return "Icons/Size72/tonkeepr-demo-mode-logo"
         case .iconsSize84Camera:
             return "Icons/Size84/camera"
         case .iconsSize84ExclamationmarkCircle:
@@ -752,8 +752,8 @@ public extension UIImage {
             public static var keeperAppIcon: UIImage {
                 .from(asset: .artworkBrandKeeperAppIcon)
             }
-            public static var tonkeeperLogoFull: UIImage {
-                .from(asset: .artworkBrandTonkeeperLogoFull)
+            public static var tonkeeprDemoModeLogoFull: UIImage {
+                .from(asset: .artworkBrandTonkeeprDemoModeLogoFull)
             }
           }
           public enum Charts {
@@ -1116,8 +1116,8 @@ public extension UIImage {
             public static var tonChain: UIImage {
                 .from(asset: .iconsSize20TonChain)
             }
-            public static var tonkeeperSmall: UIImage {
-                .from(asset: .iconsSize20TonkeeperSmall)
+            public static var tonkeeprDemoModeSmall: UIImage {
+                .from(asset: .iconsSize20TonkeeprDemoModeSmall)
             }
             public static var trxChain: UIImage {
                 .from(asset: .iconsSize20TrxChain)
@@ -1443,8 +1443,8 @@ public extension UIImage {
             public static var tonWhalesLogo: UIImage {
                 .from(asset: .iconsSize44TonWhalesLogo)
             }
-            public static var tonkeeperLogo: UIImage {
-                .from(asset: .iconsSize44TonkeeperLogo)
+            public static var tonkeeprDemoModeLogo: UIImage {
+                .from(asset: .iconsSize44TonkeeprDemoModeLogo)
             }
             public static var trxChain: UIImage {
                 .from(asset: .iconsSize44TrxChain)
@@ -1472,8 +1472,8 @@ public extension UIImage {
             public static var serviceWallet: UIImage {
                 .from(asset: .iconsSize72ServiceWallet)
             }
-            public static var tonkeeperLogo: UIImage {
-                .from(asset: .iconsSize72TonkeeperLogo)
+            public static var tonkeeprDemoModeLogo: UIImage {
+                .from(asset: .iconsSize72TonkeeprDemoModeLogo)
             }
           }
           public enum Size84 {
@@ -1525,8 +1525,8 @@ public extension SwiftUI.Image {
             public static var keeperAppIcon: SwiftUI.Image {
                 .from(asset: .artworkBrandKeeperAppIcon)
             }
-            public static var tonkeeperLogoFull: SwiftUI.Image {
-                .from(asset: .artworkBrandTonkeeperLogoFull)
+            public static var tonkeeprDemoModeLogoFull: SwiftUI.Image {
+                .from(asset: .artworkBrandTonkeeprDemoModeLogoFull)
             }
           }
           public enum Charts {
@@ -1889,8 +1889,8 @@ public extension SwiftUI.Image {
             public static var tonChain: SwiftUI.Image {
                 .from(asset: .iconsSize20TonChain)
             }
-            public static var tonkeeperSmall: SwiftUI.Image {
-                .from(asset: .iconsSize20TonkeeperSmall)
+            public static var tonkeeprDemoModeSmall: SwiftUI.Image {
+                .from(asset: .iconsSize20TonkeeprDemoModeSmall)
             }
             public static var trxChain: SwiftUI.Image {
                 .from(asset: .iconsSize20TrxChain)
@@ -2216,8 +2216,8 @@ public extension SwiftUI.Image {
             public static var tonWhalesLogo: SwiftUI.Image {
                 .from(asset: .iconsSize44TonWhalesLogo)
             }
-            public static var tonkeeperLogo: SwiftUI.Image {
-                .from(asset: .iconsSize44TonkeeperLogo)
+            public static var tonkeeprDemoModeLogo: SwiftUI.Image {
+                .from(asset: .iconsSize44TonkeeprDemoModeLogo)
             }
             public static var trxChain: SwiftUI.Image {
                 .from(asset: .iconsSize44TrxChain)
@@ -2245,8 +2245,8 @@ public extension SwiftUI.Image {
             public static var serviceWallet: SwiftUI.Image {
                 .from(asset: .iconsSize72ServiceWallet)
             }
-            public static var tonkeeperLogo: SwiftUI.Image {
-                .from(asset: .iconsSize72TonkeeperLogo)
+            public static var tonkeeprDemoModeLogo: SwiftUI.Image {
+                .from(asset: .iconsSize72TonkeeprDemoModeLogo)
             }
           }
           public enum Size84 {

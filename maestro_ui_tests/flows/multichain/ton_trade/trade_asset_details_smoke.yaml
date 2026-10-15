@@ -1,5 +1,5 @@
 # regress_EN [Trading UI]: token details from trading UI; [Token screen] sections and Send/Receive menu.
-appId: com.jbig.tonkeeper
+appId: com.jbig.tonkeeprdemomode
 ---
 - runFlow: "../../../steps/launch_app_ensure_ton_wallet.yaml"
 - extendedWaitUntil:

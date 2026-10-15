@@ -30,7 +30,7 @@ struct PerpsSharePositionCard: View {
             stats
                 .padding(.top, Layout.pnlToStats)
 
-            SwiftUI.Image(uiImage: .TKUIKit.Artwork.Brand.tonkeeperLogoFull)
+            SwiftUI.Image(uiImage: .TKUIKit.Artwork.Brand.tonkeeprDemoModeLogoFull)
                 .frame(width: Layout.logoWidth, height: Layout.logoHeight)
                 .padding(.top, Layout.statsToLogo)
         }

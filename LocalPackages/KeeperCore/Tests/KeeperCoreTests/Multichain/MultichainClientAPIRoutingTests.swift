@@ -89,7 +89,7 @@ private final class RoutingContext {
 
     private static func client(recorder: OperationRecorder) -> MultichainAPI.Client {
         MultichainAPI.Client(
-            serverURL: URL(string: "https://multi.tonkeeper.com")!,
+            serverURL: URL(string: "https://multi.example.com")!,
             transport: UnusedTransport(),
             middlewares: [StopAndRecordMiddleware(recorder: recorder)]
         )

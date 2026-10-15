@@ -10,7 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
-/** Where the recovery-phrase backup flow was entered from:  - onboarding: right after wallet creation, inside the create flow - wallet_setup_section: \&quot;Back up your recovery phrase\&quot; card in the   \&quot;Finish setting up\&quot; wallet-setup section on the wallet main screen - settings: Settings → Backup → Back Up Manually - deep_link: opened by a tonkeeper:// / https:// backup deep link   (e.g. tonkeeper://backup), not from Settings UI  */
+/** Where the recovery-phrase backup flow was entered from:  - onboarding: right after wallet creation, inside the create flow - wallet_setup_section: \&quot;Back up your recovery phrase\&quot; card in the   \&quot;Finish setting up\&quot; wallet-setup section on the wallet main screen - settings: Settings → Backup → Back Up Manually - deep_link: opened by a tonkeeprdemomode:// / https:// backup deep link   (e.g. tonkeeprdemomode://backup), not from Settings UI  */
 public enum BackupSource: String, Codable, CaseIterable {
     case onboarding = "onboarding"
     case walletSetupSection = "wallet_setup_section"

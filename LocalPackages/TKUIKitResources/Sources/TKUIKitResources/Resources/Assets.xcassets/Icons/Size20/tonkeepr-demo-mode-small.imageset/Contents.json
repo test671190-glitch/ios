@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "tonkeeper-logo-44.svg",
+      "filename" : "tonkeepr-demo-mode-small-20.svg",
       "idiom" : "universal"
     }
   ],
@@ -10,6 +10,7 @@
     "version" : 1
   },
   "properties" : {
-    "preserves-vector-representation" : true
+    "preserves-vector-representation" : true,
+    "template-rendering-intent" : "template"
   }
 }

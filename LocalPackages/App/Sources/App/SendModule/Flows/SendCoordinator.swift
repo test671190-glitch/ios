@@ -13,7 +13,7 @@ protocol SendCoordinator: Coordinator {
     var didRequestFeeDeposit: ((_ assetId: String, _ onDismiss: @escaping () -> Void) -> Void)? { get set }
 
     func start(pushAnimated: Bool)
-    func handleTonkeeperPublishDeeplink(sign: Data) -> Bool
+    func handleTonkeeprDemoModePublishDeeplink(sign: Data) -> Bool
 }
 
 extension SendCoordinator {

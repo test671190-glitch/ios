@@ -71,8 +71,8 @@ public final class Configuration {
         configurations.mainnet.directSupportUrl
     }
 
-    public var tonkeeperNewsUrl: URL? {
-        configurations.mainnet.tonkeeperNewsUrl
+    public var tonkeeprDemoModeNewsUrl: URL? {
+        configurations.mainnet.tonkeeprDemoModeNewsUrl
     }
 
     public var stonfiUrl: URL? {
