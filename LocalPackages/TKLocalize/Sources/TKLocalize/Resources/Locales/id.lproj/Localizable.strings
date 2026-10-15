@@ -1111,9 +1111,9 @@
 "multichain_swap.provider_error.country_blocked" = "Swap tidak tersedia di wilayah Anda.";
 "multichain_swap.provider_error.provider_unavailable" = "Penyedia swap sementara tidak tersedia. Coba lagi.";
 "multichain_swap.provider_error.unknown" = "Tidak dapat memperoleh kuotasi. Coba lagi.";
-"native_swap_screen.privacy.stonfi" = "Layanan disediakan oleh [STON.fi](https://ston.fi)";
-"native_swap_screen.privacy.stonfi_terms" = "[Ketentuan Penggunaan](https://ston.fi/terms)";
-"native_swap_screen.privacy.stonfi_privacy" = "[Kebijakan Privasi](https://ston.fi/privacy)";
+"native_swap_screen.privacy.stonfi" = "Layanan disediakan oleh STON.fi";
+"native_swap_screen.privacy.stonfi_terms" = "Ketentuan Penggunaan";
+"native_swap_screen.privacy.stonfi_privacy" = "Kebijakan Privasi";
 "native_swap_screen.privacy.stonfi_terms_title" = "Ketentuan Penggunaan";
 "native_swap_screen.privacy.stonfi_privacy_title" = "Kebijakan Privasi";
 "subscription_plugin_warning.title.zero" = "Anda memiliki %@ langganan yang sudah habis masa berlakunya dari @donate";

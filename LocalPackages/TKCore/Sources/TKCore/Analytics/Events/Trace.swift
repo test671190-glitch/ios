@@ -1,3 +1,4 @@
+import FirebaseCore
 import FirebasePerformance
 import Foundation
 
@@ -5,7 +6,7 @@ public final class Trace {
     private let firebaseTrace: FirebasePerformance.Trace?
 
     public init(name: String) {
-        self.firebaseTrace = Performance.startTrace(name: name)
+        self.firebaseTrace = FirebaseApp.app() != nil ? Performance.startTrace(name: name) : nil
     }
 
     public func setValue(_ value: String, forAttribute attribute: String) {

@@ -5,6 +5,6 @@ public enum USDT {
     public static let fractionDigits: Int = 6
     public static let symbol = "USD₮"
     public static let name = "USD₮ TRC20"
-    public static let imageURL = URL(string: "https://tether.to/images/logoCircle.png")
+    public static let imageURL = URL(string: "")
     public static let tag = "TRC20"
 }

@@ -1,3 +1,4 @@
+import FirebaseCore
 import FirebaseCrashlytics
 import Foundation
 
@@ -9,6 +10,7 @@ public final class CrashlyticsReporter: CrashlyticsReporting {
     public init() {}
 
     public func recordNonFatal(message: String, domain: String, metadata: [String: String] = [:]) {
+        guard FirebaseApp.app() != nil else { return }
         var userInfo: [String: Any] = ["message": message]
         for (key, value) in metadata {
             userInfo[key] = value

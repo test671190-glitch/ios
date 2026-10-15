@@ -80,7 +80,7 @@ final class HistoryEventDetailsTronMapper {
             let title = NSMutableAttributedString(attributedString: transaction)
             title.append(hash)
 
-            let url = URL(string: "https://tronscan.org/#/transaction/\(event.txID)")!
+            let url = URL.noServer
             return HistoryEventDetailsModel.TransasctionDetailsButton(
                 buttonTitle: title,
                 url: url,

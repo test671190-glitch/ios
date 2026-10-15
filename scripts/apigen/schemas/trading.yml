@@ -1041,7 +1041,7 @@ components:
         url:
           type: string
           description: Ссылка на ресурс.
-          example: "https://www.google.com"
+          example: ""
         type:
           $ref: "#/components/schemas/LinkType"
 
@@ -1228,7 +1228,7 @@ components:
           type: string
           format: uri
           description: Ссылка на страницу .
-          example: "https://dyor.io/"
+          example: ""
 
     AssetSections:
       type: object

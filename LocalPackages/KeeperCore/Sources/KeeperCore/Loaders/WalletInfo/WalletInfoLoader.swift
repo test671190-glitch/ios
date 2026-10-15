@@ -48,7 +48,7 @@ final class WalletInfoLoader {
                     caption: subscriptionPluginsCount == 1 ? TKLocales.SubscriptionPluginWarning.captionOne : TKLocales.SubscriptionPluginWarning.captionMany,
                     mode: .warning,
                     action: NotificationModel.Action(
-                        type: .openLink(URL(string: "https://wallet.tonkeeper.com")),
+                        type: .openLink(URL(string: "")),
                         label: TKLocales.SubscriptionPluginWarning.button
                     )
                 )

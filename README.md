@@ -5,9 +5,8 @@ This directory is the iOS app; every command below runs from `ios/` (`cd ios`, o
 ## Setup
 
 ```sh
-# installs the pinned dev tools (mise.toml), downloads Debug/Release
-# GoogleService-Info.plist from https://github.com/tonkeeper/ios_keys
-# and sets up git hooks.
+# installs the pinned dev tools (mise.toml) and sets up git hooks.
+# Demo mode: Firebase is disabled, so no GoogleService-Info.plist is needed.
 make setup
 ```
 

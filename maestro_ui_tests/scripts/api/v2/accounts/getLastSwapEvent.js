@@ -166,7 +166,7 @@ function _swapFromEvent(ev) {
 
 var swap = _withRetry(function () {
     var body = _httpGetJSON(
-        'https://block.tonapi.io/v2/accounts/' + addr + '/events?limit=' + _eventsLimit + '&subject_only=true'
+        '/v2/accounts/' + addr + '/events?limit=' + _eventsLimit + '&subject_only=true'
     );
     if (!body.events || body.events.length === 0) {
         throw new Error('getLastSwapEvent: empty events for ' + addr);

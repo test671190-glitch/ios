@@ -1111,9 +1111,9 @@
 "multichain_swap.provider_error.country_blocked" = "Almashuv sizning hududingizda mavjud emas.";
 "multichain_swap.provider_error.provider_unavailable" = "Almashuv provayderi vaqtincha mavjud emas. Qayta urinib ko‘ring.";
 "multichain_swap.provider_error.unknown" = "Kotirovka olinmadi. Qayta urinib ko‘ring.";
-"native_swap_screen.privacy.stonfi" = "Xizmat [STON.fi](https://ston.fi) tomonidan taqdim etilgan";
-"native_swap_screen.privacy.stonfi_terms" = "[Foydalanish shartlari](https://ston.fi/terms)";
-"native_swap_screen.privacy.stonfi_privacy" = "[Maxfiylik siyosati](https://ston.fi/privacy)";
+"native_swap_screen.privacy.stonfi" = "Xizmat STON.fi tomonidan taqdim etilgan";
+"native_swap_screen.privacy.stonfi_terms" = "Foydalanish shartlari";
+"native_swap_screen.privacy.stonfi_privacy" = "Maxfiylik siyosati";
 "native_swap_screen.privacy.stonfi_terms_title" = "Foydalanish shartlari";
 "native_swap_screen.privacy.stonfi_privacy_title" = "Maxfiylik siyosati";
 "subscription_plugin_warning.title.zero" = "Sizda @donate dan %@ muddati tugagan obunalaringiz bor";

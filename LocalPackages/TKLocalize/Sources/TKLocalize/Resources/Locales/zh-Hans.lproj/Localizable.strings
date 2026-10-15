@@ -1123,9 +1123,9 @@
 "multichain_swap.provider_error.country_blocked" = "您所在的地区不支持兑换。";
 "multichain_swap.provider_error.provider_unavailable" = "兑换服务商暂时不可用，请重试。";
 "multichain_swap.provider_error.unknown" = "无法获取报价，请重试。";
-"native_swap_screen.privacy.stonfi" = "[STON.fi](https://ston.fi) 提供的服务";
-"native_swap_screen.privacy.stonfi_terms" = "[使用条款](https://ston.fi/terms)";
-"native_swap_screen.privacy.stonfi_privacy" = "[隐私政策](https://ston.fi/privacy)";
+"native_swap_screen.privacy.stonfi" = "STON.fi 提供的服务";
+"native_swap_screen.privacy.stonfi_terms" = "使用条款";
+"native_swap_screen.privacy.stonfi_privacy" = "隐私政策";
 "native_swap_screen.privacy.stonfi_terms_title" = "使用条款";
 "native_swap_screen.privacy.stonfi_privacy_title" = "隐私政策";
 "subscription_plugin_warning.title.zero" = "您对 @donate 的 %@ 订阅已过期";

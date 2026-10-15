@@ -126,9 +126,8 @@ final class EthenaDetailsConfigurator: TokenDetailsConfigurator {
     }
 
     func getDetailsURL() -> URL? {
-        guard let string = try? "\(String.tonviewer)/\(wallet.friendlyAddress.toString())/jetton/\(JettonMasterAddress.USDe.toString())",
-              let url = URL(string: string) else { return nil }
-        return url
+        // Demo mode: block explorer links are cut out.
+        nil
     }
 
     private func getBannerItems(balance: ProcessedBalanceEthenaItem?) -> [TokenDetailsBannerItem] {

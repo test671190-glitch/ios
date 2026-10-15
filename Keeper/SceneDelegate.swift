@@ -1,7 +1,6 @@
 import App
 import TKCoordinator
 import TKFeatureFlags
-import TKFeatureFlagsFirebase
 import TKUIKit
 import UIKit
 
@@ -19,9 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = TKWindow(windowScene: windowScene)
         let coordinator = App.LaunchCoordinator(
             router: TKCoordinator.WindowRouter(window: window),
-            remoteConfig: TKFirebaseRemoteConfigProvider(
-                requestTimeoutMs: 1500
-            )
+            remoteConfig: OfflineRemoteConfigProvider()
         )
 
         if let deeplink = connectionOptions.urlContexts.first?.url.absoluteString {

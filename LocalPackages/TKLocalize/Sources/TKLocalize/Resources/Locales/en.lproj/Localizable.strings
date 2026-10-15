@@ -1387,9 +1387,9 @@
 "multichain_swap.provider_error.provider_unavailable" = "Swap provider is temporarily unavailable. Please try again.";
 "multichain_swap.provider_error.unknown" = "Couldn't get a quote. Please try again.";
 
-"native_swap_screen.privacy.stonfi" = "Service provided by [STON.fi](https://ston.fi)";
-"native_swap_screen.privacy.stonfi_terms" = "[Terms of Use](https://ston.fi/terms)";
-"native_swap_screen.privacy.stonfi_privacy" = "[Privacy Policy](https://ston.fi/privacy)";
+"native_swap_screen.privacy.stonfi" = "Service provided by STON.fi";
+"native_swap_screen.privacy.stonfi_terms" = "Terms of Use";
+"native_swap_screen.privacy.stonfi_privacy" = "Privacy Policy";
 "native_swap_screen.privacy.stonfi_terms_title" = "Terms of Use";
 "native_swap_screen.privacy.stonfi_privacy_title" = "Privacy Policy";
 

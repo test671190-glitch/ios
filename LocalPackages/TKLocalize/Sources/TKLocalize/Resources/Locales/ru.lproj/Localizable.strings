@@ -1309,9 +1309,9 @@
 "native_swap.screen.confirm.field.value_difference.info" = "Насколько ваша сделка сдвигает цену: положительное значение даст вам больше, отрицательное — меньше.";
 "native_swap.screen.confirm.field.slippage.info" = "Если до подтверждения произойдёт сильное изменение цены не в вашу пользу, транзакция будет отклонена.";
 
-"native_swap_screen.privacy.stonfi" = "Сервис предоставлен [STON.fi](https://ston.fi)";
-"native_swap_screen.privacy.stonfi_terms" = "[Условия](https://ston.fi/terms)";
-"native_swap_screen.privacy.stonfi_privacy" = "[Политика](https://ston.fi/privacy)";
+"native_swap_screen.privacy.stonfi" = "Сервис предоставлен STON.fi";
+"native_swap_screen.privacy.stonfi_terms" = "Условия";
+"native_swap_screen.privacy.stonfi_privacy" = "Политика";
 "native_swap_screen.privacy.stonfi_terms_title" = "Условия";
 "native_swap_screen.privacy.stonfi_privacy_title" = "Политика";
 "native_swap.screen.confirm.field.expires" = "Истекает через";

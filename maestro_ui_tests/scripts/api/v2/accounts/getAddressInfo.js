@@ -99,7 +99,7 @@ function _withRetry(fn, attempts, delayMs) {
 // <<< api-runtime
 
 var accData = _withRetry(function () {
-    var d = _httpGetJSON('https://block.tonapi.io/v2/accounts/' + addr);
+    var d = _httpGetJSON('/v2/accounts/' + addr);
     if (d.balance == null) {
         throw new Error('getAddressInfo: response is missing balance for ' + addr);
     }

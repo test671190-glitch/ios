@@ -236,7 +236,7 @@ private struct NFTCardSecureBlurView: UIViewRepresentable {
                         id: "1",
                         title: "Plush Pepe",
                         subtitle: "Telegram User",
-                        imageSource: .url(URL(string: "https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=041"))
+                        imageSource: .url(URL(string: ""))
                     )
                 ),
                 action: {}
@@ -252,7 +252,7 @@ private struct NFTCardSecureBlurView: UIViewRepresentable {
                         title: "Snoop Dogg",
                         subtitle: "Anonymous",
                         subtitleColor: .accentOrange,
-                        imageSource: .url(URL(string: "https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=041")),
+                        imageSource: .url(URL(string: "")),
                         isSecureMode: true
                     )
                 ),

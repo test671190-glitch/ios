@@ -1847,14 +1847,14 @@ public enum TKLocales {
 
     public enum NativeSwapScreen {
         public enum Privacy {
-            /// Service provided by [STON.fi](https://ston.fi)
-            public static let stonfi = TKLocales.tr("Localizable", "native_swap_screen.privacy.stonfi", fallback: "Service provided by [STON.fi](https://ston.fi)")
-            /// [Privacy Policy](https://ston.fi/privacy)
-            public static let stonfiPrivacy = TKLocales.tr("Localizable", "native_swap_screen.privacy.stonfi_privacy", fallback: "[Privacy Policy](https://ston.fi/privacy)")
+            /// Service provided by STON.fi
+            public static let stonfi = TKLocales.tr("Localizable", "native_swap_screen.privacy.stonfi", fallback: "Service provided by STON.fi")
+            /// Privacy Policy
+            public static let stonfiPrivacy = TKLocales.tr("Localizable", "native_swap_screen.privacy.stonfi_privacy", fallback: "Privacy Policy")
             /// Privacy Policy
             public static let stonfiPrivacyTitle = TKLocales.tr("Localizable", "native_swap_screen.privacy.stonfi_privacy_title", fallback: "Privacy Policy")
-            /// [Terms of Use](https://ston.fi/terms)
-            public static let stonfiTerms = TKLocales.tr("Localizable", "native_swap_screen.privacy.stonfi_terms", fallback: "[Terms of Use](https://ston.fi/terms)")
+            /// Terms of Use
+            public static let stonfiTerms = TKLocales.tr("Localizable", "native_swap_screen.privacy.stonfi_terms", fallback: "Terms of Use")
             /// Terms of Use
             public static let stonfiTermsTitle = TKLocales.tr("Localizable", "native_swap_screen.privacy.stonfi_terms_title", fallback: "Terms of Use")
         }

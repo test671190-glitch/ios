@@ -59,7 +59,7 @@ struct TronTRXTokenDetailsConfigurator: TokenDetailsConfigurator {
     }
 
     func getDetailsURL() -> URL? {
-        guard let address = wallet.tron?.address.base58 else { return nil }
-        return URL(string: "\(String.tronscan)/\(address)")
+        // Demo mode: block explorer links are cut out.
+        nil
     }
 }

@@ -1123,9 +1123,9 @@
 "multichain_swap.provider_error.country_blocked" = "Swaps sind in deiner Region nicht verfügbar.";
 "multichain_swap.provider_error.provider_unavailable" = "Der Swap-Anbieter ist vorübergehend nicht verfügbar. Bitte versuche es erneut.";
 "multichain_swap.provider_error.unknown" = "Kein Angebot verfügbar. Bitte versuche es erneut.";
-"native_swap_screen.privacy.stonfi" = "Dienst bereitgestellt von [STON.fi](https://ston.fi)";
-"native_swap_screen.privacy.stonfi_terms" = "[Nutzungsbedingungen](https://ston.fi/terms)";
-"native_swap_screen.privacy.stonfi_privacy" = "[Datenschutzerklärung](https://ston.fi/privacy)";
+"native_swap_screen.privacy.stonfi" = "Dienst bereitgestellt von STON.fi";
+"native_swap_screen.privacy.stonfi_terms" = "Nutzungsbedingungen";
+"native_swap_screen.privacy.stonfi_privacy" = "Datenschutzerklärung";
 "native_swap_screen.privacy.stonfi_terms_title" = "Nutzungsbedingungen";
 "native_swap_screen.privacy.stonfi_privacy_title" = "Datenschutzrichtlinie";
 "subscription_plugin_warning.title.zero" = "Sie haben %@ abgelaufene Abonnements von @donate";

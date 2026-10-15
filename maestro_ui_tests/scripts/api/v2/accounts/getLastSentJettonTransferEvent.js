@@ -123,7 +123,7 @@ function _toNanoString(decimalAmount, decimals) {
 var FEE_COMMENT = /^Call: (Tonkeeper|Keeper)RelayerFee$/;
 
 var result = _withRetry(function () {
-    var body = _httpGetJSON('https://block.tonapi.io/v2/accounts/' + addr + '/events?limit=1&subject_only=true');
+    var body = _httpGetJSON('/v2/accounts/' + addr + '/events?limit=1&subject_only=true');
     if (!body.events || body.events.length === 0) {
         throw new Error('getLastSentJettonTransferEvent: empty events for ' + addr);
     }

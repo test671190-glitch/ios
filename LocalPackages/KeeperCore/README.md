@@ -7,13 +7,13 @@ The goal of the library is to provide strictly-typed definition of the wallet be
 
 * High-level API for blockchain entities: tokens, balances and transactions.
 * API for offchain and private data: prices, events, keys, TON Connect sessions, and user preferences.
-* Connectivity via [Ton API](https://tonapi.io) and [TON Connect](https://github.com/ton-connect).
+* Connectivity via Ton API and TON Connect.
 
 ### Dependencies:
 
-* [ton-swift](https://github.com/tonkeeper/ton-swift)
-* [TON Connect](https://github.com/ton-connect)
-* [Ton API](https://tonapi.io)
+* ton-swift
+* TON Connect
+* Ton API
 
 ### License
 

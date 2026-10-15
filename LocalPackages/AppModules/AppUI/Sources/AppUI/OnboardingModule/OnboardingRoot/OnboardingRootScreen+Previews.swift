@@ -18,6 +18,6 @@ private extension OnboardingRootScreenState {
         importButtonTitle: "Import Existing Wallet",
         termsCaption: "By continuing, you agree to our Terms of Use",
         termsLinkTitle: "Terms of Use",
-        termsURL: URL(string: "https://tonkeeper.com/terms")
+        termsURL: URL(string: "")
     )
 }

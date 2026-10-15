@@ -46,7 +46,7 @@ final class KeystoneImportScanViewModelImplementation: KeystoneImportScanViewMod
     }
 
     func didTapOpenKeystone() {
-        guard let url = URL(string: "https://keyst.one") else {
+        guard let url = URL(string: "") else {
             return
         }
         urlOpener.open(url: url)

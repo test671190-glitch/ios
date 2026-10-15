@@ -100,7 +100,7 @@ public final class Configuration {
             return result
         }
 
-        return URL(string: "https://api.trongrid.io/")!
+        return .noServer
     }
 
     public func accountExplorer(network: Network) -> String? {

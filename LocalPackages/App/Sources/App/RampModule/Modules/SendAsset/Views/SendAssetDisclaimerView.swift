@@ -11,7 +11,7 @@ final class SendAssetDisclaimerView: UIView {
         static let changelly = Model(
             text: TKLocales.Ramp.Deposit.changellyDisclaimer,
             linkText: TKLocales.Ramp.Deposit.changellyTermsOfUse,
-            linkURL: URL(string: "https://changelly.com/terms-of-use")
+            linkURL: URL(string: "")
         )
     }
 

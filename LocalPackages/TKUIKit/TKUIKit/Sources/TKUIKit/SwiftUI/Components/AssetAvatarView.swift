@@ -364,7 +364,7 @@ private var sampleSizesAndColors: [(AssetAvatarView.Size, Color)] {
         HStack {
             ForEach(sampleShapes, id: \.self) { shape in
                 AssetAvatarView(
-                    imageSource: .url(URL(string: "https://avatars.githubusercontent.com/u/88587596")!),
+                    imageSource: .url(URL(string: "about:blank")!),
                     shape: shape
                 )
             }

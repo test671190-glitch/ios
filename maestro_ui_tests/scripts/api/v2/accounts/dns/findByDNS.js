@@ -98,7 +98,7 @@ function _withRetry(fn, attempts, delayMs) {
 }
 // <<< api-runtime
 
-var r = _httpGetJSONOrNull('https://keeper.tonapi.io/v2/accounts/' + _dns + '.ton/publickey');
+var r = _httpGetJSONOrNull('/v2/accounts/' + _dns + '.ton/publickey');
 var pubkey = r && r.public_key ? r.public_key : undefined;
 
 output.pubkey = pubkey;

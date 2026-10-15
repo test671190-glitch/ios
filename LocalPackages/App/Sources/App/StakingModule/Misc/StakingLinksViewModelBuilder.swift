@@ -49,7 +49,7 @@ struct StakingLinksViewModelBuilder {
             linkItems.append(button)
         }
 
-        let tonviewerUrlString = "https://tonviewer.com/\(poolInfo.address.toRaw())"
+        let tonviewerUrlString = ""
         if let tonviewerUrl = URL(string: tonviewerUrlString) {
             let urlButton = StakingDetailsLinksView.Model.LinkItem(title: "tonviewer.com", icon: .TKUIKit.Icons.Size16.magnifyingGlass) {
                 openURLInApp(tonviewerUrl)

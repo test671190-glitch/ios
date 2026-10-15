@@ -84,12 +84,8 @@ final class NativeSwapAPIImplementation: NativeSwapAPI {
     }
 }
 
-private extension String {
-    static let ipAPIHost = "https://swap.tonkeeper.com"
-}
-
 extension Configuration {
     func swapHostURL(network: Network) -> URL {
-        value(\.webSwapsUrl, network: network) ?? URL(string: .ipAPIHost)!
+        value(\.webSwapsUrl, network: network) ?? .noServer
     }
 }

@@ -311,7 +311,7 @@ extension APIProtocol {
 public enum Servers {
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
-            validatingOpenAPIServerURL: "http://localhost:8888",
+            validatingOpenAPIServerURL: "",
             variables: []
         )
     }

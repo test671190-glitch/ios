@@ -344,7 +344,7 @@ class DappViewModelImplementation: DappViewModel, DappModuleOutput, DappModuleIn
         }
 
         guard let encoded = urlEncoded(url) else { return url }
-        guard let updatedUrl = URL(string: "https://app.tonkeeper.com/dapp/\(encoded)") else { return url }
+        guard let updatedUrl = URL(string: "") else { return url }
         return updatedUrl
     }
 }

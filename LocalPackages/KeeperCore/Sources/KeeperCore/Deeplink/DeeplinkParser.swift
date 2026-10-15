@@ -96,9 +96,6 @@ public struct DeeplinkParser: Sendable {
             "ton://",
             "tonkeeper://",
             "tonkeeper-mob://",
-            "https://app.tonkeeper.com/",
-            "https://app.tonkeeper.org/",
-            "https://tonhub.com/",
             "tonkeeper-mob://",
             "tonkeeper-tc-mob://",
         ]
@@ -210,10 +207,6 @@ public struct DeeplinkParser: Sendable {
         case ("ton", "wc", _),
              ("tonkeeper", "wc", _),
              ("tonkeeper-mob", "wc", _):
-            return .deeplink
-        case ("https", "app.tonkeeper.com", "/wc"),
-             ("https", "app.tonkeeper.org", "/wc"),
-             ("https", "tonhub.com", "/wc"):
             return .deeplink
         default:
             return nil

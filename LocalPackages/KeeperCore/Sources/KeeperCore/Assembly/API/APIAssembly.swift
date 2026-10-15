@@ -286,15 +286,15 @@ public final class APIAssembly {
     // MARK: - Private
 
     var tonConnectURL: URL {
-        URL(string: "https://bridge.tonapi.io")!
+        .noServer
     }
 
     private var swapAPIURL: URL {
-        URL(string: "https://swap.tonkeeper.com")!
+        .noServer
     }
 
     var tonConnectBridgeURL: URL {
-        URL(string: "https://bridge.tonapi.io/bridge")!
+        .noServer
     }
 }
 

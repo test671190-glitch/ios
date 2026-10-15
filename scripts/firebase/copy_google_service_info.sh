@@ -24,8 +24,9 @@ if [ ! -f "${SOURCE_PLIST}" ]; then
     echo "Firebase plist for ${FOLDER} is missing, fallback to Keeper"
     SOURCE_PLIST="${DEFAULT_PLIST}"
   else
-    echo "Firebase plist not found: ${SOURCE_PLIST}" >&2
-    exit 1
+    # Demo mode: Firebase is never configured, so the app builds and runs without this plist.
+    echo "Firebase plist not found, skipping: ${SOURCE_PLIST}"
+    exit 0
   fi
 fi
 

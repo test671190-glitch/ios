@@ -1,4 +1,5 @@
 import FirebaseAnalytics
+import FirebaseCore
 import Foundation
 import Network
 
@@ -10,6 +11,7 @@ public final class FirebaseTonConnectReturnStrategyLogger: TonConnectReturnStrat
     public init() {}
 
     public func logReturnStrategy(_ returnStrategy: TonConnectReturnStrategy) {
+        guard FirebaseApp.app() != nil else { return }
         let event = TonConnectReturnStrategyEvent(returnStrategy)
         Analytics.logEvent(event.name, parameters: event.parameters)
     }

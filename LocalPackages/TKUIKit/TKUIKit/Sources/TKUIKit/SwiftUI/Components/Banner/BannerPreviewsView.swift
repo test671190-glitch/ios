@@ -126,7 +126,7 @@ private extension BannerPreviewsView {
             title: "Boost rewards with Keeper Battery",
             description: "Top up once and cover network fees automatically",
             actionTitle: "Open",
-            imageURL: URL(string: "https://picsum.photos/seed/tonkeeper-banner/800/400"),
+            imageURL: URL(string: ""),
             action: {}
         )
     }
@@ -149,7 +149,7 @@ private extension BannerPreviewsView {
                 id: "banner-stack-3",
                 title: "Explore multichain receive addresses in one place",
                 actionTitle: "Open Details",
-                imageURL: URL(string: "https://picsum.photos/seed/tonkeeper-banner/800/400"),
+                imageURL: URL(string: ""),
                 action: {}
             ),
         ].reversed())

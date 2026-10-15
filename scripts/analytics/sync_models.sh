@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 REPO_ROOT=$(cd "$SCRIPT_DIR/../.." && pwd)
 
-ANALYTICS_SCHEMAS_REPO_URL=${ANALYTICS_SCHEMAS_REPO_URL:-git@github.com:tonkeeper/analytics-schemas.git}
+ANALYTICS_SCHEMAS_REPO_URL=${ANALYTICS_SCHEMAS_REPO_URL:-}
 # Checkouts shared across the repository live in .context at the repository root.
 ANALYTICS_SCHEMAS_ROOT=${ANALYTICS_SCHEMAS_ROOT:-"$(git rev-parse --show-toplevel)/.context/analytics-schemas"}
 SRC_DIR=${ANALYTICS_MODELS_SRC_DIR:-"$ANALYTICS_SCHEMAS_ROOT/generated/openapi-swift/TonkeeperAnalytics/Classes/OpenAPIs/Models"}
@@ -23,6 +23,10 @@ cleanup() {
 trap cleanup EXIT
 
 if [ ! -d "$ANALYTICS_SCHEMAS_ROOT" ]; then
+  if [ -z "$ANALYTICS_SCHEMAS_REPO_URL" ]; then
+    echo "Set ANALYTICS_SCHEMAS_REPO_URL to the analytics schemas repository" >&2
+    exit 1
+  fi
   mkdir -p "$(dirname "$ANALYTICS_SCHEMAS_ROOT")"
   git clone "$ANALYTICS_SCHEMAS_REPO_URL" "$ANALYTICS_SCHEMAS_ROOT"
 else

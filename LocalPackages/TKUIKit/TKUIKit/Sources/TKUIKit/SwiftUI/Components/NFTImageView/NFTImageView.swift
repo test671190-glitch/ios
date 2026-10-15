@@ -150,7 +150,7 @@ private func shimmerConfig() -> ShimmerSwiftUIView.Config {
 #Preview {
     HStack(spacing: 12) {
         NFTImageView(
-            imageSource: .url(URL(string: "https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=041")),
+            imageSource: .url(URL(string: "")),
             size: .small
         )
         .background(TKPreview.palette.background.contentTint)

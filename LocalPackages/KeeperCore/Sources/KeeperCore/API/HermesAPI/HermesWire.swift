@@ -15,7 +15,8 @@ struct HermesSocketFactory: @unchecked Sendable {
 
     func makeTask() async throws -> URLSessionWebSocketTask {
         let host = await hostProvider.basePath
-        guard let hostURL = URL(string: host), let url = HermesEndpoint.webSocketURL(from: hostURL) else {
+        // Demo mode: server hosts are cut out, so a host-less URL means there is nothing to connect to.
+        guard let hostURL = URL(string: host), hostURL.host != nil, let url = HermesEndpoint.webSocketURL(from: hostURL) else {
             throw HermesSocketError.badURL
         }
         return urlSession.webSocketTask(with: url)

@@ -207,6 +207,6 @@ public struct PushNotificationsAPI {
 
 private extension URL {
     static var host: URL {
-        URL(string: "https://keeper.tonapi.io")!
+        .noServer
     }
 }

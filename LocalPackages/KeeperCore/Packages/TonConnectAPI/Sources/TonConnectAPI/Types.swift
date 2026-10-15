@@ -51,7 +51,7 @@ extension APIProtocol {
 public enum Servers {
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
-            validatingOpenAPIServerURL: "https://bridge.tonapi.io/bridge",
+            validatingOpenAPIServerURL: "",
             variables: []
         )
     }

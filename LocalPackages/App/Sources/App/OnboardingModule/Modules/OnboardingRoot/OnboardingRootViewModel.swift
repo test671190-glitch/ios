@@ -22,7 +22,7 @@ final class OnboardingRootViewModelImplementation: OnboardingRootModuleOutput {
         importButtonTitle: TKLocales.Onboarding.Buttons.importExisting,
         termsCaption: TKLocales.Onboarding.Terms.caption(TKLocales.Onboarding.Terms.title),
         termsLinkTitle: TKLocales.Onboarding.Terms.title,
-        termsURL: URL(string: "https://tonkeeper.com/terms")
+        termsURL: URL(string: "")
     )
 
     func didTapCreate() {

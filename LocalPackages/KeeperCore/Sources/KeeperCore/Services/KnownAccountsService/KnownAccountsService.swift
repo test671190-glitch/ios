@@ -32,6 +32,6 @@ final class KnownAccountsServiceImplementation: KnownAccountsService {
 
 private extension URL {
     static var knownAccountsUrl: URL {
-        URL(string: "https://raw.githubusercontent.com/tonkeeper/ton-assets/main/accounts.json")!
+        .noServer
     }
 }

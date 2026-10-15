@@ -92,8 +92,7 @@ struct JettonTokenDetailsConfigurator: TokenDetailsConfigurator {
     }
 
     func getDetailsURL() -> URL? {
-        guard let string = try? "\(String.tonviewer)/\(wallet.friendlyAddress.toString())/jetton/\(jettonItem.jettonInfo.address.toString())",
-              let url = URL(string: string) else { return nil }
-        return url
+        // Demo mode: block explorer links are cut out.
+        nil
     }
 }

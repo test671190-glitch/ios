@@ -49,6 +49,8 @@ final class MultichainRealtimeClient: MultichainRealtimeTransport {
     }
 
     func connect(walletId: String, endpoint: URL) {
+        // Demo mode: the realtime server is cut out, so there is nothing to connect to.
+        guard endpoint != .noServer else { return }
         syncQueue.async { [weak self] in
             guard let self else { return }
             self.teardownClient()

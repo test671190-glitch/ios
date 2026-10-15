@@ -1,4 +1,3 @@
-import FirebaseMessaging
 import UserNotifications
 
 final class NotificationService: UNNotificationServiceExtension {
@@ -6,8 +5,7 @@ final class NotificationService: UNNotificationServiceExtension {
         _ request: UNNotificationRequest,
         withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void
     ) {
-        Messaging.serviceExtension()
-            .exportDeliveryMetricsToBigQuery(withMessageInfo: request.content.userInfo)
+        // Demo mode: no delivery metrics are exported to Firebase.
         contentHandler(request.content)
     }
 }

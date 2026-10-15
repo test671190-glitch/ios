@@ -1138,9 +1138,9 @@
 "multichain_swap.provider_error.country_blocked" = "Takas bulunduğunuz bölgede kullanılamıyor.";
 "multichain_swap.provider_error.provider_unavailable" = "Takas sağlayıcısı geçici olarak kullanılamıyor. Lütfen tekrar deneyin.";
 "multichain_swap.provider_error.unknown" = "Teklif alınamadı. Lütfen tekrar deneyin.";
-"native_swap_screen.privacy.stonfi" = "Hizmet [STON.fi](https://ston.fi) tarafından sağlandı";
-"native_swap_screen.privacy.stonfi_terms" = "[Kullanım Koşulları](https://ston.fi/terms)";
-"native_swap_screen.privacy.stonfi_privacy" = "[Gizlilik Politikası](https://ston.fi/privacy)";
+"native_swap_screen.privacy.stonfi" = "Hizmet STON.fi tarafından sağlandı";
+"native_swap_screen.privacy.stonfi_terms" = "Kullanım Koşulları";
+"native_swap_screen.privacy.stonfi_privacy" = "Gizlilik Politikası";
 "native_swap_screen.privacy.stonfi_terms_title" = "Kullanım Koşulları";
 "native_swap_screen.privacy.stonfi_privacy_title" = "Gizlilik Politikası";
 "subscription_plugin_warning.title.zero" = "%@ süresi dolmuş @donate aboneliğiniz var";

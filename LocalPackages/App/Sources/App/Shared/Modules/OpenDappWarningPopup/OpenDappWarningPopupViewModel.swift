@@ -1,4 +1,3 @@
-import LinkPresentation
 import TKCore
 import TKLocalize
 import TKUIKit
@@ -59,19 +58,9 @@ final class OpenDappWarningPopupViewModelImplementation: OpenDappWarningPopupVie
     var didUpdateConfiguration: ((TKPopUp.Configuration) -> Void)?
 
     func viewDidLoad() {
+        // Demo mode: page metadata is not fetched from the network.
+        titleState = .resolved(title: "...")
         prepareContent()
-
-        let task = Task {
-            let provider = LPMetadataProvider()
-            do {
-                let meta = try await provider.startFetchingMetadata(for: url)
-                titleState = .resolved(title: meta.title ?? "...")
-            } catch {
-                titleState = .resolved(title: "...")
-            }
-            prepareContent()
-        }
-        titleState = .resolving(task: task)
     }
 
     private func prepareContent() {

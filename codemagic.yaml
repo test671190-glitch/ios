@@ -11,23 +11,9 @@ workflows:
         XCODE_PROJECT: "Keeper.xcodeproj"
         XCODE_SCHEME: "Keeper"
     scripts:
-      - name: Положить GoogleService-Info.plist из секрета
-        script: |
-          set -e
-          if [ -z "$GOOGLE_SERVICE_INFO_PLIST_B64" ]; then
-            echo "error: в Codemagic не задана секретная переменная GOOGLE_SERVICE_INFO_PLIST_B64 (base64 от GoogleService-Info.plist для Keeper)" >&2
-            exit 1
-          fi
-          DEST="$CM_BUILD_DIR/Keeper/Resources/Firebase/Keeper"
-          mkdir -p "$DEST"
-          echo "$GOOGLE_SERVICE_INFO_PLIST_B64" | base64 --decode > "$DEST/GoogleService-Info.plist"
-          plutil -lint "$DEST/GoogleService-Info.plist"
-
       - name: Сборка без подписи в .xcarchive
         script: |
           set -e
-          # ENABLE_USER_SCRIPT_SANDBOXING=NO: скрипт Crashlytics+dSYM отправляет dSYM по сети,
-          # песочница user scripts (включена в проекте) этого не разрешает.
           # Без -configuration: конфигурация архива берётся из схемы Keeper (KeeperRelease).
           # В проекте нет конфигурации Debug, а при -configuration Debug пакеты SPM и таргеты
           # раскладывали продукты в разные папки (Debug-iphoneos и KeeperDebug-iphoneos).

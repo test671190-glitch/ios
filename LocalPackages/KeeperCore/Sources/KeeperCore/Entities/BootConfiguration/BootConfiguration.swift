@@ -109,7 +109,7 @@ public struct BootConfiguration: Codable, Equatable {
 
 extension BootConfiguration {
     /// Used until the boot configuration answers, and whenever it answers without a realtime host.
-    static let defaultMultichainRealtimeURL = URL(string: "wss://rt.tonkeeper.com/connection/websocket")!
+    static let defaultMultichainRealtimeURL = URL.noServer
 
     static var empty: BootConfiguration {
         BootConfiguration(
@@ -151,16 +151,16 @@ extension BootConfiguration {
             qrScannerExtensions: nil,
             region: nil,
             tronApiUrl: nil,
-            tronSwapUrl: "https://widget.letsexchange.io/en?affiliate_id=ffzymmunvvyxyypo&coin_from=ton&coin_to=USDT-TRC20&is_iframe=true",
+            tronSwapUrl: "",
             tronSwapTitle: "LetsExchange",
             tonkeeperApiUrl: nil,
             aptabaseEndpoint: nil,
-            multichainHelpUrl: URL(string: "https://tonkeeper.helpscoutdocs.com/article/137-multichain#Transfer-fees-for-USDT-TRC20-tHzDd"),
+            multichainHelpUrl: nil,
             multichain: Endpoint(
-                domain: URL(string: "https://multi.tonkeeper.com")!,
+                domain: .noServer,
                 realtime: defaultMultichainRealtimeURL
             ),
-            trading: Endpoint(domain: URL(string: "https://trading.tonkeeper.com")!, realtime: nil),
+            trading: Endpoint(domain: .noServer, realtime: nil),
             explorers: []
         )
     }

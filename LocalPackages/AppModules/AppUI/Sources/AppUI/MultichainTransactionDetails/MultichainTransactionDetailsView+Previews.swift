@@ -172,7 +172,7 @@ private extension MultichainTransactionDetailsModel {
     )
 
     static var previewTransactionButton: TransactionButton? {
-        guard let url = URL(string: "https://tonviewer.com") else {
+        guard let url = URL(string: "") else {
             return nil
         }
         return TransactionButton(

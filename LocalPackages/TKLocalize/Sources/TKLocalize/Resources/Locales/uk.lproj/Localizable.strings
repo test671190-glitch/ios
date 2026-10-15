@@ -1137,9 +1137,9 @@
 "multichain_swap.provider_error.country_blocked" = "Обмін недоступний у вашому регіоні.";
 "multichain_swap.provider_error.provider_unavailable" = "Провайдер обміну тимчасово недоступний. Спробуйте ще раз.";
 "multichain_swap.provider_error.unknown" = "Не вдалося отримати котирування. Спробуйте ще раз.";
-"native_swap_screen.privacy.stonfi" = "Послуги надає [STON.fi](https://ston.fi)";
-"native_swap_screen.privacy.stonfi_terms" = "[Умови використання](https://ston.fi/terms)";
-"native_swap_screen.privacy.stonfi_privacy" = "[Політика конфіденційності](https://ston.fi/privacy)";
+"native_swap_screen.privacy.stonfi" = "Послуги надає STON.fi";
+"native_swap_screen.privacy.stonfi_terms" = "Умови використання";
+"native_swap_screen.privacy.stonfi_privacy" = "Політика конфіденційності";
 "native_swap_screen.privacy.stonfi_terms_title" = "Умови використання";
 "native_swap_screen.privacy.stonfi_privacy_title" = "Політика конфіденційності";
 "subscription_plugin_warning.title.zero" = "У вас є %@ прострочених підписок від @donate";

@@ -58,33 +58,8 @@ public final class WalletConnectAssembly {
 
     @WalletConnectActor
     private func walletConnectConfiguration() throws(WalletConnectConfigurationError) -> WalletConnectConfiguration {
-        try WalletConnectConfiguration(
-            projectId: "81bb6dac2849cc0dd57bdc40e14f1db8",
-            relayHost: "relay.walletconnect.org",
-            groupIdentifier: Bundle.main.object(
-                forInfoDictionaryKey: "APP_GROUP_IDENTIFIER"
-            ) as? String ?? "",
-            metadata: AppMetadata(
-                name: "Keeper",
-                description: "Keeper wallet",
-                url: "https://tonkeeper.com/",
-                icons: ["https://tonkeeper.com/assets/tonkeeper-logo.png"],
-                redirect: walletConnectRedirect()
-            )
-        )
-    }
-
-    @WalletConnectActor
-    private func walletConnectRedirect() throws(WalletConnectConfigurationError) -> AppMetadata.Redirect {
-        do {
-            return try AppMetadata.Redirect(
-                native: "tonkeeper://wc",
-                universal: "https://app.tonkeeper.com/wc"
-            )
-        } catch {
-            Log.e("WalletConnect: failed to create app metadata redirect", error: error)
-            throw .invalidRedirect
-        }
+        // Demo mode: the WalletConnect relay server is cut out, so the SDK is never configured.
+        throw .sdk(message: "WalletConnect is disabled in demo mode")
     }
 
     private let mnemonicAccess: MnemonicAccess

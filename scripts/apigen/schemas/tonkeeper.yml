@@ -7,7 +7,7 @@ info:
     email: "contact@tonaps.org"
 
 servers:
-  - url: "http://localhost:8888"
+  - url: ""
 
 paths:
   /ready:
@@ -969,7 +969,7 @@ components:
                 example: "Instantly buy with a credit card."
               icon_url:
                 type: string
-                example: "https://tonkeeper.com/assets/neocrypto-new.png"
+                example: ""
               features:
                 type: array
                 items:
@@ -1013,7 +1013,7 @@ components:
                       example: "Terms of use"
                     url:
                       type: string
-                      example: "https://neocrypto.net/policy/term-of-use.pdf"
+                      example: ""
     PopularCategory:
       type: object
       required:
@@ -1137,7 +1137,7 @@ components:
               example: "Update"
             url:
               type: string
-              example: "https://apps.apple.com/us/app/tonkeeper/id1587742107"
+              example: ""
         isPersistenceHide:
           type: boolean
           default: false
@@ -1368,7 +1368,7 @@ components:
           example: "United States Dollar"
         image:
           type: string
-          example: "https://tonkeeper.com/assets/currencies/usd.png"
+          example: ""
         type:
           type: string
           enum:

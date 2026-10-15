@@ -17,10 +17,10 @@ final class CurrenciesAPIAssembly {
     }
 
     var apiV1BootURL: URL {
-        URL(string: "https://boot.tonkeeper.com")!
+        .noServer
     }
 
     var apiV1BlockURL: URL {
-        URL(string: "https://block.tonkeeper.com")!
+        .noServer
     }
 }

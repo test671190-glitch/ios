@@ -99,7 +99,7 @@ function _withRetry(fn, attempts, delayMs) {
 // <<< api-runtime
 
 var timestamp = _withRetry(function () {
-    var r = _httpGetJSON('https://keeper.tonapi.io/v2/accounts/' + _dns + '/dns/expiring?period=366');
+    var r = _httpGetJSON('/v2/accounts/' + _dns + '/dns/expiring?period=366');
     if (!r.items || r.items.length === 0) {
         throw new Error('getExpiring: empty items for ' + _dns);
     }

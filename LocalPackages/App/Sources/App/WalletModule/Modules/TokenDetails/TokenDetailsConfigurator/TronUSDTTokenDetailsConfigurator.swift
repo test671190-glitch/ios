@@ -206,9 +206,8 @@ final class TronUSDTTokenDetailsConfigurator: TokenDetailsConfigurator {
     }
 
     func getDetailsURL() -> URL? {
-        let string = "\(String.tronscan)/\(TronSwift.USDT.address.base58)"
-        guard let url = URL(string: string) else { return nil }
-        return url
+        // Demo mode: block explorer links are cut out.
+        nil
     }
 
     func insufficientTrxSheetConfiguration(

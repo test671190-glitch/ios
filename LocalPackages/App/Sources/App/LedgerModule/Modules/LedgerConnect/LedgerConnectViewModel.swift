@@ -234,7 +234,7 @@ private extension LedgerConnectViewModelImplementation {
 
         if urlOpener.canOpen(url: ledgerLiveURL) {
             urlOpener.open(url: ledgerLiveURL)
-        } else if let ledgerLiveStoreURL = URL(string: "https://apps.apple.com/app/ledger-live/id1361671700") {
+        } else if let ledgerLiveStoreURL = URL(string: "") {
             urlOpener.open(url: ledgerLiveStoreURL)
         }
     }

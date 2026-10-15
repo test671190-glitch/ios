@@ -3,7 +3,7 @@ info:
   title: TonConnect
   version: 1.0.0
 servers:
-  - url: "https://bridge.tonapi.io/bridge"
+  - url: ""
 paths:
   /events:
     get:

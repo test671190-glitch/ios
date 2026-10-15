@@ -235,7 +235,7 @@ public struct RemoteCurrency: Codable {
         RemoteCurrency(
             code: "USD",
             name: "US Dollar",
-            image: "https://tonkeeper.com/assets/currencies/USD.png",
+            image: "",
             type: "fiat"
         )
     }

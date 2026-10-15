@@ -16,8 +16,3 @@ extension TokenDetailsConfigurator {
     func viewDidLoad() {}
     func reload() {}
 }
-
-extension String {
-    static let tonviewer = "https://tonviewer.com"
-    static let tronscan = "https://tronscan.org/#/address"
-}

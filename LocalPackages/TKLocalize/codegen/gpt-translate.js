@@ -17,7 +17,7 @@ let translated = 0;
 let total = 0;
 
 async function query(prompt, message) {
-    const resp = await fetch('https://api.datafield.io/gpt/prompt', {
+    const resp = await fetch('', {
         method: 'POST',
         body: JSON.stringify({
             prompt: prompt,
